@@ -37,6 +37,10 @@ char keyboard_read(char * uart_char, int8_t * c_count) {
         {
             return 2;
         }
+        if (uart_char[(*c_count)] == (0x20))
+        {
+            return 7;
+        }
         if (uart_char[(*c_count)] == (0x0D))
         {
             uart_char[(*c_count)] = 0;

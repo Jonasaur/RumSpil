@@ -29,20 +29,36 @@ void how_to_screen() {
 
 void settings_screen() {
     clrscr();
-    //gotoxy();
-
+    gotoxy(5, 5); printf("     _______. _______ .___________.___________. __  .__   __.   _______      _______.");
+    gotoxy(5, 6); printf("    /       ||   ____||           |           ||  | |  \\ |  |  /  _____|    /       |");
+    gotoxy(5, 7); printf("   |   (----`|  |__   `---|  |----`---|  |----`|  | |   \\|  | |  |  __     |   (----`");
+    gotoxy(5, 8); printf("    \\   \\    |   __|      |  |        |  |     |  | |  . `  | |  | |_ |     \\   \\    ");
+    gotoxy(5, 9); printf(".----)   |   |  |____     |  |        |  |     |  | |  |\\   | |  |__| | .----)   |   ");
+   gotoxy(5, 10); printf("|_______/    |_______|    |__|        |__|     |__| |__| \\__|  \\______| |_______/    ");
 }
 
 void play_screen() {
     clrscr();
-    //gotoxy();
-
+    gotoxy(5, 5); printf(" __    __    ______   ____    __    ____   .___________.  ______     .______    __          ___   ____    ____ ");
+    gotoxy(5, 6); printf("|  |  |  |  /  __  \\  \\   \\  /  \\  /   /   |           | /  __  \\    |   _  \\  |  |        /   \\  \\   \\  /   / ");
+    gotoxy(5, 7); printf("|  |__|  | |  |  |  |  \\   \\/    \\/   /    `---|  |----`|  |  |  |   |  |_)  | |  |       /  ^  \\  \\   \\/   /  ");
+    gotoxy(5, 8); printf("|   __   | |  |  |  |   \\            /         |  |     |  |  |  |   |   ___/  |  |      /  /_\\  \\  \\_    _/   ");
+    gotoxy(5, 9); printf("|  |  |  | |  `--'  |    \\    /\\    /          |  |     |  `--'  |   |  |      |  `----./  _____  \\   |  |     ");
+   gotoxy(5, 10); printf("|__|  |__|  \\______/      \\__/  \\__/           |__|      \\______/    | _|      |_______/__/     \\__\\  |__|     ");
 }
 
 void high_score() {
     clrscr();
-    //gotoxy();
+    gotoxy(5, 5); printf(" __    __   __    _______  __    __         _______.  ______   ______   .______       _______ ");
+    gotoxy(5, 6); printf("|  |  |  | |  |  /  _____||  |  |  |       /       | /      | /  __  \\  |   _  \\     |   ____|");
+    gotoxy(5, 7); printf("|  |__|  | |  | |  |  __  |  |__|  |      |   (----`|  ,----'|  |  |  | |  |_)  |    |  |__   ");
+    gotoxy(5, 8); printf("|   __   | |  | |  | |_ | |   __   |       \\   \\    |  |     |  |  |  | |      /     |   __|  ");
+    gotoxy(5, 9); printf("|   __   | |  | |  | |_ | |   __   |       \\   \\    |  |     |  |  |  | |      /     |   __|  ");
+   gotoxy(5, 10); printf("|__|  |__| |__|  \\______| |__|  |__|   |_______/     \\______| \\______/  | _| `._____||_______|");
+}
 
+void start_game() {
+    printf("Let the games begin");
 }
 
 void menu_selection(char * uart_char, int8_t * c_count) {
@@ -51,39 +67,48 @@ void menu_selection(char * uart_char, int8_t * c_count) {
     int8_t select;
     int8_t in_menu = 1;
     int8_t print_flag;
+    //int8_t play_game();
     do {
         switch(keyboard_read(uart_char, &c_count)) {
             case 3: { //what to do if "Up" is pushed
                 (*c_count) = 0;
                 if (select == 2) {
                     print_flag = 1;
+                    select = 0;
                 }
                 break;
             }
             case 4: { //what to do if "Down" is pushed
-                select = 1;
-                (*c_count) = 0;
-                print_flag = 1;
+                if (select == 0) {
+                    select = 1;
+                    (*c_count) = 0;
+                    print_flag = 1;
+                }
                 break;
             }
             case 5: { //what to do if "Right" is pushed
-                if (selection < 3)
-                {
-                    selection++;
+                if (select == 0) {
+                    if (selection < 3)
+                    {
+                        selection++;
+                    }
+                    else selection = 0;
+                    (*c_count) = 0;
+                    print_flag = 1;
                 }
-                else selection = 0;
-                (*c_count) = 0;
-                print_flag = 1;
                 break;
             }
             case 6: { //what to do if "Left" is pushed
-                if (selection > 0)
+                if (select == 0)
                 {
-                    selection--;
+                    if (selection > 0)
+                    {
+                        selection--;
+                    }
+                    else selection = 3;
+                    (*c_count) = 0;
+                    print_flag = 1;
                 }
-                else selection = 3;
-                (*c_count) = 0;
-                print_flag = 1;
                 break;
             }
         }
@@ -122,6 +147,7 @@ void menu_selection(char * uart_char, int8_t * c_count) {
                     if (select == 1) {
                         play_screen();
                         select = 2;
+                        in_menu = 0;
                     }
                     break;
                 }
@@ -141,4 +167,5 @@ void menu_selection(char * uart_char, int8_t * c_count) {
         print_flag = 0;
         }
     } while(in_menu == 1);
+    start_game();
 }

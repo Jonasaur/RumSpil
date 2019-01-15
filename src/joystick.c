@@ -35,3 +35,45 @@ int16_t readJoystick()
     val_dir = val_r + val_u + val_c + val_l + val_d;
     return val_dir;
 }
+
+//USED TO BE IN MAIN()
+
+     /*
+        input = readJoystick();
+        setLED(input);
+        time_print(10, 20);
+
+        if(input != oldinput)
+        {
+            switch(input)
+            {
+            case 2: //DOWN
+            {
+                stop_timer();
+                timer.hs = 0; timer_s1.hs = 0; timer_s2.hs = 0;
+                 timer.s = 0;  timer_s1.s = 0;  timer_s2.s = 0;
+                 timer.m = 0;  timer_s1.m = 0;  timer_s2.m = 0;
+                 timer.h = 0;  timer_s1.h = 0;  timer_s2.h = 0;
+            }
+            break;
+            case 4: //LEFT
+            {
+                timer_s1 = timer;
+            }
+            break;
+            case 8: //RIGHT
+            {
+                timer_s2 = timer;
+            }
+            break;
+            case 16:
+            {
+                if (TIM2->CR1 & (0x01)) stop_timer();
+                else start_timer();
+                break;
+            }
+            }
+            //printf("Hey, look at this number: %d\n", input);
+        }
+        oldinput = input;
+*/

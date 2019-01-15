@@ -20,6 +20,9 @@ void timer_setup()
     timer.s = 0;
     timer.m = 0;
     timer.h = 0;
+    timer.f = 0;
+
+    start_timer();
 }
 
 void start_timer()
@@ -65,14 +68,7 @@ void TIM2_IRQHandler(void)
 }
 
 int8_t get_flag() {
-    timer.f++;
     return timer.f;
-    /*if (timer.f == 1){
-            timer.f = 0;
-            return 1;
-    } else {
-        return 0;
-    }*/
 }
 
 void time_print(int8_t x, int8_t y)
