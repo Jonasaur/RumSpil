@@ -4,15 +4,6 @@ volatile struct time timer; //Global variable
 volatile struct time timer_s1;
 volatile struct time timer_s2;
 
-
-int8_t get_flag() {
-    if (timer.f == 1){
-            timer.f = 0;
-            return 1;
-    } else {
-        return 0;
-    }
-}
 void timer_setup()
 {
     RCC->APB1ENR |= RCC_APB1Periph_TIM2; // Enable clock line to timer 2;
@@ -65,7 +56,23 @@ void TIM2_IRQHandler(void)
     {
         timer.h = 0;
     }
+
+    if ((timer.hs &15)==0){
+        timer.f++;
+    }
+
     TIM2->SR &= ~0x0001; //reset the interrupt
+}
+
+int8_t get_flag() {
+    timer.f++;
+    return timer.f;
+    /*if (timer.f == 1){
+            timer.f = 0;
+            return 1;
+    } else {
+        return 0;
+    }*/
 }
 
 void time_print(int8_t x, int8_t y)

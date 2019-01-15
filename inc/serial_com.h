@@ -6,6 +6,5 @@
 #define _SERIAL_COM_H_
 
 char keyboard_read(char * uart_char, int8_t * c_count);
-int8_t keyboard_controls(char button_pressed);
 
 #endif

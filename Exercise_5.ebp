@@ -93,6 +93,9 @@
 		<Unit filename="inc\ansi.h" />
 		<Unit filename="inc\ball.h" />
 		<Unit filename="inc\charset.h" />
+		<Unit filename="inc\joystick.h" />
+		<Unit filename="inc\LED_control.h" />
+		<Unit filename="inc\menu.h" />
 		<Unit filename="inc\serial_com.h" />
 		<Unit filename="inc\stm32f30x.h" />
 		<Unit filename="inc\stm32f30x_conf.h" />
@@ -199,7 +202,16 @@
 		<Unit filename="src\charset.c">
 			<Option compilerVar="CC" />
 		</Unit>
+		<Unit filename="src\joystick.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="src\LED_control.c">
+			<Option compilerVar="CC" />
+		</Unit>
 		<Unit filename="src\main.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="src\menu.c">
 			<Option compilerVar="CC" />
 		</Unit>
 		<Unit filename="src\serial_com.c">

@@ -11,4 +11,5 @@ obj\debug\src\main.o: src\main.c inc/stm32f30x_conf.h \
  SPL\inc/stm32f30x_rcc.h SPL\inc/stm32f30x_rtc.h SPL\inc/stm32f30x_spi.h \
  SPL\inc/stm32f30x_tim.h SPL\inc/stm32f30x_usart.h \
  SPL\inc/stm32f30x_wwdg.h SPL\inc/stm32f30x_misc.h inc/30010_io.h \
- inc/ansi.h inc/serial_com.h
+ inc/ansi.h inc/serial_com.h inc/timer.h inc/ansi.h inc/ball.h \
+ inc/timer.h inc/LED_control.h inc/joystick.h inc/menu.h

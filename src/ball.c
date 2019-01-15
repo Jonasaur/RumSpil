@@ -27,13 +27,13 @@ void rotateBall (struct ball_t * b, int angle)
 
 void updateBallPos(struct ball_t *b)
 {
-    if (timer.f != (*b).tempf)
+    if (get_flag() != (*b).tempf)
     {
         (*b).tempx = (*b).x;
         (*b).tempy = (*b).y;
         (*b).x += (*b).vx;
         (*b).y += (*b).vy;
-        (*b).tempf = timer.f;
+        (*b).tempf = get_flag();
     }
 }
 
