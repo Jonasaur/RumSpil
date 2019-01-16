@@ -20,7 +20,14 @@
 #include "LED_control.h"
 #include "joystick.h"
 #include "menu.h"
+#include "asteroid.h"
+#include "gamefunctions.h"
 //#include "calc_sin.h" //needs to be implemented
+
+#define RAND_MAX 40
+#define RAND_MIN 10
+#define UART_BAUDRATE 921600
+#define CHAR_ARRAY_LEN 255
 
 #define FIX14_SHIFT 14
 #define FIX14_MULT(a, b) ( (a)*(b) >> FIX14_SHIFT )
@@ -30,7 +37,7 @@
 
 void setup()
 {
-    uart_init(921600);
+    uart_init(UART_BAUDRATE);
     uart_clear();
     clrscr();
 
@@ -39,28 +46,51 @@ void setup()
     LED_setup();
 }
 
-volatile struct time timer; //Global variable
-volatile struct time timer_s1;
-volatile struct time timer_s2;
+//volatile struct time timer; //Global variable
 
 int main(void)
 {
     //uint16_t input, oldinput;
-    char uart_char[255];
+    char uart_char[CHAR_ARRAY_LEN];
     int8_t c_count;
-
     setup();
+    //printf("%i",rand());
+
+    struct spaceship_t theShip;
+    initSpaceship(&theShip,5,5);
+
+    struct Rocket_t theRockets[10];
+    initRocket(theRockets,2,1,2);
+
+    uint8_t x= 8;
+    uint8_t y= 8;
+
+    struct alien_t the_alien;
+
+
+    init_alien(&the_alien, 100,rand() % 50, 5);
+    draw_alien(&the_alien);
+
+    set_lvl(100);
+
 
     while(1)
     {
-        menu_selection(uart_char, &c_count);
-        /*deleteBall(&theBall);
-        updateBallPos(&theBall);
-        printBall(&theBall);
-        if (theBall.y >= 20)
+        Controls(&theShip, theRockets);
+        if (get_flag() != (theShip).tempf)
         {
-            theBall.vy = -theBall.vy;
+            moveRocket(theRockets);
+            hitDetection(theRockets);
+            theShip.tempf = get_flag();
         }
-        */
+
+        if (get_flag() != the_alien.tempf)
+        {
+            move_alien(&the_alien);
+            the_alien.tempf = get_flag();
+        }
+        //menu_selection(uart_char, &c_count);
+
     }
+
 }

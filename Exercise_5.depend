@@ -203,7 +203,7 @@
 	"stm32f30x_conf.h"
 	<stdio.h>
 
-1547466496 source:c:\users\jonas\desktop\30010 programmeringsprojekt\øvelse 4\exercise_5\src\ball.c
+1547570449 source:c:\users\jonas\desktop\30010 programmeringsprojekt\øvelse 4\exercise_5\src\ball.c
 	"ball.h"
 
 1547461295 c:\users\jonas\desktop\30010 programmeringsprojekt\øvelse 4\exercise_5\inc\ball.h
@@ -213,7 +213,7 @@
 	"ansi.h"
 	"timer.h"
 
-1547459592 c:\users\jonas\desktop\30010 programmeringsprojekt\øvelse 4\exercise_5\inc\timer.h
+1547633405 c:\users\jonas\desktop\30010 programmeringsprojekt\øvelse 4\exercise_5\inc\timer.h
 	"stm32f30x_conf.h"
 	<stdio.h>
 	<string.h>
@@ -224,7 +224,7 @@
 
 1547131195 c:\users\jonas\desktop\30010 programmeringsprojekt\øvelse 4\exercise_5\inc\charset.h
 
-1547559514 source:c:\users\jonas\desktop\30010 programmeringsprojekt\øvelse 4\exercise_5\src\main.c
+1547636514 source:c:\users\jonas\desktop\30010 programmeringsprojekt\øvelse 4\exercise_5\src\main.c
 	"stm32f30x_conf.h"
 	"30010_io.h"
 	"ansi.h"
@@ -234,13 +234,15 @@
 	"LED_control.h"
 	"joystick.h"
 	"menu.h"
+	"asteroid.h"
+	"gamefunctions.h"
 
 1547540828 c:\users\jonas\desktop\30010 programmeringsprojekt\øvelse 4\exercise_5\inc\serial_com.h
 	"stm32f30x_conf.h"
 	<stdio.h>
 	<string.h>
 
-1547553709 source:c:\users\jonas\desktop\30010 programmeringsprojekt\øvelse 4\exercise_5\src\serial_com.c
+1547635551 source:c:\users\jonas\desktop\30010 programmeringsprojekt\øvelse 4\exercise_5\src\serial_com.c
 	"serial_com.h"
 
 1547026604 source:c:\users\jonas\desktop\30010 programmeringsprojekt\øvelse 4\exercise_5\src\startup_stm32f30x.s
@@ -248,7 +250,7 @@
 1547026604 source:c:\users\jonas\desktop\30010 programmeringsprojekt\øvelse 4\exercise_5\src\system_stm32f30x.c
 	"stm32f30x.h"
 
-1547557283 source:c:\users\jonas\desktop\30010 programmeringsprojekt\øvelse 4\exercise_5\src\timer.c
+1547633546 source:c:\users\jonas\desktop\30010 programmeringsprojekt\øvelse 4\exercise_5\src\timer.c
 	"timer.h"
 
 1547559480 source:c:\users\jonas\desktop\30010 programmeringsprojekt\øvelse 4\exercise_5\src\joystick.c
@@ -267,24 +269,36 @@
 	<stdio.h>
 	<string.h>
 
-1547558624 source:c:\users\jonas\desktop\30010 programmeringsprojekt\øvelse 4\exercise_5\src\menu.c
+1547635467 source:c:\users\jonas\desktop\30010 programmeringsprojekt\øvelse 4\exercise_5\src\menu.c
 	"menu.h"
 
-1547559748 c:\users\jonas\desktop\30010 programmeringsprojekt\øvelse 4\exercise_5\inc\menu.h
+1547595146 c:\users\jonas\desktop\30010 programmeringsprojekt\øvelse 4\exercise_5\inc\menu.h
 	"ansi.h"
 	"stm32f30x_conf.h"
 	<stdio.h>
 	<string.h>
 	"serial_com.h"
 
-1547558431 source:c:\users\jonas\desktop\30010 programmeringsprojekt\øvelse 4\exercise_5\src\gamefunctions.c
+1547635612 source:c:\users\jonas\desktop\30010 programmeringsprojekt\øvelse 4\exercise_5\src\gamefunctions.c
 	"gamefunctions.h"
 
-1547558484 c:\users\jonas\desktop\30010 programmeringsprojekt\øvelse 4\exercise_5\inc\gamefunctions.h
+1547635675 c:\users\jonas\desktop\30010 programmeringsprojekt\øvelse 4\exercise_5\inc\gamefunctions.h
 	"stm32f30x_conf.h"
 	<stdio.h>
 	<string.h>
 	"serial_com.h"
 	"timer.h"
 	"ansi.h"
+	"gamefunctions.h"
+
+1547631507 c:\users\jonas\desktop\30010 programmeringsprojekt\øvelse 4\exercise_5\inc\asteroid.h
+	"stm32f30x_conf.h"
+	<stdio.h>
+	<string.h>
+	"serial_com.h"
+	"timer.h"
+	"ansi.h"
+
+1547633430 source:c:\users\jonas\desktop\30010 programmeringsprojekt\øvelse 4\exercise_5\src\asteroid.c
+	"asteroid.h"
 

@@ -1,8 +1,6 @@
 #include "timer.h"
 
 volatile struct time timer; //Global variable
-volatile struct time timer_s1;
-volatile struct time timer_s2;
 
 void timer_setup()
 {
@@ -21,6 +19,9 @@ void timer_setup()
     timer.m = 0;
     timer.h = 0;
     timer.f = 0;
+    timer.al = 0;
+    timer.n = 0;
+    timer.anim = 0;
 
     start_timer();
 }
@@ -59,24 +60,38 @@ void TIM2_IRQHandler(void)
     {
         timer.h = 0;
     }
-
-    if ((timer.hs &15)==0){
+    if ((timer.hs & 15) == 0) {
         timer.f++;
     }
-
+    if ((timer.hs & timer.n) == 0) {
+        timer.al++;
+    }
+    if ((timer.hs & timer.n) == 0) {
+        timer.anim = 1;
+    }
     TIM2->SR &= ~0x0001; //reset the interrupt
 }
 
-int8_t get_flag() {
+int8_t get_flag()
+{
     return timer.f;
 }
 
-void time_print(int8_t x, int8_t y)
+int8_t get_anim()
 {
-    gotoxy(x, y);
-    printf("   Time: %2d:%2d:%2d.%2d\n",timer.h,timer.m,timer.s,timer.hs);
-    gotoxy(x+1, y);
-    printf("Split 1: %2d:%2d:%2d.%2d\n",timer_s1.h,timer_s1.m,timer_s1.s,timer_s1.hs);
-    gotoxy(x+2, y);
-    printf("Split 2: %2d:%2d:%2d.%2d\n",timer_s2.h,timer_s2.m,timer_s2.s,timer_s2.hs);
+    if (timer.anim == 1){
+        timer.anim = 0;
+        return 1;
+    } else return 0;
 }
+
+void set_lvl(int8_t lvl_input) {
+    timer.n = lvl_input;
+}
+
+int8_t get_level_flag() {
+    return timer.al;
+}
+
+
+

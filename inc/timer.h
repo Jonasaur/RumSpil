@@ -8,10 +8,9 @@
 
 struct time
 {
-    uint32_t hs, s, m, h, f;
+    uint32_t hs, s, m, h, f, al, n, anim; //n is the level - a speed multiplier - it changes a flag controlling how fast asteroids and aliens update
 };
 
-int8_t get_flag();
 
 void timer_setup();
 
@@ -21,6 +20,12 @@ void stop_timer();
 
 void TIM2_IRQHandler(void);
 
-void time_print(int8_t x, int8_t y);
+int8_t get_flag();
+
+int8_t get_level_flag();
+
+void set_lvl(int8_t lvl_input);
+
+int8_t get_anim_flag();
 
 #endif

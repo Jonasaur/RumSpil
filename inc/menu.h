@@ -7,9 +7,11 @@
 #ifndef _MENU_H_
 #define _MENU_H_
 
+/*
 struct high_scores {
     int8_t
 };
+*/
 
 void menu_init();
 void how_to_screen();

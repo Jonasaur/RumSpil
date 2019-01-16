@@ -25,7 +25,7 @@ void rotateBall (struct ball_t * b, int angle)
     (*b).vy = temp_vy;
 }
 
-void updateBallPos(struct ball_t *b)
+void updateBallPos(struct ball_t * b)
 {
     if (get_flag() != (*b).tempf)
     {
