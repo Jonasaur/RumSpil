@@ -5,6 +5,8 @@
 #include "serial_com.h"
 #include "timer.h"
 #include "ansi.h"
+#include "asteroid.h"
+#include "alien.h"
 
 #ifndef _GAMEFUNCTIONS_H_
 #define _GAMEFUNCTIONS_H_
@@ -16,6 +18,11 @@ struct spaceship_t
 };
 
 struct Rocket_t
+{
+    int32_t x, y, vx, tempx, tempy, tempf, active;
+};
+
+struct Bomb_t
 {
     int32_t x, y, vx, tempx, tempy, tempf, active;
 };
@@ -33,10 +40,19 @@ void drawRocket (struct Rocket_t *r);
 void deleteRocket(struct Rocket_t *r);
 void shootRocket (struct Rocket_t *r, struct spaceship_t *s);
 void updateRocketPos (struct Rocket_t *r);
-void moveRocket (struct Rocket_t *b);
-void hitDetection (struct Rocket_t *r);
+void moveRocket (struct Rocket_t *r);
+void hitDetection (struct Rocket_t *r, struct Bomb_t *b, struct alien_t *al);
 
-void Controls(struct spaceship_t *s, struct Rocket_t *r);
+void initBomb(struct Bomb_t *b, int x, int y, int vx);
+void drawBomb (struct Bomb_t *b);
+void deleteBomb(struct Bomb_t *b);
+void shootBomb (struct Bomb_t *b, struct spaceship_t *s);
+void updateBombPos (struct Bomb_t *b);
+void moveBomb (struct Bomb_t *b);
+
+
+
+void Controls(struct spaceship_t *s, struct Rocket_t *r, struct Bomb_t *b);
 
 
 #include "gamefunctions.h"

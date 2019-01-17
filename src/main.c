@@ -16,17 +16,18 @@
 #include "ansi.h"
 #include "serial_com.h"
 #include "timer.h"
-#include "ball.h"
 #include "LED_control.h"
 #include "joystick.h"
 #include "menu.h"
 #include "asteroid.h"
+#include "alien.h"
 #include "gamefunctions.h"
+#include <stdlib.h>
 //#include "calc_sin.h" //needs to be implemented
 
-#define RAND_MAX 40
-#define RAND_MIN 10
-#define UART_BAUDRATE 921600
+//#define RAND_MAX 40
+//#define RAND_MIN 10
+#define UART_BAUDRATE 256000
 #define CHAR_ARRAY_LEN 255
 
 #define FIX14_SHIFT 14
@@ -57,40 +58,33 @@ int main(void)
     //printf("%i",rand());
 
     struct spaceship_t theShip;
-    initSpaceship(&theShip,5,5);
+    initSpaceship(&theShip, 15, 15);
 
     struct Rocket_t theRockets[10];
-    initRocket(theRockets,2,1,2);
+    initRocket(theRockets, 15, 15, 2);
 
-    uint8_t x= 8;
-    uint8_t y= 8;
+    struct Bomb_t theBombs[10];
+    initBomb(theBombs, 2, 1, 1);
 
     struct alien_t the_alien;
-
-
-    init_alien(&the_alien, 100,rand() % 50, 5);
-    draw_alien(&the_alien);
+    init_alien(&the_alien, 160, rand() % 50 , 1);
 
     set_lvl(100);
 
+    menu_selection(uart_char, &c_count, 1);
 
     while(1)
     {
-        Controls(&theShip, theRockets);
+        Controls(&theShip, theRockets, theBombs);
         if (get_flag() != (theShip).tempf)
         {
             moveRocket(theRockets);
-            hitDetection(theRockets);
+            moveBomb(theBombs);
+            hitDetection(theRockets,theBombs, &the_alien);
+            move_alien(&the_alien);
+
             theShip.tempf = get_flag();
         }
-
-        if (get_flag() != the_alien.tempf)
-        {
-            move_alien(&the_alien);
-            the_alien.tempf = get_flag();
-        }
-        //menu_selection(uart_char, &c_count);
-
     }
 
 }

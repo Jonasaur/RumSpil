@@ -41,15 +41,28 @@ char keyboard_read(char * uart_char, int8_t * c_count)
             (*c_count) -= 2;
         }
 
-        if (uart_char[(*c_count)] == (0x7F))
+        if (uart_char[(*c_count)] == (0x32))
         {
-
             return 2;
         }
-        if (uart_char[(*c_count)] == (0x20))
+        if (uart_char[(*c_count)] == (0x31))
         {
-
             return 7;
+        }
+        if (uart_char[(*c_count)] == (0x33))
+        {
+            int8_t i;
+            if (i == 0)
+            {
+                stop_timer();
+                i = 1;
+            }
+            else
+            {
+                start_timer();
+                i = 0;
+            }
+            return 8;
         }
         if (uart_char[(*c_count)] == (0x0D))
         {

@@ -12,7 +12,8 @@ void initSpaceship(struct spaceship_t *s, int x, int y)
 
 void initRocket(struct Rocket_t *r, int x, int y, int vx)
 {
-    for (uint8_t i = 0 ; i < 10 ; i++){
+    for (uint8_t i = 0 ; i < 10 ; i++)
+    {
         r[i].active = 0;
         r[i].x = x << 14;
         r[i].y = y << 14;
@@ -20,6 +21,20 @@ void initRocket(struct Rocket_t *r, int x, int y, int vx)
         r[i].vx = vx << 14;
         r[i].tempf = 0;
     }
+}
+
+void initBomb(struct Bomb_t *b, int x, int y, int vx)
+{
+    for (uint8_t i = 0 ; i < 10 ; i++)
+    {
+        b[i].active = 0;
+        b[i].x = x << 14;
+        b[i].y = y << 14;
+        b[i].tempx = x << 14;
+        b[i].vx = vx << 14;
+        b[i].tempf = 0;
+    }
+
 }
 
 void drawSpaceship (struct spaceship_t *s)
@@ -94,17 +109,47 @@ void drawRocket (struct Rocket_t *r)
     }
 }
 
+
+void drawBomb (struct Bomb_t *b)
+{
+    for (uint8_t i = 0 ; i < 10 ; i++)
+    {
+        if (b[i].active == 1)
+        {
+            gotoxy(((b[i].x>>14)+1),(b[i].y>>14));
+            printf("%c",111);
+        }
+    }
+}
+
+
+
+
 void deleteRocket(struct Rocket_t *r)
 {
     for (uint8_t i = 0 ; i < 10 ; i++)
     {
-       // if (r[i].active == 1 || r[i].active == 0)
+        // if (r[i].active == 1 || r[i].active == 0)
         {
             gotoxy((((r[i]).x>>14)+1),((r[i]).y>>14));
             printf(" ");
         }
     }
 }
+
+void deleteBomb(struct Bomb_t *b)
+{
+    for (uint8_t i = 0 ; i < 10 ; i++)
+    {
+        // if (r[i].active == 1 || r[i].active == 0)
+        {
+            gotoxy((((b[i]).x>>14)+1),((b[i]).y>>14));
+            printf(" ");
+        }
+    }
+}
+
+
 
 void shootRocket (struct Rocket_t *r, struct spaceship_t *s )
 {
@@ -122,21 +167,57 @@ void shootRocket (struct Rocket_t *r, struct spaceship_t *s )
     }
 }
 
-void hitDetection (struct Rocket_t *r){
 
- for (uint8_t i = 0 ; i < 10 ; i++)
+void shootBomb (struct Bomb_t *b, struct spaceship_t *s )
+{
+
+
+    for (uint8_t i = 0 ; i < 10 ; i++)
     {
-      if (r[i].x == 180 << 14) {
-
-       r[i].active = 0;
-
-      }
-
-
+        if (b[i].active == 0)
+        {
+            b[i].active = 1;
+            b[i].x = (*s).x+(1<<14);
+            b[i].y = (*s).y+(2<<14);
+            return;
+        }
     }
 }
 
-void Controls(struct spaceship_t *s, struct Rocket_t *r)
+
+
+void hitDetection(struct Rocket_t *r, struct Bomb_t *b, struct alien_t *al)
+{
+
+    for (uint8_t i = 0 ; i < 10 ; i++)
+    {
+        if (r[i].x == 180 << 14)
+        {
+
+            r[i].active = 0;
+
+        }
+        if (b[i].x == 180 << 14)
+        {
+
+            b[i].active = 0;
+
+        }
+        if ((r[i].x >= (*al).x && ((r[i].y <= (*al).y + (3<<14)) && (r[i].y >= (*al).y - (0<<14) ))) && (*al).active > 0 && r[i].active > 0)
+        {
+            r[i].active = 0;
+            (*al).active -= 1;
+        }
+        if ((b[i].x >= (*al).x && ((r[i].y <= (*al).y + (3<<14)) && (b[i].y >= (*al).y - (0<<14) ))) && (*al).active > 0 && b[i].active > 0)
+        {
+            b[i].active = 0;
+            (*al).active = 0;
+
+        }
+    }
+
+}
+void Controls(struct spaceship_t *s, struct Rocket_t *r, struct Bomb_t *b)
 {
     char uart_char[255];
     static int8_t c_count;
@@ -146,7 +227,7 @@ void Controls(struct spaceship_t *s, struct Rocket_t *r)
 
     case 3:   /// up
     {
-        if ((*s).y > 3 << 14)
+        if ((*s).y > 14 << 14)
         {
             deleteSpaceship(s);
             updateShippositionUp(s);
@@ -157,18 +238,19 @@ void Controls(struct spaceship_t *s, struct Rocket_t *r)
     }
     case 5:   /// right
     {
-        if ( (*s).x < 176 << 14 ){
-        deleteSpaceship(s);
-        updateShippositionRight(s);
-        drawSpaceship(s);
-        c_count = 0;
+        if ( (*s).x < 176 << 14 )
+        {
+            deleteSpaceship(s);
+            updateShippositionRight(s);
+            drawSpaceship(s);
+            c_count = 0;
         }
         break;
 
     }
     case 6:   /// left
     {
-        if ( (*s).x > 3 << 14 )
+        if ( (*s).x > 5 << 14 )
         {
             deleteSpaceship(s);
             updateShippositionLeft(s);
@@ -194,7 +276,11 @@ void Controls(struct spaceship_t *s, struct Rocket_t *r)
         shootRocket(r,s);
         break;
     }
-
+    case 2: // b-button
+    {
+        shootBomb(b,s);
+        break;
+    }
     }
 
 }
@@ -208,26 +294,51 @@ void updateRocketPos (struct Rocket_t *r)
         {
             r[i].tempx = (*r).x;
             r[i].x += (*r).vx;
-            // (*b).tempf = timer.f;
+
         }
     }
 }
 
-void moveRocket (struct Rocket_t *b)
+void updateBombPos (struct Bomb_t *b)
+{
+    for (uint8_t i = 0 ; i < 10 ; i++)
+    {
+        if (b[i].active == 1)
+        {
+            b[i].tempx = (*b).x;
+            b[i].x += (*b).vx;
+
+        }
+    }
+}
+
+
+
+void moveRocket (struct Rocket_t *r)
 {
     //if ((*b).active == 1){
-        deleteRocket(b);
-        updateRocketPos(b);
-        drawRocket(b);
+    deleteRocket(r);
+    updateRocketPos(r);
+    drawRocket(r);
     //}
 }
+
+void moveBomb (struct Bomb_t *b)
+{
+    //if ((*b).active == 1){
+    deleteBomb(b);
+    updateBombPos(b);
+    drawBomb(b);
+    //}
+}
+
 
 void updateShippositionRight ( struct spaceship_t *s)
 {
     // if (timer.f != (*s).tempf)
     {
         (*s).tempx = (*s).x;
-        (*s).x+= 2 << 14;
+        (*s).x += 2 << 14;
         //(*s).tempf = timer.f;
 
 
@@ -252,7 +363,7 @@ void updateShippositionDown ( struct spaceship_t *s)
     //if (timer.f != (*s).tempf)
     {
         (*s).tempy = (*s).y;
-        (*s).y+= 2 << 14;
+        (*s).y += 2 << 14;
         // (*s).tempf = timer.f;
 
     }

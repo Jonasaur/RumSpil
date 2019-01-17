@@ -1,7 +1,5 @@
 #include "ball.h"
 
-
-
 void printBall(struct ball_t * b)
 {
     gotoxy((*b).y>>14,(*b).x>>14);

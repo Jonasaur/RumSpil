@@ -1,5 +1,7 @@
 #include "asteroid.h"
 
+/*
+
 void init_alien(struct alien_t * al, int x, int y, int vx)
 {
     (*al).x = x << 14;
@@ -58,3 +60,5 @@ void move_alien(struct alien_t * al)
         draw_alien(al);
     }
 }
+
+*/

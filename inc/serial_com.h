@@ -1,6 +1,7 @@
 #include "stm32f30x_conf.h"
 #include <stdio.h>
 #include <string.h>
+#include "timer.h"
 
 #ifndef _SERIAL_COM_H_
 #define _SERIAL_COM_H_

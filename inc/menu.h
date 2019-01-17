@@ -16,9 +16,8 @@ struct high_scores {
 void menu_init();
 void how_to_screen();
 void settings_screen();
-void play_screen();
 void high_score();
-void menu_selection();
-void play_game();
+void start_game();
+void menu_selection(char * uart_char, int8_t * c_count, int8_t in_menu);
 
 #endif
