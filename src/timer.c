@@ -60,7 +60,7 @@ void TIM2_IRQHandler(void)
     {
         timer.h = 0;
     }
-    if ((timer.hs & 15) == 0) {
+    if ((timer.hs & 1) == 0) {
         timer.f++;
     }
     if ((timer.hs & timer.n) == 0) {

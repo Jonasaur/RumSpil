@@ -103,7 +103,7 @@ void drawRocket (struct Rocket_t *r)
     {
         if (r[i].active == 1)
         {
-            gotoxy(((r[i].x>>14)+1),(r[i].y>>14));
+            gotoxy(((r[i].x >> 14) + 1),(r[i].y >> 14));
             printf("%c",95);
         }
     }
@@ -151,17 +151,15 @@ void deleteBomb(struct Bomb_t *b)
 
 
 
-void shootRocket (struct Rocket_t *r, struct spaceship_t *s )
+void shootRocket (struct Rocket_t *r, struct spaceship_t *s)
 {
-
-
     for (uint8_t i = 0 ; i < 10 ; i++)
     {
         if (r[i].active == 0)
         {
             r[i].active = 1;
-            r[i].x = (*s).x+(1<<14);
-            r[i].y = (*s).y-(2<<14);
+            r[i].x = (*s).x + (1 << 14);
+            r[i].y = (*s).y - (2 << 14);
             return;
         }
     }
@@ -170,8 +168,6 @@ void shootRocket (struct Rocket_t *r, struct spaceship_t *s )
 
 void shootBomb (struct Bomb_t *b, struct spaceship_t *s )
 {
-
-
     for (uint8_t i = 0 ; i < 10 ; i++)
     {
         if (b[i].active == 0)
@@ -271,7 +267,7 @@ void Controls(struct spaceship_t *s, struct Rocket_t *r, struct Bomb_t *b)
         }
         break;
     }
-    case 7 : // space-bar
+    case 7 : // 1
     {
         shootRocket(r,s);
         break;

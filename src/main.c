@@ -45,6 +45,7 @@ void setup()
     timer_setup();
     joystick_setup();
     LED_setup();
+    srand(time(0));
 }
 
 //volatile struct time timer; //Global variable
@@ -67,7 +68,7 @@ int main(void)
     initBomb(theBombs, 2, 1, 1);
 
     struct alien_t the_alien;
-    init_alien(&the_alien, 160, rand() % 50 , 1);
+    init_alien(&the_alien, 160, 30 , 1, 0);
 
     set_lvl(100);
 
@@ -81,9 +82,13 @@ int main(void)
             moveRocket(theRockets);
             moveBomb(theBombs);
             hitDetection(theRockets,theBombs, &the_alien);
-            move_alien(&the_alien);
-
             theShip.tempf = get_flag();
+        }
+        if (get_level_flag() != (the_alien).tempf)
+        {
+            hitDetection(theRockets,theBombs, &the_alien);
+            move_alien(&the_alien, 1, 1);
+            the_alien.tempf = get_level_flag();
         }
     }
 

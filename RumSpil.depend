@@ -523,7 +523,7 @@
 	<string.h>
 	"timer.h"
 
-1547633405 c:\users\jonas\desktop\30010 programmeringsprojekt\rumspil\inc\timer.h
+1547804917 c:\users\jonas\desktop\30010 programmeringsprojekt\rumspil\inc\timer.h
 	"stm32f30x_conf.h"
 	<stdio.h>
 	<string.h>
@@ -544,10 +544,10 @@
 
 1547131195 c:\users\jonas\desktop\30010 programmeringsprojekt\rumspil\inc\charset.h
 
-1547680748 source:c:\users\jonas\desktop\30010 programmeringsprojekt\rumspil\src\gamefunctions.c
+1547811240 source:c:\users\jonas\desktop\30010 programmeringsprojekt\rumspil\src\gamefunctions.c
 	"gamefunctions.h"
 
-1547654661 c:\users\jonas\desktop\30010 programmeringsprojekt\rumspil\inc\gamefunctions.h
+1547804917 c:\users\jonas\desktop\30010 programmeringsprojekt\rumspil\inc\gamefunctions.h
 	"stm32f30x_conf.h"
 	<stdio.h>
 	<string.h>
@@ -579,10 +579,10 @@
 1547026604 source:c:\users\jonas\desktop\30010 programmeringsprojekt\rumspil\src\system_stm32f30x.c
 	"stm32f30x.h"
 
-1547678156 source:c:\users\jonas\desktop\30010 programmeringsprojekt\rumspil\src\timer.c
+1547805145 source:c:\users\jonas\desktop\30010 programmeringsprojekt\rumspil\src\timer.c
 	"timer.h"
 
-1547681679 source:c:\users\jonas\desktop\30010 programmeringsprojekt\rumspil\src\main.c
+1547809142 source:c:\users\jonas\desktop\30010 programmeringsprojekt\rumspil\src\main.c
 	"stm32f30x_conf.h"
 	"30010_io.h"
 	"ansi.h"
@@ -596,7 +596,7 @@
 	"gamefunctions.h"
 	<stdlib.h>
 
-1547648998 c:\users\jonas\desktop\30010 programmeringsprojekt\rumspil\inc\menu.h
+1547804917 c:\users\jonas\desktop\30010 programmeringsprojekt\rumspil\inc\menu.h
 	"ansi.h"
 	"stm32f30x_conf.h"
 	<stdio.h>
@@ -606,13 +606,13 @@
 1547685061 source:c:\users\jonas\desktop\30010 programmeringsprojekt\rumspil\src\serial_com.c
 	"serial_com.h"
 
-1547684740 source:c:\users\jonas\desktop\30010 programmeringsprojekt\rumspil\src\menu.c
+1547804917 source:c:\users\jonas\desktop\30010 programmeringsprojekt\rumspil\src\menu.c
 	"menu.h"
 
-1547681760 source:c:\users\jonas\desktop\30010 programmeringsprojekt\rumspil\src\alien.c
+1547809479 source:c:\users\jonas\desktop\30010 programmeringsprojekt\rumspil\src\alien.c
 	"alien.h"
 
-1547654721 c:\users\jonas\desktop\30010 programmeringsprojekt\rumspil\inc\alien.h
+1547808925 c:\users\jonas\desktop\30010 programmeringsprojekt\rumspil\inc\alien.h
 	"stm32f30x_conf.h"
 	<stdio.h>
 	<string.h>
