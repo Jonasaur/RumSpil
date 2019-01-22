@@ -541,7 +541,7 @@
 
 1547131195 c:\users\jonas\desktop\30010 programmeringsprojekt\rumspil\inc\charset.h
 
-1548114609 source:c:\users\jonas\desktop\30010 programmeringsprojekt\rumspil\src\gamefunctions.c
+1548148791 source:c:\users\jonas\desktop\30010 programmeringsprojekt\rumspil\src\gamefunctions.c
 	"gamefunctions.h"
 
 1548114081 c:\users\jonas\desktop\30010 programmeringsprojekt\rumspil\inc\gamefunctions.h
@@ -609,10 +609,10 @@
 1548113256 source:c:\users\jonas\desktop\30010 programmeringsprojekt\rumspil\src\serial_com.c
 	"serial_com.h"
 
-1548106785 source:c:\users\jonas\desktop\30010 programmeringsprojekt\rumspil\src\menu.c
+1548117607 source:c:\users\jonas\desktop\30010 programmeringsprojekt\rumspil\src\menu.c
 	"menu.h"
 
-1548115583 source:c:\users\jonas\desktop\30010 programmeringsprojekt\rumspil\src\alien.c
+1548115705 source:c:\users\jonas\desktop\30010 programmeringsprojekt\rumspil\src\alien.c
 	"alien.h"
 
 1548085141 c:\users\jonas\desktop\30010 programmeringsprojekt\rumspil\inc\alien.h
@@ -637,7 +637,7 @@
 1548007339 c:\users\jonas\desktop\30010 programmeringsprojekt\rumspil\inc\fpsqrt.h
 	<stdint.h>
 
-1548084470 source:c:\users\jonas\desktop\30010 programmeringsprojekt\rumspil\src\lcd.c
+1548148608 source:c:\users\jonas\desktop\30010 programmeringsprojekt\rumspil\src\lcd.c
 	"LCD.h"
 
 1548085799 c:\users\jonas\desktop\30010 programmeringsprojekt\rumspil\inc\lcd.h

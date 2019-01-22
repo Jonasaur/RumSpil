@@ -62,7 +62,7 @@ int main(void)
     initBomb(theBombs, 2, 1, 1, 0);
 
     struct alien_t the_alien;
-    init_alien(&the_alien, 60, 30, 1, 0);
+    init_alien(&the_alien, 60, 30, 0, 0);
 
     struct spaceship_t theShip;
     initSpaceship(&theShip, 15, 15);
@@ -84,10 +84,10 @@ int main(void)
     menu_selection(uart_char, &c_count, 1);
 
     memset(buffer,0x00,512);
-    lcd_draw_hearts(theCounts.lives,buffer,1,2);
-    lcd_write_string("Ship status",buffer,1,0);
-    lcd_draw_rockets(theCounts.ammo, buffer, 1,3);
-    lcd_draw_bombs(theCounts.bombs, buffer, 1,4);
+    lcd_draw_hearts(theCounts.lives,buffer, 1, 2);
+    lcd_write_string("Ship status",buffer, 1, 0);
+    lcd_draw_rockets(theCounts.ammo, buffer, 1, 3);
+    lcd_draw_bombs(theCounts.bombs, buffer, 1, 4);
     lcd_push_buffer(buffer);
 
     while(1)

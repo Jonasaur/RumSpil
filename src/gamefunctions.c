@@ -111,8 +111,8 @@ void drawRocket (struct Rocket_t * r)
     {
         if (r[i].active == 1)
         {
-            gotoxy(((r[i].x >> 14) + 1),(r[i].y >> 14));
-            printf("%c",248);
+            gotoxy(((r[i].x>>14)+1),(r[i].y>>14));
+            printf("%c%c",197, 196);
         }
     }
 }
@@ -135,7 +135,7 @@ void deleteRocket(struct Rocket_t * r)
     {
         {
             gotoxy((((r[i]).x>>14)+1),((r[i]).y>>14));
-            printf(" ");
+            printf("  ");
         }
     }
 }

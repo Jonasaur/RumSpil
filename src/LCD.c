@@ -34,16 +34,23 @@ void lcd_draw_hearts(int amount, uint8_t * buffer, int pos, int row) {
     }
 }
 
-void lcd_draw_rockets(int amount, uint8_t* buffer, int pos, int row) {
-    memset(buffer + pos + (row - 1) * 128, 0x00, 30);
+void lcd_draw_rockets(int amount, uint8_t * buffer, int pos, int row)
+{
+    memset(buffer + pos + (row - 1) * 128, 0x00, 70);
     int i = 0;
-    for (i = 0; i < amount; i++) {
+    for (i = 0; i < amount; i++)
+    {
         int offset;
-        offset = pos + i * 3 + (row - 1) * 128;
-        memset(buffer + offset, 0b01111111, 1);
-        memset(buffer + offset + 1, 0b01111111, 1);
+        offset = pos + i * 7 + (row - 1) * 128;
+        memset(buffer + offset, 0b00001100, 1);
+        memset(buffer + offset + 1, 0b00001100, 1);
+        memset(buffer + offset + 2, 0b11111111, 1);
+        memset(buffer + offset + 3, 0b11111111, 1);
+        memset(buffer + offset + 4, 0b00001100, 1);
+        memset(buffer + offset + 5, 0b00001100, 1);
     }
 }
+
 
 void lcd_draw_bombs(int amount, uint8_t * buffer, int pos, int row) {
     memset(buffer + pos + (row - 1) * 128, 0x00, 30);
