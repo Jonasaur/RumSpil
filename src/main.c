@@ -22,19 +22,14 @@
 #include "asteroid.h"
 #include "alien.h"
 #include "gamefunctions.h"
+#include "LCD.h"
+#include "powerUps.h"
+
+#include "config.h"
+
 #include <stdlib.h>
+#include <time.h>
 //#include "calc_sin.h" //needs to be implemented
-
-//#define RAND_MAX 40
-//#define RAND_MIN 10
-#define UART_BAUDRATE 256000
-#define CHAR_ARRAY_LEN 255
-
-#define FIX14_SHIFT 14
-#define FIX14_MULT(a, b) ( (a)*(b) >> FIX14_SHIFT )
-#define FIX14_DIV(a, b) ( ((a) << FIX14_SHIFT) / b )
-
-
 
 void setup()
 {
@@ -45,51 +40,80 @@ void setup()
     timer_setup();
     joystick_setup();
     LED_setup();
-    srand(time(0));
-}
+    lcd_init();
 
-//volatile struct time timer; //Global variable
+    srand(time(0));
+
+    background(41,8);
+}
 
 int main(void)
 {
     //uint16_t input, oldinput;
     char uart_char[CHAR_ARRAY_LEN];
-    int8_t c_count;
+    int8_t c_count = 0;
+    int8_t i_time = 0;
     setup();
-    //printf("%i",rand());
+
+    struct Rocket_t theRockets[N_ROCKETS];
+    initRocket(theRockets, 15, 15, 2, 0);
+
+    struct Bomb_t theBombs[N_BOMBS];
+    initBomb(theBombs, 2, 1, 1, 0);
+
+    struct alien_t the_alien;
+    init_alien(&the_alien, 60, 30, 1, 0);
 
     struct spaceship_t theShip;
     initSpaceship(&theShip, 15, 15);
 
-    struct Rocket_t theRockets[10];
-    initRocket(theRockets, 15, 15, 2);
+    struct asteroid_t theAsteroid;
+    init_asteroid(&theAsteroid, 140, 20, 1, 0);
 
-    struct Bomb_t theBombs[10];
-    initBomb(theBombs, 2, 1, 1);
+    struct counter_t theCounts;
+    initCounter(&theCounts, 3, N_ROCKETS, N_BOMBS);
 
-    struct alien_t the_alien;
-    init_alien(&the_alien, 160, 30 , 1, 0);
+    struct powerup_t thePowerup;
+    init_powerup(&thePowerup, 30, 15);
 
+    uint8_t buffer [512];
+    int16_t i = 0;
+
+    //struct high_scores high_score[5];
     set_lvl(100);
-
     menu_selection(uart_char, &c_count, 1);
+
+    memset(buffer,0x00,512);
+    lcd_draw_hearts(theCounts.lives,buffer,1,2);
+    lcd_write_string("Ship status",buffer,1,0);
+    lcd_draw_rockets(theCounts.ammo, buffer, 1,3);
+    lcd_draw_bombs(theCounts.bombs, buffer, 1,4);
+    lcd_push_buffer(buffer);
 
     while(1)
     {
-        Controls(&theShip, theRockets, theBombs);
-        if (get_flag() != (theShip).tempf)
+        game_controls(&i_time, &theShip, theRockets, theBombs, &theCounts, buffer);
+        if (get_flag() != (theShip).tempf && i_time == 0)
         {
+            gravity(theRockets, &the_alien);
             moveRocket(theRockets);
             moveBomb(theBombs);
-            hitDetection(theRockets,theBombs, &the_alien);
+            move_alien(&the_alien);
+            move_asteroid(&theAsteroid);
+            hitDetection(theRockets,theBombs, &the_alien, &theAsteroid, &theShip ,&thePowerup, & theCounts , buffer );
+            respawn(&theShip, &theCounts,buffer);
             theShip.tempf = get_flag();
+            controlPowerups(&thePowerup);
         }
-        if (get_level_flag() != (the_alien).tempf)
+
+
+/*
+        if (lost == true)
         {
-            hitDetection(theRockets,theBombs, &the_alien);
-            move_alien(&the_alien, 1, 1);
-            the_alien.tempf = get_level_flag();
+            update_high_score(high_score);
+            go to high score screen
         }
+*/
     }
 
 }

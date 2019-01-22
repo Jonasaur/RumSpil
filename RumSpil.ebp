@@ -94,10 +94,14 @@
 		<Unit filename="inc\ansi.h" />
 		<Unit filename="inc\asteroid.h" />
 		<Unit filename="inc\charset.h" />
+		<Unit filename="inc\config.h" />
+		<Unit filename="inc\fpsqrt.h" />
 		<Unit filename="inc\gamefunctions.h" />
 		<Unit filename="inc\joystick.h" />
+		<Unit filename="inc\LCD.h" />
 		<Unit filename="inc\LED_control.h" />
 		<Unit filename="inc\menu.h" />
+		<Unit filename="inc\PowerUps.h" />
 		<Unit filename="inc\serial_com.h" />
 		<Unit filename="inc\stm32f30x.h" />
 		<Unit filename="inc\stm32f30x_conf.h" />
@@ -198,6 +202,9 @@
 		<Unit filename="src\alien.c">
 			<Option compilerVar="CC" />
 		</Unit>
+		<Unit filename="src\alien_array.c">
+			<Option compilerVar="CC" />
+		</Unit>
 		<Unit filename="src\ansi.c">
 			<Option compilerVar="CC" />
 		</Unit>
@@ -207,10 +214,16 @@
 		<Unit filename="src\charset.c">
 			<Option compilerVar="CC" />
 		</Unit>
+		<Unit filename="src\fpsqrt.c">
+			<Option compilerVar="CC" />
+		</Unit>
 		<Unit filename="src\gamefunctions.c">
 			<Option compilerVar="CC" />
 		</Unit>
 		<Unit filename="src\joystick.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="src\LCD.c">
 			<Option compilerVar="CC" />
 		</Unit>
 		<Unit filename="src\LED_control.c">
@@ -222,6 +235,9 @@
 		<Unit filename="src\menu.c">
 			<Option compilerVar="CC" />
 		</Unit>
+		<Unit filename="src\PowerUps.c">
+			<Option compilerVar="CC" />
+		</Unit>
 		<Unit filename="src\serial_com.c">
 			<Option compilerVar="CC" />
 		</Unit>
@@ -229,6 +245,9 @@
 			<Option compilerVar="CC" />
 		</Unit>
 		<Unit filename="src\system_stm32f30x.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="src\test_alien_array.c">
 			<Option compilerVar="CC" />
 		</Unit>
 		<Unit filename="src\timer.c">

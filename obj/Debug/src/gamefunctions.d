@@ -10,5 +10,6 @@ obj\debug\src\gamefunctions.o: src\gamefunctions.c inc/gamefunctions.h \
  SPL\inc/stm32f30x_opamp.h SPL\inc/stm32f30x_pwr.h \
  SPL\inc/stm32f30x_rcc.h SPL\inc/stm32f30x_rtc.h SPL\inc/stm32f30x_spi.h \
  SPL\inc/stm32f30x_tim.h SPL\inc/stm32f30x_usart.h \
- SPL\inc/stm32f30x_wwdg.h SPL\inc/stm32f30x_misc.h inc/serial_com.h \
- inc/timer.h inc/ansi.h inc/asteroid.h inc/alien.h inc/gamefunctions.h
+ SPL\inc/stm32f30x_wwdg.h SPL\inc/stm32f30x_misc.h inc/alien.h inc/ansi.h \
+ inc/asteroid.h inc/PowerUps.h inc/config.h inc/fpsqrt.h inc/LCD.h \
+ inc/30010_io.h inc/charset.h

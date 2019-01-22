@@ -63,14 +63,27 @@ void TIM2_IRQHandler(void)
     if ((timer.hs & 1) == 0) {
         timer.f++;
     }
-    if ((timer.hs & timer.n) == 0) {
+    /*
+    if ((timer.hs & 15) == 0) {
         timer.al++;
-    }
+    }*/
     if ((timer.hs & timer.n) == 0) {
         timer.anim = 1;
     }
     TIM2->SR &= ~0x0001; //reset the interrupt
 }
+
+/*void update_high_score(struct high_scores * hs)
+{
+    for (int8_t i = 0; i < 5; i++)
+    {
+        (*hs).hs = timer.hs;
+        (*hs).s = timer.s;
+        (*hs).m = timer.m;
+        (*hs).h = timer.h;
+        return;
+    }
+}*/
 
 int8_t get_flag()
 {

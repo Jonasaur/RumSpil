@@ -1,11 +1,5 @@
 #include "menu.h"
 
-#define TEXT_X 15
-#define TEXT_Y 15
-#define ARROW_X 40
-#define ARROW_Y 20
-#define INSTRUCTIONS_Y 20
-
 void menu_init() {
     //setting up the opening screen; game title and selections bars
     clrscr();
@@ -119,7 +113,21 @@ void high_score() {
    gotoxy(45, 10); printf("|__|  |__| |__|  \\______| |__|  |__|    |_______/    \\______| \\______/  | _| `._____||_______|");
 }
 
+void stop_game() {
+
+}
+
 void start_game() {
+    //The Final Frontier - Revenge of Mecha-Jesus
+    //Seventh Heaven - Expanse
+    //The Second Coming - Blood of the Heathens-
+    //Expansive Exorcism
+    //Vengeance Cometh
+    //The Atonement of Andromeda
+    //Atonement of the Infidels
+    //Crossroads of the Infidels
+    //Space Jesus - Dare you cross him again?
+
     clrscr();
     gotoxy(4, 3); printf("            __  .___  ___. .______   .______       _______   _______   _______ .__   __.      ___   .___________.  ______   .______          ___    __   _____    ___           ");
     gotoxy(4, 4); printf("           |  | |   \\/   | |   _  \\  |   _  \\     |   ____| /  _____| /  _____||  \\ |  |     /   \\  |           | /  __  \\  |   _  \\        |__ \\  /_ | | ____|  / _ \\          ");
@@ -161,23 +169,21 @@ void menu_selection(char * uart_char, int8_t * c_count, int8_t in_menu) {
     int8_t print_flag;
     do {
         switch(keyboard_read(uart_char, &c_count)) {
-            case 3: { //what to do if "Up" is pushed
+            case 3: //what to do if "Up" is pushed
                 (*c_count) = 0;
                 if (select == 2) {
                     print_flag = 1;
                     select = 0;
                 }
                 break;
-            }
-            case 4: { //what to do if "Down" is pushed
-                if (select == 0) {
+            case 4: //what to do if "Down" is pushed
+                if (select == 0) { //If you push down as the first thing somethings gonna fuck up
                     select = 1;
                     (*c_count) = 0;
                     print_flag = 1;
                 }
                 break;
-            }
-            case 5: { //what to do if "Right" is pushed
+            case 5: //what to do if "Right" is pushed
                 if (select == 0) {
                     if (selection < 3)
                     {
@@ -188,8 +194,7 @@ void menu_selection(char * uart_char, int8_t * c_count, int8_t in_menu) {
                     print_flag = 1;
                 }
                 break;
-            }
-            case 6: { //what to do if "Left" is pushed
+            case 6: //what to do if "Left" is pushed
                 if (select == 0)
                 {
                     if (selection > 0)
@@ -201,7 +206,6 @@ void menu_selection(char * uart_char, int8_t * c_count, int8_t in_menu) {
                     print_flag = 1;
                 }
                 break;
-            }
         }
         if (print_flag == 1) {
             switch(selection) {

@@ -1,64 +1,102 @@
 #include "asteroid.h"
 
-/*
-
-void init_alien(struct alien_t * al, int x, int y, int vx)
-{
-    (*al).x = x << 14;
-    (*al).y = y << 14;
-    (*al).tempx = x << 14;
-    (*al).tempy = y << 14;
-    (*al).tempf = 0;
+void init_asteroid(struct asteroid_t * as, int8_t x, int8_t y, int8_t vx, int8_t vy) {
+    (*as).x = x << 14;
+    (*as).y = y << 14;
+    (*as).tempx = x << 14;
+    (*as).tempy = y << 14;
+    (*as).vx = vx << 14;
+    (*as).vy = vy << 14;
+    (*as).active = 6;
+    (*as).tempf = 0;
+    (*as).G = 2500 << 14;
 }
 
-void draw_alien(struct alien_t * al)
-{
-    if (get_anim() == 1)
+void draw_asteroid(struct asteroid_t *as ) {
+
+    if ((*as).active == 6)
     {
-        gotoxy((*al).x>>14,(*al).y>>14);
-        printf("   %c",(0x5F));
-        gotoxy((*al).x>>14,((*al).y>>14)+1);
-        printf(" %c%c%c%c%c",0x3C,0x2F,0x5E,0x5C,0x3E);
-        gotoxy((*al).x>>14,((*al).y>>14)+2);
-        printf("%c%c%c%c%c%c%c",0x3C,0x2F,0xCF,0x2D,0xCF,0x5C,0x3E);
-        gotoxy((*al).x>>14,((*al).y>>14)+3);
-        printf(" %c%c%c%c%c", 0xC9,0xBC,0xBA,0xC8,0xBB);
+        gotoxy(((*as).x>>14)-3,((*as).y>>14)+2);
+        printf("%c%c%c%c%c%c", 176, 176, 176, 176, 176, 176);
+        gotoxy(((*as).x>>14)-4,((*as).y>>14)+1);
+        printf("%c%c%c%c%c%c%c%c", 176, 176, 176, 176, 176, 176, 176, 176);
+        gotoxy(((*as).x>>14)-5,((*as).y>>14));
+        printf("%c%c%c%c%c%c%c%c%c%c", 176, 176, 176, 176, 176, 176, 176, 176, 176, 176);
+        gotoxy(((*as).x>>14)-4,((*as).y>>14)-1);
+        printf("%c%c%c%c%c%c%c%c", 176, 176, 176, 176, 176, 176, 176, 176);
+        gotoxy(((*as).x>>14)-3,((*as).y>>14)-2);
+        printf("%c%c%c%c%c%c", 176, 176, 176, 176, 176, 176);
     }
-    else
+
+    if ((*as).active == 5 || (*as).active == 4 )
     {
-        gotoxy((*al).x>>14,(*al).y>>14);
-        printf("   %c",(0x5F));
-        gotoxy((*al).x>>14,((*al).y>>14) + 1);
-        printf(" %c%c%c%c%c",0x3C,0x2F,0x5E,0x5C,0x3E);
-        gotoxy((*al).x>>14,((*al).y>>14) + 2);
-        printf("%c%c%c%c%c%c%c",0x3C,0x2F,0xCF,0x4F,0xCF,0x5C,0x3E);
-        gotoxy((*al).x>>14,((*al).y>>14) + 3);
-        printf(" %c%c%c%c%c", 0xCD,0xBC,0xBA,0xC8,0xCD);
+        gotoxy(((*as).x>>14)-3,((*as).y>>14)+2);
+        printf("%c%c%c%c%c%c", 176, 32, 176, 176, 176, 32);
+        gotoxy(((*as).x>>14)-4,((*as).y>>14)+1);
+        printf("%c%c%c%c%c%c%c%c", 176, 176, 176, 176, 176, 32, 176, 176);
+        gotoxy(((*as).x>>14)-5,((*as).y>>14));
+        printf("%c%c%c%c%c%c%c%c%c%c", 176, 176, 176, 176, 176, 32, 176, 176, 176, 176);
+        gotoxy(((*as).x>>14)-4,((*as).y>>14)-1);
+        printf("%c%c%c%c%c%c%c%c", 176, 32, 176, 32, 32, 176, 176, 176);
+        gotoxy(((*as).x>>14)-3,((*as).y>>14)-2);
+        printf("%c%c%c%c%c%c", 176, 176, 176, 176, 176, 176);
     }
-}
 
-void delete_alien (struct alien_t * al)
-{
-    gotoxy(((*al).x>>14) + 3,(*al).y>>14);
-    printf(" ");
-    gotoxy((*al).x>>14,((*al).y>>14) + 1);
-    printf("      ");
-    gotoxy((*al).x>>14,((*al).y>>14) + 2);
-    printf("       ");
-    gotoxy((*al).x>>14,((*al).y>>14) + 3);
-    printf("       ");
-}
-
-void move_alien(struct alien_t * al)
-{
-    if (get_level_flag() != (*al).tempf)
+    if ((*as).active == 3 || (*as).active == 2 )
     {
-        delete_alien(al);
-        (*al).tempx = (*al).x;
-        (*al).x -= 1 << 14;
-        (*al).tempf = get_level_flag();
-        draw_alien(al);
+        gotoxy(((*as).x>>14)-3,((*as).y>>14)+2);
+        printf("%c%c%c%c%c%c", 176, 32, 32, 176, 176, 32);
+        gotoxy(((*as).x>>14)-4,((*as).y>>14)+1);
+        printf("%c%c%c%c%c%c%c%c", 176, 176, 176, 176, 176, 32, 176, 176);
+        gotoxy(((*as).x>>14)-5,((*as).y>>14));
+        printf("%c%c%c%c%c%c%c%c%c%c", 176, 176, 32, 176, 32, 32, 176, 176, 32, 176);
+        gotoxy(((*as).x>>14)-4,((*as).y>>14)-1);
+        printf("%c%c%c%c%c%c%c%c", 176, 32, 176, 32, 32, 176, 176, 176);
+        gotoxy(((*as).x>>14)-3,((*as).y>>14)-2);
+        printf("%c%c%c%c%c%c", 176, 176, 176, 32, 176, 176);
+    }
+    if((*as).active ==  1)
+    {
+        gotoxy(((*as).x>>14)-3,((*as).y>>14)+2);
+        printf("%c%c%c%c%c%c", 32, 32, 32, 176, 176, 32);
+        gotoxy(((*as).x>>14)-4,((*as).y>>14)+1);
+        printf("%c%c%c%c%c%c%c%c", 176, 176, 176, 176, 176, 32, 176, 176);
+        gotoxy(((*as).x>>14)-5,((*as).y>>14));
+        printf("%c%c%c%c%c%c%c%c%c%c", 176, 176, 32, 176, 32, 32, 176, 176, 32, 32);
+        gotoxy(((*as).x>>14)-4,((*as).y>>14)-1);
+        printf("%c%c%c%c%c%c%c%c", 32, 32, 176, 32, 32, 176, 176, 32);
+        gotoxy(((*as).x>>14)-3,((*as).y>>14)-2);
+        printf("%c%c%c%c%c%c", 176, 176, 176, 32, 32, 176);
     }
 }
 
-*/
+void delete_asteroid(struct asteroid_t *as) {
+        gotoxy(((*as).x>>14)-3,((*as).y>>14)+2);
+        printf("%c%c%c%c%c%c", 32, 32, 32, 32, 32, 32);
+        gotoxy(((*as).x>>14)-4,((*as).y>>14)+1);
+        printf("%c%c%c%c%c%c%c%c", 32, 32, 32, 32, 32, 32, 32, 32);
+        gotoxy(((*as).x>>14)-5,((*as).y>>14));
+        printf("%c%c%c%c%c%c%c%c%c%c", 32, 32, 32, 32, 32, 32, 32, 32, 32, 32);
+        gotoxy(((*as).x>>14)-4,((*as).y>>14)-1);
+        printf("%c%c%c%c%c%c%c%c", 32, 32, 32, 32, 32, 32, 32, 32);
+        gotoxy(((*as).x>>14)-3,((*as).y>>14)-2);
+        printf("%c%c%c%c%c%c", 32, 32, 32, 32, 32, 32);
+}
+
+void move_asteroid(struct asteroid_t * as) {
+    if (as->active > 0)
+    {
+        (*as).x += (*as).vx;
+        if ((*as).tempx != (*as).x >>14)
+        {
+            delete_asteroid(as);
+            draw_asteroid(as);
+            (*as).tempx = (*as).x >> 14;
+        }
+    }
+    if (as->active <= 0 && as-> active != -10)
+    {
+        delete_asteroid(as);
+        (*as).active = -10;
+    }
+}
