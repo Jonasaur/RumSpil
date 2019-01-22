@@ -65,10 +65,10 @@ int main(void)
     init_alien(&the_alien, 60, 30, 0, 0);
 
     struct spaceship_t theShip;
-    initSpaceship(&theShip, 15, 15);
+    initSpaceship(&theShip, 20, 30);
 
     struct asteroid_t theAsteroid;
-    init_asteroid(&theAsteroid, 140, 20, 1, 0);
+    init_asteroid(&theAsteroid, 140, 20, 0, 0);
 
     struct counter_t theCounts;
     initCounter(&theCounts, 3, N_ROCKETS, N_BOMBS);
@@ -85,7 +85,7 @@ int main(void)
 
     memset(buffer,0x00,512);
     lcd_draw_hearts(theCounts.lives,buffer, 1, 2);
-    lcd_write_string("Ship status",buffer, 1, 0);
+    lcd_write_string("Holy Recourses",buffer, 1, 0);
     lcd_draw_rockets(theCounts.ammo, buffer, 1, 3);
     lcd_draw_bombs(theCounts.bombs, buffer, 1, 4);
     lcd_push_buffer(buffer);

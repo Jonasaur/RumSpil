@@ -111,7 +111,7 @@ void drawRocket (struct Rocket_t * r)
     {
         if (r[i].active == 1)
         {
-            gotoxy(((r[i].x>>14)+1),(r[i].y>>14));
+            gotoxy(((r[i].x>>14)),(r[i].y>>14)+1);
             printf("%c%c",197, 196);
         }
     }
@@ -123,7 +123,7 @@ void drawBomb (struct Bomb_t * b)
     {
         if (b[i].active == 1)
         {
-            gotoxy(((b[i].x>>14)+1),(b[i].y>>14));
+            gotoxy(((b[i].x>>14)),(b[i].y>>14)+3);
             printf("%c",111);
         }
     }
@@ -134,7 +134,7 @@ void deleteRocket(struct Rocket_t * r)
     for (uint8_t i = 0 ; i < N_ROCKETS; i++)
     {
         {
-            gotoxy((((r[i]).x>>14)+1),((r[i]).y>>14));
+            gotoxy((((r[i]).x>>14)),((r[i]).y>>14)+1);
             printf("  ");
         }
     }
@@ -145,8 +145,8 @@ void deleteBomb(struct Bomb_t * b)
     for (uint8_t i = 0 ; i < N_BOMBS; i++)
     {
         {
-            gotoxy((((b[i]).x>>14)+1),((b[i]).y>>14));
-            printf(" ");
+            gotoxy((((b[i]).x>>14)),((b[i]).y>>14)+3);
+            printf("  ");
         }
     }
 }
@@ -329,14 +329,14 @@ void updateShippositionUp(struct spaceship_t * s) {
 
 void respawn(struct spaceship_t * s, struct counter_t * c, uint8_t * buffer) {
     lcd_draw_hearts((*c).lives,buffer, 1, 2);
-    lcd_write_string("Ship status",buffer, 0, 0);
+    lcd_write_string("Holy Resources",buffer, 0, 0);
     lcd_push_buffer(buffer);
     if ((*s).active == 0 && (*c).lives >= 1)
     {
         deleteSpaceship(s);
         (*s).active = 1;
         (*c).lives -= (1);
-        initSpaceship(s, 5, 5);
+        initSpaceship(s, 15, 15);
         drawSpaceship(s);
     }
 }

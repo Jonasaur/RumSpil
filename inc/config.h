@@ -19,8 +19,8 @@
 #define RAND_MIN 10
 
 //MENU
-#define TEXT_X 15
-#define TEXT_Y 15
+#define TEXT_X  8
+#define TEXT_Y 38
 #define ARROW_X 40
 #define ARROW_Y 20
 #define INSTRUCTIONS_Y 20

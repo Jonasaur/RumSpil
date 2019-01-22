@@ -506,10 +506,10 @@
 	"stm32f30x_conf.h"
 	<stdio.h>
 
-1548110633 source:c:\users\jonas\desktop\30010 programmeringsprojekt\rumspil\src\asteroid.c
+1548156013 source:c:\users\jonas\desktop\30010 programmeringsprojekt\rumspil\src\asteroid.c
 	"asteroid.h"
 
-1548010773 c:\users\jonas\desktop\30010 programmeringsprojekt\rumspil\inc\asteroid.h
+1548154678 c:\users\jonas\desktop\30010 programmeringsprojekt\rumspil\inc\asteroid.h
 	"stm32f30x_conf.h"
 	<stdio.h>
 
@@ -580,7 +580,7 @@
 1547992797 source:c:\users\jonas\desktop\30010 programmeringsprojekt\rumspil\src\timer.c
 	"timer.h"
 
-1548115607 source:c:\users\jonas\desktop\30010 programmeringsprojekt\rumspil\src\main.c
+1548156406 source:c:\users\jonas\desktop\30010 programmeringsprojekt\rumspil\src\main.c
 	"stm32f30x_conf.h"
 	"30010_io.h"
 	"ansi.h"
@@ -609,7 +609,7 @@
 1548113256 source:c:\users\jonas\desktop\30010 programmeringsprojekt\rumspil\src\serial_com.c
 	"serial_com.h"
 
-1548117607 source:c:\users\jonas\desktop\30010 programmeringsprojekt\rumspil\src\menu.c
+1548155626 source:c:\users\jonas\desktop\30010 programmeringsprojekt\rumspil\src\menu.c
 	"menu.h"
 
 1548115705 source:c:\users\jonas\desktop\30010 programmeringsprojekt\rumspil\src\alien.c
@@ -628,7 +628,7 @@
 
 1547999134 source:c:\users\jonas\desktop\30010 programmeringsprojekt\rumspil\src\game_controls.c
 
-1548108055 c:\users\jonas\desktop\30010 programmeringsprojekt\rumspil\inc\config.h
+1548155003 c:\users\jonas\desktop\30010 programmeringsprojekt\rumspil\inc\config.h
 
 1548007316 source:c:\users\jonas\desktop\30010 programmeringsprojekt\rumspil\src\fpsqrt.c
 	"fpsqrt.h"
