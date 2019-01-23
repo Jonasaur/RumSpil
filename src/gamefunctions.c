@@ -1,14 +1,12 @@
 #include "gamefunctions.h"
 
-void initCounter(struct counter_t * c, int x, int a, int bo)
-{
+void initCounter(struct counter_t * c, int x) {
     (*c).lives = x;
-    (*c).ammo = a;
-    (*c). bombs = bo;
+    (*c).ammo = N_ROCKETS;
+    (*c).bombs  = N_BOMBS;
 }
 
-void initSpaceship(struct spaceship_t * s, int x, int y)
-{
+void initSpaceship(struct spaceship_t * s, int x, int y) {
     (*s).x = x << 14;
     (*s).y = y << 14;
     (*s).tempx = x << 14;
@@ -16,6 +14,7 @@ void initSpaceship(struct spaceship_t * s, int x, int y)
     (*s).tempf = 0;
 }
 
+/// All the structures with arrays, loops over the initialization
 void initRocket(struct Rocket_t * r, int x, int y, int vx, int vy)
 {
     for (uint8_t i = 0 ; i < N_ROCKETS; i++)
@@ -45,6 +44,7 @@ void initBomb(struct Bomb_t * b, int x, int y, int vx, int vy)
 
 }
 
+/// draws the spaceship, with goto and asci codes
 void drawSpaceship (struct spaceship_t * s)
 {
     gotoxy((*s).x>>14,(*s).y>>14);
@@ -75,6 +75,7 @@ void drawSpaceship (struct spaceship_t * s)
     printf("%c",203);
 }
 
+/// goes to the previous spaceship locations and prints spaces.
 void deleteSpaceship (struct spaceship_t * s)
 {
     gotoxy((*s).x>>14,(*s).y>>14);
@@ -105,6 +106,7 @@ void deleteSpaceship (struct spaceship_t * s)
     printf(" ");
 }
 
+/// draws the array of rockets
 void drawRocket (struct Rocket_t * r)
 {
     for (uint8_t i = 0 ; i < N_ROCKETS; i++)
@@ -151,12 +153,16 @@ void deleteBomb(struct Bomb_t * b)
     }
 }
 
+/// shoots rockets when player wants to
 void shootRocket(struct Rocket_t *r, struct spaceship_t *s , struct counter_t *c, uint8_t * buffer, int8_t vx, int8_t vy) {
+    /// only shoots if ammo > 0
     if ((*c).ammo > 0)
     {
+        /// depletes ammo, and displays amount on LCD
         (*c).ammo -= 1;
         lcd_draw_rockets((*c).ammo, buffer, 1,3);
         lcd_push_buffer(buffer);
+        /// when rocket is fired sets to active, and sets position at the spaceships position.
         for (uint8_t i = 0 ; i < N_ROCKETS; i++)
         {
             if (r[i].active == 0)
@@ -172,6 +178,7 @@ void shootRocket(struct Rocket_t *r, struct spaceship_t *s , struct counter_t *c
     }
 }
 
+/// works the same as shoot rockets
 void shootBomb (struct Bomb_t *b, struct spaceship_t *s, struct counter_t *c, uint8_t * buffer, int8_t vx, int8_t vy) {
     if ((*c).bombs > 0)
     {
@@ -193,17 +200,20 @@ void shootBomb (struct Bomb_t *b, struct spaceship_t *s, struct counter_t *c, ui
     }
 }
 
-void hitDetection (struct Rocket_t * r, struct Bomb_t * b, struct alien_t * al, struct asteroid_t * as, struct spaceship_t * s, struct powerup_t * p, struct counter_t * c, uint8_t * buffer)
+/// hit detection creates "hit boxes" for objects in the game,
+void hitDetection (struct Rocket_t * r, struct Bomb_t * b, struct alien_t * al, struct asteroid_t * as, struct spaceship_t * s, struct powerup_t * p, struct counter_t * c, uint8_t * buffer, struct laser_t * l)
 {
 
     for (uint8_t i = 0 ; i < 10 ; i++)
     {
-        if ((r[i].x >= 176 << 14) || (r[i].x <= 5 << 14) || (r[i].y <= 14 << 14) || (r[i].y >= 47 << 14)) {
+        if ((r[i].x >= 176 << 14) || (r[i].x <= 5 << 14) || (r[i].y <= 14 << 14) || (r[i].y >= 47 << 14))
+        {
 
             r[i].active = 0;
 
         }
-        if ((b[i].x >= 176 << 14) || (b[i].x <= 5 << 14) || (b[i].y <= 14 << 14) || (b[i].y >= 47 << 14)) {
+        if ((b[i].x >= 176 << 14) || (b[i].x <= 5 << 14) || (b[i].y <= 14 << 14) || (b[i].y >= 47 << 14))
+        {
 
             b[i].active = 0;
 
@@ -242,8 +252,8 @@ void hitDetection (struct Rocket_t * r, struct Bomb_t * b, struct alien_t * al, 
 
 
         } /// ship hits powerup;
-          if ( ((*p).x -(*s).x <= (2<<14)) && ( (*p).x -(*s).x >= (-2<<14)) &&  ((*p).y - (*s).y <= (2<<14)) && ((*p).y - (*s).y >= (-2<<14)) && (*p).active > 0)
-               //if (((*s).x+ (4<<14)) > ((*p).x) - (1<<14) && (((*s).x) - (1<<14)) < ((*p).x + (1<<14)) && /* ((*s).y) + ((1<<14) > ((*p).y) -(1<<14)) && (((*s).y) -(1<<14)) < ((*p).y)+ (1<<14) */ (*p).y - (*s).y < 2)
+        if ( ((*p).x -(*s).x <= (2<<14)) && ( (*p).x -(*s).x >= (-2<<14)) &&  ((*p).y - (*s).y <= (2<<14)) && ((*p).y - (*s).y >= (-2<<14)) && (*p).active > 0)
+            //if (((*s).x+ (4<<14)) > ((*p).x) - (1<<14) && (((*s).x) - (1<<14)) < ((*p).x + (1<<14)) && /* ((*s).y) + ((1<<14) > ((*p).y) -(1<<14)) && (((*s).y) -(1<<14)) < ((*p).y)+ (1<<14) */ (*p).y - (*s).y < 2)
         {
             (*p).active -= 1;
             (*c).ammo = 10;
@@ -253,8 +263,23 @@ void hitDetection (struct Rocket_t * r, struct Bomb_t * b, struct alien_t * al, 
             lcd_push_buffer(buffer);
             deletePowerup(p);
         }
+
+        /// laser hits wall
+        if  ((l[i].x >= 176 << 14) || (l[i].x <= 5 << 14) || (l[i].y <= 14 << 14) || (l[i].y >= 47 << 14))
+        {
+            l[i].active = 0;
+        }
+
+        /// laser hits ship
+        if ( ((*s).x - l[i].x <= (1<<14)) && ( (*s).x -l[i].x >= (-1<<14)) &&  ((*s).y - l[i].y <= (1<<14)) && ((*s).y - l[i].y >= (-1<<14)) && l[i].active > 0)
+        {
+            (*s).active = 0;
+            l[i].active = 0;
+
+        }
     }
 }
+
 
 void updateRocketPos(struct Rocket_t * r)
 {
@@ -276,8 +301,10 @@ void updateBombPos(struct Bomb_t * b)
     {
         if (b[i].active == 1)
         {
-            b[i].tempx = (*b).x;
-            b[i].x += (*b).vx;
+            b[i].tempx = b[i].x;
+            b[i].tempy = b[i].y;
+            b[i].x += b[i].vx;
+            b[i].y += b[i].vy;
         }
     }
 }
@@ -356,7 +383,7 @@ void background(int x, int y) {
     printf("%c",42);
 }
 
-void gravity(struct Rocket_t * r, struct alien_t * al) {
+void gravityRockets(struct Rocket_t * r, struct asteroid_t * as) {
     //brug 32 for at undgå overflow. Vi har burg for at shifte for at opnå præccision når vi kigger på kredsløb.
     //afstand til asteroide
     static int32_t Dvx[N_ROCKETS];
@@ -367,14 +394,14 @@ void gravity(struct Rocket_t * r, struct alien_t * al) {
     int32_t Dvx_old[N_ROCKETS];
     int32_t Dvy_old[N_ROCKETS];
     int32_t r2[N_ROCKETS];
-    int32_t G = 2500 << 14; //int32_t G = al->G << 14; //25
+    int32_t G = 2500 << 14; //int32_t G = as->G << 14; //25
     int32_t countLimit = (1 << 13) / 3;
 
     for (int8_t i = 0; i < N_ROCKETS; i++) {
         if ((r[i].active == 1)) {
 
-            dx[i] = (al->x - r[i].x ) >> 14;
-            dy[i] = (al->y - r[i].y ) >> 14;
+            dx[i] = (as->x - r[i].x ) >> 14;
+            dy[i] = (as->y - r[i].y ) >> 14;
 
             r2[i] = (sqrtI2I(dx[i] * dx[i] + dy[i] * dy[i]) * sqrtI2I(dx[i] * dx[i] + dy[i] * dy[i])) << 11; //giver radius i anden
             //r2[i] = r2[i] << 11;// Hvad vi gerne vil er at beregne en hastighedsændring som følge af asteroiden.  Dvs: v = v + Delta v
@@ -395,21 +422,67 @@ void gravity(struct Rocket_t * r, struct alien_t * al) {
             Dvx[i] += ((dx[i] / abs(dx[i])) * F[i]);
             Dvy[i] += ((dy[i] / abs(dy[i])) * F[i]);
 
-            /*gotoxy(20,26);
-            printf("G: %i", G);
-            gotoxy(20,27);
-            printf("R2: %i", r2);
-            gotoxy(20,28);
-            printf("F: %i", F);
-            gotoxy(20,24);
-            printf("Dvx: %i, Dvy: %i", (Dvx >> 14), (Dvy >> 14));*/
-
             if (Dvx[i] >= countLimit || Dvx[i] <= -(countLimit)) {
                 r[i].vx += ((Dvx[i] / abs(Dvx[i])) << 14);
                 Dvx[i] = 0;
             }
             if (Dvy[i] >= countLimit || Dvy[i] <= -(countLimit)) {
                 r[i].vy += ((Dvy[i] / abs(Dvy[i])) << 14);
+                Dvy[i] = 0;
+            }
+        }
+        else {
+            Dvx[i] = 0;
+            Dvy[i] = 0;
+        }
+    }
+}
+
+void gravityBombs(struct Bomb_t * b, struct asteroid_t * as) {
+    //brug 32 for at undgå overflow. Vi har burg for at shifte for at opnå præccision når vi kigger på kredsløb.
+    //afstand til asteroide
+    static int32_t Dvx[N_BOMBS];
+    static int32_t Dvy[N_BOMBS];
+    int32_t dy[N_BOMBS];
+    int32_t dx[N_BOMBS];
+    int32_t F[N_BOMBS];
+    int32_t Dvx_old[N_BOMBS];
+    int32_t Dvy_old[N_BOMBS];
+    int32_t r2[N_BOMBS];
+    int32_t G = 2500 << 14; //int32_t G = as->G << 14; //25
+    int32_t countLimit = (1 << 13) / 3;
+
+    for (int8_t i = 0; i < N_BOMBS; i++) {
+        if ((b[i].active == 1)) {
+
+            dx[i] = (as->x - b[i].x ) >> 14;
+            dy[i] = (as->y - b[i].y ) >> 14;
+
+            r2[i] = (sqrtI2I(dx[i] * dx[i] + dy[i] * dy[i]) * sqrtI2I(dx[i] * dx[i] + dy[i] * dy[i])) << 11; //giver radius i anden
+            //r2[i] = r2[i] << 11;// Hvad vi gerne vil er at beregne en hastighedsændring som følge af asteroiden.  Dvs: v = v + Delta v
+            F[i] = G / r2[i];
+
+            Dvx_old[i] = Dvx[i];
+            Dvy_old[i] = Dvy[i];
+
+            if (abs(Dvx_old[i]) > abs(Dvx[i]) ) { // for negativ til positv ændring
+                Dvx[i] = 0;
+            }
+            if (abs(Dvy_old[i]) > abs(Dvy[i]) ) {
+                Dvy[i] = 0;
+            }
+            //Afgører om påvirkningen er positivt eller negativt.
+            //Påvirkningen er mindre, jo større r2 er. r2 er det reciprokke af radius i anden.
+
+            Dvx[i] += ((dx[i] / abs(dx[i])) * F[i]);
+            Dvy[i] += ((dy[i] / abs(dy[i])) * F[i]);
+
+            if (Dvx[i] >= countLimit || Dvx[i] <= -(countLimit)) {
+                b[i].vx += ((Dvx[i] / abs(Dvx[i])) << 14);
+                Dvx[i] = 0;
+            }
+            if (Dvy[i] >= countLimit || Dvy[i] <= -(countLimit)) {
+                b[i].vy += ((Dvy[i] / abs(Dvy[i])) << 14);
                 Dvy[i] = 0;
             }
         }

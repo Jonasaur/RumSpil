@@ -85,12 +85,12 @@ void TIM2_IRQHandler(void)
     }
 }*/
 
-int8_t get_flag()
+int32_t get_flag()
 {
     return timer.f;
 }
 
-int8_t get_anim()
+int32_t get_anim()
 {
     if (timer.anim == 1){
         timer.anim = 0;
@@ -98,11 +98,11 @@ int8_t get_anim()
     } else return 0;
 }
 
-void set_lvl(int8_t lvl_input) {
+void set_lvl(int32_t lvl_input) {
     timer.n = lvl_input;
 }
 
-int8_t get_level_flag() {
+int32_t get_level_flag() {
     return timer.al;
 }
 

@@ -12,8 +12,8 @@ obj\debug\src\main.o: src\main.c inc/stm32f30x_conf.h \
  SPL\inc/stm32f30x_tim.h SPL\inc/stm32f30x_usart.h \
  SPL\inc/stm32f30x_wwdg.h SPL\inc/stm32f30x_misc.h inc/30010_io.h \
  inc/ansi.h inc/serial_com.h inc/timer.h inc/30010_io.h \
- inc/gamefunctions.h inc/alien.h inc/ansi.h inc/asteroid.h inc/PowerUps.h \
- inc/config.h inc/fpsqrt.h inc/LCD.h inc/charset.h inc/timer.h \
+ inc/gamefunctions.h inc/alien.h inc/ansi.h inc/config.h inc/asteroid.h \
+ inc/PowerUps.h inc/fpsqrt.h inc/LCD.h inc/charset.h inc/timer.h \
  inc/LED_control.h inc/joystick.h inc/menu.h inc/serial_com.h \
  inc/asteroid.h inc/alien.h inc/gamefunctions.h inc/LCD.h inc/powerUps.h \
  inc/config.h

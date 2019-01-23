@@ -11,7 +11,7 @@ c:/program files (x86)/embitz/1.11/share/em_armgcc/bin/../lib/gcc/arm-none-eabi/
 c:/program files (x86)/embitz/1.11/share/em_armgcc/bin/../lib/gcc/arm-none-eabi/5.4.1/../../../../arm-none-eabi/lib/armv7e-m\libg_n.a(lib_a-printf.o)
                               obj\debug\src\alien.o (printf)
 c:/program files (x86)/embitz/1.11/share/em_armgcc/bin/../lib/gcc/arm-none-eabi/5.4.1/../../../../arm-none-eabi/lib/armv7e-m\libg_n.a(lib_a-putchar.o)
-                              obj\debug\src\ansi.o (putchar)
+                              obj\debug\src\alien.o (putchar)
 c:/program files (x86)/embitz/1.11/share/em_armgcc/bin/../lib/gcc/arm-none-eabi/5.4.1/../../../../arm-none-eabi/lib/armv7e-m\libg_n.a(lib_a-rand.o)
                               obj\debug\src\main.o (srand)
 c:/program files (x86)/embitz/1.11/share/em_armgcc/bin/../lib/gcc/arm-none-eabi/5.4.1/../../../../arm-none-eabi/lib/armv7e-m\libg_n.a(lib_a-setbuf.o)
@@ -3283,6 +3283,7 @@ Discarded input sections
  .group         0x00000000        0x8 obj\debug\src\alien.o
  .group         0x00000000        0x8 obj\debug\src\alien.o
  .group         0x00000000        0x8 obj\debug\src\alien.o
+ .group         0x00000000        0x8 obj\debug\src\alien.o
  .text          0x00000000        0x0 obj\debug\src\alien.o
  .data          0x00000000        0x0 obj\debug\src\alien.o
  .bss           0x00000000        0x0 obj\debug\src\alien.o
@@ -3744,6 +3745,10 @@ Discarded input sections
  .text          0x00000000        0x0 obj\debug\src\gamefunctions.o
  .data          0x00000000        0x0 obj\debug\src\gamefunctions.o
  .bss           0x00000000        0x0 obj\debug\src\gamefunctions.o
+ .text.gravityBombs
+                0x00000000      0x3d0 obj\debug\src\gamefunctions.o
+ .bss.Dvx.9119  0x00000000       0x14 obj\debug\src\gamefunctions.o
+ .bss.Dvy.9120  0x00000000       0x14 obj\debug\src\gamefunctions.o
  .debug_macro   0x00000000      0x892 obj\debug\src\gamefunctions.o
  .debug_macro   0x00000000       0x74 obj\debug\src\gamefunctions.o
  .debug_macro   0x00000000       0x35 obj\debug\src\gamefunctions.o
@@ -3804,6 +3809,7 @@ Discarded input sections
  .debug_macro   0x00000000      0x189 obj\debug\src\gamefunctions.o
  .debug_macro   0x00000000       0x16 obj\debug\src\gamefunctions.o
  .debug_macro   0x00000000       0x35 obj\debug\src\gamefunctions.o
+ .debug_macro   0x00000000       0x6a obj\debug\src\gamefunctions.o
  .group         0x00000000        0x8 obj\debug\src\joystick.o
  .group         0x00000000        0x8 obj\debug\src\joystick.o
  .group         0x00000000        0x8 obj\debug\src\joystick.o
@@ -4309,7 +4315,7 @@ Discarded input sections
  .debug_macro   0x00000000      0x189 obj\debug\src\main.o
  .debug_macro   0x00000000       0x16 obj\debug\src\main.o
  .debug_macro   0x00000000       0x83 obj\debug\src\main.o
- .debug_macro   0x00000000       0x64 obj\debug\src\main.o
+ .debug_macro   0x00000000       0x6a obj\debug\src\main.o
  .debug_macro   0x00000000       0x10 obj\debug\src\main.o
  .debug_macro   0x00000000       0x16 obj\debug\src\main.o
  .debug_macro   0x00000000       0x16 obj\debug\src\main.o
@@ -4447,7 +4453,7 @@ Discarded input sections
  .debug_macro   0x00000000       0x16 obj\debug\src\menu.o
  .debug_macro   0x00000000       0x83 obj\debug\src\menu.o
  .debug_macro   0x00000000       0x10 obj\debug\src\menu.o
- .debug_macro   0x00000000       0x64 obj\debug\src\menu.o
+ .debug_macro   0x00000000       0x6a obj\debug\src\menu.o
  .debug_macro   0x00000000       0x10 obj\debug\src\menu.o
  .debug_macro   0x00000000       0x16 obj\debug\src\menu.o
  .debug_macro   0x00000000       0x95 obj\debug\src\menu.o
@@ -4659,7 +4665,7 @@ Discarded input sections
  .debug_macro   0x00000000       0x16 obj\debug\src\serial_com.o
  .debug_macro   0x00000000       0x35 obj\debug\src\serial_com.o
  .debug_macro   0x00000000       0x10 obj\debug\src\serial_com.o
- .debug_macro   0x00000000       0x64 obj\debug\src\serial_com.o
+ .debug_macro   0x00000000       0x6a obj\debug\src\serial_com.o
  .debug_macro   0x00000000       0x10 obj\debug\src\serial_com.o
  .debug_macro   0x00000000       0x16 obj\debug\src\serial_com.o
  .debug_macro   0x00000000       0x83 obj\debug\src\serial_com.o
@@ -4748,21 +4754,6 @@ Discarded input sections
  .debug_macro   0x00000000       0x34 obj\debug\src\system_stm32f30x.o
  .debug_macro   0x00000000       0x89 obj\debug\src\system_stm32f30x.o
  .debug_macro   0x00000000       0x35 obj\debug\src\system_stm32f30x.o
- .group         0x00000000        0x8 obj\debug\src\test_alien_array.o
- .text          0x00000000        0x0 obj\debug\src\test_alien_array.o
- .data          0x00000000        0x0 obj\debug\src\test_alien_array.o
- .bss           0x00000000        0x0 obj\debug\src\test_alien_array.o
- .debug_info    0x00000000       0x21 obj\debug\src\test_alien_array.o
- .debug_abbrev  0x00000000       0x13 obj\debug\src\test_alien_array.o
- .debug_aranges
-                0x00000000       0x18 obj\debug\src\test_alien_array.o
- .debug_macro   0x00000000       0x11 obj\debug\src\test_alien_array.o
- .debug_macro   0x00000000      0x892 obj\debug\src\test_alien_array.o
- .debug_line    0x00000000       0x37 obj\debug\src\test_alien_array.o
- .debug_str     0x00000000     0x250e obj\debug\src\test_alien_array.o
- .comment       0x00000000       0x6f obj\debug\src\test_alien_array.o
- .ARM.attributes
-                0x00000000       0x33 obj\debug\src\test_alien_array.o
  .group         0x00000000        0x8 obj\debug\src\timer.o
  .group         0x00000000        0x8 obj\debug\src\timer.o
  .group         0x00000000        0x8 obj\debug\src\timer.o
@@ -4827,7 +4818,7 @@ Discarded input sections
  .data          0x00000000        0x0 obj\debug\src\timer.o
  .bss           0x00000000        0x0 obj\debug\src\timer.o
  .text.get_level_flag
-                0x00000000       0x18 obj\debug\src\timer.o
+                0x00000000       0x14 obj\debug\src\timer.o
  .debug_macro   0x00000000      0x892 obj\debug\src\timer.o
  .debug_macro   0x00000000       0x74 obj\debug\src\timer.o
  .debug_macro   0x00000000       0x35 obj\debug\src\timer.o
@@ -5111,7 +5102,7 @@ LOAD c:/program files (x86)/embitz/1.11/share/em_armgcc/bin/../lib/gcc/arm-none-
                 0x00000000                __HEAP_SIZE = 0x0
                 0x00000100                __STACK_SIZE = 0x100
 
-.text           0x08000000     0x7c88
+.text           0x08000000     0x81ec
  *(.isr_vector)
  .isr_vector    0x08000000      0x188 obj\debug\src\startup_stm32f30x.o
                 0x08000000                __isr_vector
@@ -5177,417 +5168,436 @@ LOAD c:/program files (x86)/embitz/1.11/share/em_armgcc/bin/../lib/gcc/arm-none-
                 0x08000ef4      0x2b8 obj\debug\src\30010_io.o
                 0x08000ef4                lcd_init
  .text.init_alien
-                0x080011ac       0x78 obj\debug\src\alien.o
+                0x080011ac       0x60 obj\debug\src\alien.o
                 0x080011ac                init_alien
  .text.draw_alien
-                0x08001224      0x31c obj\debug\src\alien.o
-                0x08001224                draw_alien
+                0x0800120c      0x31c obj\debug\src\alien.o
+                0x0800120c                draw_alien
  .text.delete_alien
-                0x08001540       0xe0 obj\debug\src\alien.o
-                0x08001540                delete_alien
+                0x08001528      0x118 obj\debug\src\alien.o
+                0x08001528                delete_alien
  .text.move_alien
-                0x08001620       0x6c obj\debug\src\alien.o
-                0x08001620                move_alien
- .text.clrscr   0x0800168c       0x14 obj\debug\src\ansi.o
-                0x0800168c                clrscr
- .text.gotoxy   0x080016a0       0x28 obj\debug\src\ansi.o
-                0x080016a0                gotoxy
- .text.inverse  0x080016c8       0x14 obj\debug\src\ansi.o
-                0x080016c8                inverse
+                0x08001640      0x12c obj\debug\src\alien.o
+                0x08001640                move_alien
+ .text.initLaser
+                0x0800176c       0x88 obj\debug\src\alien.o
+                0x0800176c                initLaser
+ .text.drawLaser
+                0x080017f4       0x60 obj\debug\src\alien.o
+                0x080017f4                drawLaser
+ .text.deleteLaser
+                0x08001854       0x50 obj\debug\src\alien.o
+                0x08001854                deleteLaser
+ .text.updateLaserPos
+                0x080018a4       0x9c obj\debug\src\alien.o
+                0x080018a4                updateLaserPos
+ .text.shootLaser
+                0x08001940       0x98 obj\debug\src\alien.o
+                0x08001940                shootLaser
+ .text.moveLaser
+                0x080019d8       0x30 obj\debug\src\alien.o
+                0x080019d8                moveLaser
+ .text.clrscr   0x08001a08       0x14 obj\debug\src\ansi.o
+                0x08001a08                clrscr
+ .text.gotoxy   0x08001a1c       0x28 obj\debug\src\ansi.o
+                0x08001a1c                gotoxy
+ .text.inverse  0x08001a44       0x14 obj\debug\src\ansi.o
+                0x08001a44                inverse
  .text.no_inverse
-                0x080016dc       0x14 obj\debug\src\ansi.o
-                0x080016dc                no_inverse
+                0x08001a58       0x14 obj\debug\src\ansi.o
+                0x08001a58                no_inverse
  .text.init_asteroid
-                0x080016f0       0x5c obj\debug\src\asteroid.o
-                0x080016f0                init_asteroid
+                0x08001a6c       0x5c obj\debug\src\asteroid.o
+                0x08001a6c                init_asteroid
  .text.draw_asteroid
-                0x0800174c      0x49c obj\debug\src\asteroid.o
-                0x0800174c                draw_asteroid
+                0x08001ac8      0x49c obj\debug\src\asteroid.o
+                0x08001ac8                draw_asteroid
  .text.delete_asteroid
-                0x08001be8      0x12c obj\debug\src\asteroid.o
-                0x08001be8                delete_asteroid
+                0x08001f64      0x140 obj\debug\src\asteroid.o
+                0x08001f64                delete_asteroid
  .text.move_asteroid
-                0x08001d14       0x6c obj\debug\src\asteroid.o
-                0x08001d14                move_asteroid
- .text.sqrtI2I  0x08001d80       0x58 obj\debug\src\fpsqrt.o
-                0x08001d80                sqrtI2I
+                0x080020a4       0x74 obj\debug\src\asteroid.o
+                0x080020a4                move_asteroid
+ .text.sqrtI2I  0x08002118       0x58 obj\debug\src\fpsqrt.o
+                0x08002118                sqrtI2I
  .text.initCounter
-                0x08001dd8       0x2c obj\debug\src\gamefunctions.o
-                0x08001dd8                initCounter
+                0x08002170       0x28 obj\debug\src\gamefunctions.o
+                0x08002170                initCounter
  .text.initSpaceship
-                0x08001e04       0x3c obj\debug\src\gamefunctions.o
-                0x08001e04                initSpaceship
+                0x08002198       0x3c obj\debug\src\gamefunctions.o
+                0x08002198                initSpaceship
  .text.initRocket
-                0x08001e40       0x88 obj\debug\src\gamefunctions.o
-                0x08001e40                initRocket
+                0x080021d4       0x88 obj\debug\src\gamefunctions.o
+                0x080021d4                initRocket
  .text.initBomb
-                0x08001ec8       0x88 obj\debug\src\gamefunctions.o
-                0x08001ec8                initBomb
+                0x0800225c       0x88 obj\debug\src\gamefunctions.o
+                0x0800225c                initBomb
  .text.drawSpaceship
-                0x08001f50      0x140 obj\debug\src\gamefunctions.o
-                0x08001f50                drawSpaceship
+                0x080022e4      0x140 obj\debug\src\gamefunctions.o
+                0x080022e4                drawSpaceship
  .text.deleteSpaceship
-                0x08002090      0x140 obj\debug\src\gamefunctions.o
-                0x08002090                deleteSpaceship
+                0x08002424      0x140 obj\debug\src\gamefunctions.o
+                0x08002424                deleteSpaceship
  .text.drawRocket
-                0x080021d0       0x64 obj\debug\src\gamefunctions.o
-                0x080021d0                drawRocket
+                0x08002564       0x64 obj\debug\src\gamefunctions.o
+                0x08002564                drawRocket
  .text.drawBomb
-                0x08002234       0x5c obj\debug\src\gamefunctions.o
-                0x08002234                drawBomb
+                0x080025c8       0x5c obj\debug\src\gamefunctions.o
+                0x080025c8                drawBomb
  .text.deleteRocket
-                0x08002290       0x54 obj\debug\src\gamefunctions.o
-                0x08002290                deleteRocket
+                0x08002624       0x54 obj\debug\src\gamefunctions.o
+                0x08002624                deleteRocket
  .text.deleteBomb
-                0x080022e4       0x54 obj\debug\src\gamefunctions.o
-                0x080022e4                deleteBomb
+                0x08002678       0x54 obj\debug\src\gamefunctions.o
+                0x08002678                deleteBomb
  .text.shootRocket
-                0x08002338       0xac obj\debug\src\gamefunctions.o
-                0x08002338                shootRocket
+                0x080026cc       0xac obj\debug\src\gamefunctions.o
+                0x080026cc                shootRocket
  .text.shootBomb
-                0x080023e4       0xac obj\debug\src\gamefunctions.o
-                0x080023e4                shootBomb
+                0x08002778       0xac obj\debug\src\gamefunctions.o
+                0x08002778                shootBomb
  .text.hitDetection
-                0x08002490      0x3bc obj\debug\src\gamefunctions.o
-                0x08002490                hitDetection
+                0x08002824      0x480 obj\debug\src\gamefunctions.o
+                0x08002824                hitDetection
  .text.updateRocketPos
-                0x0800284c       0x9c obj\debug\src\gamefunctions.o
-                0x0800284c                updateRocketPos
+                0x08002ca4       0x9c obj\debug\src\gamefunctions.o
+                0x08002ca4                updateRocketPos
  .text.updateBombPos
-                0x080028e8       0x5c obj\debug\src\gamefunctions.o
-                0x080028e8                updateBombPos
+                0x08002d40       0x9c obj\debug\src\gamefunctions.o
+                0x08002d40                updateBombPos
  .text.moveRocket
-                0x08002944       0x24 obj\debug\src\gamefunctions.o
-                0x08002944                moveRocket
+                0x08002ddc       0x24 obj\debug\src\gamefunctions.o
+                0x08002ddc                moveRocket
  .text.moveBomb
-                0x08002968       0x24 obj\debug\src\gamefunctions.o
-                0x08002968                moveBomb
+                0x08002e00       0x24 obj\debug\src\gamefunctions.o
+                0x08002e00                moveBomb
  .text.updateShippositionRight
-                0x0800298c       0x28 obj\debug\src\gamefunctions.o
-                0x0800298c                updateShippositionRight
+                0x08002e24       0x28 obj\debug\src\gamefunctions.o
+                0x08002e24                updateShippositionRight
  .text.updateShippositionLeft
-                0x080029b4       0x28 obj\debug\src\gamefunctions.o
-                0x080029b4                updateShippositionLeft
+                0x08002e4c       0x28 obj\debug\src\gamefunctions.o
+                0x08002e4c                updateShippositionLeft
  .text.updateShippositionDown
-                0x080029dc       0x28 obj\debug\src\gamefunctions.o
-                0x080029dc                updateShippositionDown
+                0x08002e74       0x28 obj\debug\src\gamefunctions.o
+                0x08002e74                updateShippositionDown
  .text.updateShippositionUp
-                0x08002a04       0x28 obj\debug\src\gamefunctions.o
-                0x08002a04                updateShippositionUp
- .text.respawn  0x08002a2c       0x70 obj\debug\src\gamefunctions.o
-                0x08002a2c                respawn
+                0x08002e9c       0x28 obj\debug\src\gamefunctions.o
+                0x08002e9c                updateShippositionUp
+ .text.respawn  0x08002ec4       0x70 obj\debug\src\gamefunctions.o
+                0x08002ec4                respawn
  .text.controlPowerups
-                0x08002a9c       0x40 obj\debug\src\gamefunctions.o
-                0x08002a9c                controlPowerups
+                0x08002f34       0x40 obj\debug\src\gamefunctions.o
+                0x08002f34                controlPowerups
  .text.background
-                0x08002adc       0x28 obj\debug\src\gamefunctions.o
-                0x08002adc                background
- .text.gravity  0x08002b04      0x3e8 obj\debug\src\gamefunctions.o
-                0x08002b04                gravity
+                0x08002f74       0x28 obj\debug\src\gamefunctions.o
+                0x08002f74                background
+ .text.gravityRockets
+                0x08002f9c      0x3e8 obj\debug\src\gamefunctions.o
+                0x08002f9c                gravityRockets
  .text.joystick_setup
-                0x08002eec       0xa8 obj\debug\src\joystick.o
-                0x08002eec                joystick_setup
+                0x08003384       0xa8 obj\debug\src\joystick.o
+                0x08003384                joystick_setup
  .text.lcd_write_string
-                0x08002f94       0x88 obj\debug\src\lcd.o
-                0x08002f94                lcd_write_string
+                0x0800342c       0x88 obj\debug\src\lcd.o
+                0x0800342c                lcd_write_string
  .text.lcd_draw_hearts
-                0x0800301c       0xd8 obj\debug\src\lcd.o
-                0x0800301c                lcd_draw_hearts
+                0x080034b4       0xd8 obj\debug\src\lcd.o
+                0x080034b4                lcd_draw_hearts
  .text.lcd_draw_rockets
-                0x080030f4       0xc8 obj\debug\src\lcd.o
-                0x080030f4                lcd_draw_rockets
+                0x0800358c       0xc8 obj\debug\src\lcd.o
+                0x0800358c                lcd_draw_rockets
  .text.lcd_draw_bombs
-                0x080031bc       0xbc obj\debug\src\lcd.o
-                0x080031bc                lcd_draw_bombs
+                0x08003654       0xbc obj\debug\src\lcd.o
+                0x08003654                lcd_draw_bombs
  .text.LED_setup
-                0x08003278      0x140 obj\debug\src\led_control.o
-                0x08003278                LED_setup
- .text.setup    0x080033b8       0x40 obj\debug\src\main.o
-                0x080033b8                setup
- .text.main     0x080033f8      0x1cc obj\debug\src\main.o
-                0x080033f8                main
+                0x08003710      0x140 obj\debug\src\led_control.o
+                0x08003710                LED_setup
+ .text.setup    0x08003850       0x40 obj\debug\src\main.o
+                0x08003850                setup
+ .text.main     0x08003890      0x218 obj\debug\src\main.o
+                0x08003890                main
  .text.menu_init
-                0x080035c4      0x218 obj\debug\src\menu.o
-                0x080035c4                menu_init
+                0x08003aa8      0x218 obj\debug\src\menu.o
+                0x08003aa8                menu_init
  .text.how_to_screen
-                0x080037dc      0x37c obj\debug\src\menu.o
-                0x080037dc                how_to_screen
+                0x08003cc0      0x37c obj\debug\src\menu.o
+                0x08003cc0                how_to_screen
  .text.settings_screen
-                0x08003b58       0x78 obj\debug\src\menu.o
-                0x08003b58                settings_screen
+                0x0800403c       0x78 obj\debug\src\menu.o
+                0x0800403c                settings_screen
  .text.high_score
-                0x08003bd0       0x78 obj\debug\src\menu.o
-                0x08003bd0                high_score
+                0x080040b4       0x78 obj\debug\src\menu.o
+                0x080040b4                high_score
  .text.start_game
-                0x08003c48      0x150 obj\debug\src\menu.o
-                0x08003c48                start_game
+                0x0800412c      0x150 obj\debug\src\menu.o
+                0x0800412c                start_game
  .text.menu_selection
-                0x08003d98      0x1e4 obj\debug\src\menu.o
-                0x08003d98                menu_selection
+                0x0800427c      0x214 obj\debug\src\menu.o
+                0x0800427c                menu_selection
  .text.init_powerup
-                0x08003f7c       0x34 obj\debug\src\powerups.o
-                0x08003f7c                init_powerup
+                0x08004490       0x34 obj\debug\src\powerups.o
+                0x08004490                init_powerup
  .text.drawPowerup
-                0x08003fb0       0x70 obj\debug\src\powerups.o
-                0x08003fb0                drawPowerup
+                0x080044c4       0x70 obj\debug\src\powerups.o
+                0x080044c4                drawPowerup
  .text.deletePowerup
-                0x08004020       0x68 obj\debug\src\powerups.o
-                0x08004020                deletePowerup
+                0x08004534       0x68 obj\debug\src\powerups.o
+                0x08004534                deletePowerup
  .text.keyboard_read
-                0x08004088      0x1ac obj\debug\src\serial_com.o
-                0x08004088                keyboard_read
+                0x0800459c      0x1ac obj\debug\src\serial_com.o
+                0x0800459c                keyboard_read
  .text.game_controls
-                0x08004234      0x1f0 obj\debug\src\serial_com.o
-                0x08004234                game_controls
- .text          0x08004424       0xe4 obj\debug\src\startup_stm32f30x.o
-                0x08004424                Reset_Handler
-                0x0800446a                NMI_Handler
-                0x0800446c                HardFault_Handler
-                0x0800446e                MemManage_Handler
-                0x08004470                BusFault_Handler
-                0x08004472                UsageFault_Handler
-                0x08004474                SVC_Handler
-                0x08004476                DebugMon_Handler
-                0x08004478                PendSV_Handler
-                0x0800447a                SysTick_Handler
-                0x0800447c                WWDG_IRQHandler
-                0x0800447e                PVD_IRQHandler
-                0x08004480                TAMPER_STAMP_IRQHandler
-                0x08004482                RTC_WKUP_IRQHandler
-                0x08004484                FLASH_IRQHandler
-                0x08004486                RCC_IRQHandler
-                0x08004488                EXTI0_IRQHandler
-                0x0800448a                EXTI1_IRQHandler
-                0x0800448c                EXTI2_TS_IRQHandler
-                0x0800448e                EXTI3_IRQHandler
-                0x08004490                EXTI4_IRQHandler
-                0x08004492                DMA1_Channel1_IRQHandler
-                0x08004494                DMA1_Channel2_IRQHandler
-                0x08004496                DMA1_Channel3_IRQHandler
-                0x08004498                DMA1_Channel4_IRQHandler
-                0x0800449a                DMA1_Channel5_IRQHandler
-                0x0800449c                DMA1_Channel6_IRQHandler
-                0x0800449e                DMA1_Channel7_IRQHandler
-                0x080044a0                ADC1_2_IRQHandler
-                0x080044a2                USB_HP_CAN1_TX_IRQHandler
-                0x080044a4                USB_LP_CAN1_RX0_IRQHandler
-                0x080044a6                CAN1_RX1_IRQHandler
-                0x080044a8                CAN1_SCE_IRQHandler
-                0x080044aa                EXTI9_5_IRQHandler
-                0x080044ac                TIM1_BRK_TIM15_IRQHandler
-                0x080044ae                TIM1_UP_TIM16_IRQHandler
-                0x080044b0                TIM1_TRG_COM_TIM17_IRQHandler
-                0x080044b2                TIM1_CC_IRQHandler
-                0x080044b6                TIM3_IRQHandler
-                0x080044b8                TIM4_IRQHandler
-                0x080044ba                I2C1_EV_IRQHandler
-                0x080044bc                I2C1_ER_IRQHandler
-                0x080044be                I2C2_EV_IRQHandler
-                0x080044c0                I2C2_ER_IRQHandler
-                0x080044c2                SPI1_IRQHandler
-                0x080044c4                SPI2_IRQHandler
-                0x080044c6                USART1_IRQHandler
-                0x080044ca                USART3_IRQHandler
-                0x080044cc                EXTI15_10_IRQHandler
-                0x080044ce                RTC_Alarm_IRQHandler
-                0x080044d0                USBWakeUp_IRQHandler
-                0x080044d2                TIM8_BRK_IRQHandler
-                0x080044d4                TIM8_UP_IRQHandler
-                0x080044d6                TIM8_TRG_COM_IRQHandler
-                0x080044d8                TIM8_CC_IRQHandler
-                0x080044da                ADC3_IRQHandler
-                0x080044dc                SPI3_IRQHandler
-                0x080044de                UART4_IRQHandler
-                0x080044e0                UART5_IRQHandler
-                0x080044e2                TIM6_DAC_IRQHandler
-                0x080044e4                TIM7_IRQHandler
-                0x080044e6                DMA2_Channel1_IRQHandler
-                0x080044e8                DMA2_Channel2_IRQHandler
-                0x080044ea                DMA2_Channel3_IRQHandler
-                0x080044ec                DMA2_Channel4_IRQHandler
-                0x080044ee                DMA2_Channel5_IRQHandler
-                0x080044f0                ADC4_IRQHandler
-                0x080044f2                COMP1_2_3_IRQHandler
-                0x080044f4                COMP4_5_6_IRQHandler
-                0x080044f6                COMP7_IRQHandler
-                0x080044f8                USB_HP_IRQHandler
-                0x080044fa                USB_LP_IRQHandler
-                0x080044fc                USBWakeUp_RMP_IRQHandler
-                0x080044fe                FPU_IRQHandler
+                0x08004748      0x1f0 obj\debug\src\serial_com.o
+                0x08004748                game_controls
+ .text          0x08004938       0xe4 obj\debug\src\startup_stm32f30x.o
+                0x08004938                Reset_Handler
+                0x0800497e                NMI_Handler
+                0x08004980                HardFault_Handler
+                0x08004982                MemManage_Handler
+                0x08004984                BusFault_Handler
+                0x08004986                UsageFault_Handler
+                0x08004988                SVC_Handler
+                0x0800498a                DebugMon_Handler
+                0x0800498c                PendSV_Handler
+                0x0800498e                SysTick_Handler
+                0x08004990                WWDG_IRQHandler
+                0x08004992                PVD_IRQHandler
+                0x08004994                TAMPER_STAMP_IRQHandler
+                0x08004996                RTC_WKUP_IRQHandler
+                0x08004998                FLASH_IRQHandler
+                0x0800499a                RCC_IRQHandler
+                0x0800499c                EXTI0_IRQHandler
+                0x0800499e                EXTI1_IRQHandler
+                0x080049a0                EXTI2_TS_IRQHandler
+                0x080049a2                EXTI3_IRQHandler
+                0x080049a4                EXTI4_IRQHandler
+                0x080049a6                DMA1_Channel1_IRQHandler
+                0x080049a8                DMA1_Channel2_IRQHandler
+                0x080049aa                DMA1_Channel3_IRQHandler
+                0x080049ac                DMA1_Channel4_IRQHandler
+                0x080049ae                DMA1_Channel5_IRQHandler
+                0x080049b0                DMA1_Channel6_IRQHandler
+                0x080049b2                DMA1_Channel7_IRQHandler
+                0x080049b4                ADC1_2_IRQHandler
+                0x080049b6                USB_HP_CAN1_TX_IRQHandler
+                0x080049b8                USB_LP_CAN1_RX0_IRQHandler
+                0x080049ba                CAN1_RX1_IRQHandler
+                0x080049bc                CAN1_SCE_IRQHandler
+                0x080049be                EXTI9_5_IRQHandler
+                0x080049c0                TIM1_BRK_TIM15_IRQHandler
+                0x080049c2                TIM1_UP_TIM16_IRQHandler
+                0x080049c4                TIM1_TRG_COM_TIM17_IRQHandler
+                0x080049c6                TIM1_CC_IRQHandler
+                0x080049ca                TIM3_IRQHandler
+                0x080049cc                TIM4_IRQHandler
+                0x080049ce                I2C1_EV_IRQHandler
+                0x080049d0                I2C1_ER_IRQHandler
+                0x080049d2                I2C2_EV_IRQHandler
+                0x080049d4                I2C2_ER_IRQHandler
+                0x080049d6                SPI1_IRQHandler
+                0x080049d8                SPI2_IRQHandler
+                0x080049da                USART1_IRQHandler
+                0x080049de                USART3_IRQHandler
+                0x080049e0                EXTI15_10_IRQHandler
+                0x080049e2                RTC_Alarm_IRQHandler
+                0x080049e4                USBWakeUp_IRQHandler
+                0x080049e6                TIM8_BRK_IRQHandler
+                0x080049e8                TIM8_UP_IRQHandler
+                0x080049ea                TIM8_TRG_COM_IRQHandler
+                0x080049ec                TIM8_CC_IRQHandler
+                0x080049ee                ADC3_IRQHandler
+                0x080049f0                SPI3_IRQHandler
+                0x080049f2                UART4_IRQHandler
+                0x080049f4                UART5_IRQHandler
+                0x080049f6                TIM6_DAC_IRQHandler
+                0x080049f8                TIM7_IRQHandler
+                0x080049fa                DMA2_Channel1_IRQHandler
+                0x080049fc                DMA2_Channel2_IRQHandler
+                0x080049fe                DMA2_Channel3_IRQHandler
+                0x08004a00                DMA2_Channel4_IRQHandler
+                0x08004a02                DMA2_Channel5_IRQHandler
+                0x08004a04                ADC4_IRQHandler
+                0x08004a06                COMP1_2_3_IRQHandler
+                0x08004a08                COMP4_5_6_IRQHandler
+                0x08004a0a                COMP7_IRQHandler
+                0x08004a0c                USB_HP_IRQHandler
+                0x08004a0e                USB_LP_IRQHandler
+                0x08004a10                USBWakeUp_RMP_IRQHandler
+                0x08004a12                FPU_IRQHandler
  .text.SystemInit
-                0x08004508       0x84 obj\debug\src\system_stm32f30x.o
-                0x08004508                SystemInit
+                0x08004a1c       0x84 obj\debug\src\system_stm32f30x.o
+                0x08004a1c                SystemInit
  .text.SetSysClock
-                0x0800458c       0x90 obj\debug\src\system_stm32f30x.o
+                0x08004aa0       0x90 obj\debug\src\system_stm32f30x.o
  .text.NVIC_EnableIRQ
-                0x0800461c       0x30 obj\debug\src\timer.o
+                0x08004b30       0x30 obj\debug\src\timer.o
  .text.NVIC_SetPriority
-                0x0800464c       0x54 obj\debug\src\timer.o
+                0x08004b60       0x54 obj\debug\src\timer.o
  .text.timer_setup
-                0x080046a0       0x88 obj\debug\src\timer.o
-                0x080046a0                timer_setup
+                0x08004bb4       0x88 obj\debug\src\timer.o
+                0x08004bb4                timer_setup
  .text.start_timer
-                0x08004728       0x20 obj\debug\src\timer.o
-                0x08004728                start_timer
+                0x08004c3c       0x20 obj\debug\src\timer.o
+                0x08004c3c                start_timer
  .text.stop_timer
-                0x08004748       0x20 obj\debug\src\timer.o
-                0x08004748                stop_timer
+                0x08004c5c       0x20 obj\debug\src\timer.o
+                0x08004c5c                stop_timer
  .text.TIM2_IRQHandler
-                0x08004768       0xac obj\debug\src\timer.o
-                0x08004768                TIM2_IRQHandler
+                0x08004c7c       0xac obj\debug\src\timer.o
+                0x08004c7c                TIM2_IRQHandler
  .text.get_flag
-                0x08004814       0x18 obj\debug\src\timer.o
-                0x08004814                get_flag
+                0x08004d28       0x14 obj\debug\src\timer.o
+                0x08004d28                get_flag
  .text.get_anim
-                0x0800482c       0x24 obj\debug\src\timer.o
-                0x0800482c                get_anim
- .text.set_lvl  0x08004850       0x20 obj\debug\src\timer.o
-                0x08004850                set_lvl
- .text.exit     0x08004870       0x28 c:/program files (x86)/embitz/1.11/share/em_armgcc/bin/../lib/gcc/arm-none-eabi/5.4.1/../../../../arm-none-eabi/lib/armv7e-m\libg_n.a(lib_a-exit.o)
-                0x08004870                exit
+                0x08004d3c       0x24 obj\debug\src\timer.o
+                0x08004d3c                get_anim
+ .text.set_lvl  0x08004d60       0x1c obj\debug\src\timer.o
+                0x08004d60                set_lvl
+ .text.exit     0x08004d7c       0x28 c:/program files (x86)/embitz/1.11/share/em_armgcc/bin/../lib/gcc/arm-none-eabi/5.4.1/../../../../arm-none-eabi/lib/armv7e-m\libg_n.a(lib_a-exit.o)
+                0x08004d7c                exit
  .text.__libc_init_array
-                0x08004898       0x4c c:/program files (x86)/embitz/1.11/share/em_armgcc/bin/../lib/gcc/arm-none-eabi/5.4.1/../../../../arm-none-eabi/lib/armv7e-m\libg_n.a(lib_a-init.o)
-                0x08004898                __libc_init_array
- .text.memset   0x080048e4       0x10 c:/program files (x86)/embitz/1.11/share/em_armgcc/bin/../lib/gcc/arm-none-eabi/5.4.1/../../../../arm-none-eabi/lib/armv7e-m\libg_n.a(lib_a-memset.o)
-                0x080048e4                memset
- .text.printf   0x080048f4       0x30 c:/program files (x86)/embitz/1.11/share/em_armgcc/bin/../lib/gcc/arm-none-eabi/5.4.1/../../../../arm-none-eabi/lib/armv7e-m\libg_n.a(lib_a-printf.o)
-                0x080048f4                iprintf
-                0x080048f4                printf
- .text.putchar  0x08004924       0x28 c:/program files (x86)/embitz/1.11/share/em_armgcc/bin/../lib/gcc/arm-none-eabi/5.4.1/../../../../arm-none-eabi/lib/armv7e-m\libg_n.a(lib_a-putchar.o)
-                0x08004924                putchar
- .text.srand    0x0800494c       0x50 c:/program files (x86)/embitz/1.11/share/em_armgcc/bin/../lib/gcc/arm-none-eabi/5.4.1/../../../../arm-none-eabi/lib/armv7e-m\libg_n.a(lib_a-rand.o)
-                0x0800494c                srand
- .text.setbuf   0x0800499c       0x10 c:/program files (x86)/embitz/1.11/share/em_armgcc/bin/../lib/gcc/arm-none-eabi/5.4.1/../../../../arm-none-eabi/lib/armv7e-m\libg_n.a(lib_a-setbuf.o)
-                0x0800499c                setbuf
- .text.setvbuf  0x080049ac      0x154 c:/program files (x86)/embitz/1.11/share/em_armgcc/bin/../lib/gcc/arm-none-eabi/5.4.1/../../../../arm-none-eabi/lib/armv7e-m\libg_n.a(lib_a-setvbuf.o)
-                0x080049ac                setvbuf
- .text          0x08004b00       0x10 c:/program files (x86)/embitz/1.11/share/em_armgcc/bin/../lib/gcc/arm-none-eabi/5.4.1/../../../../arm-none-eabi/lib/armv7e-m\libg_n.a(lib_a-strlen.o)
-                0x08004b00                strlen
- .text.time     0x08004b10       0x28 c:/program files (x86)/embitz/1.11/share/em_armgcc/bin/../lib/gcc/arm-none-eabi/5.4.1/../../../../arm-none-eabi/lib/armv7e-m\libg_n.a(lib_a-time.o)
-                0x08004b10                time
+                0x08004da4       0x4c c:/program files (x86)/embitz/1.11/share/em_armgcc/bin/../lib/gcc/arm-none-eabi/5.4.1/../../../../arm-none-eabi/lib/armv7e-m\libg_n.a(lib_a-init.o)
+                0x08004da4                __libc_init_array
+ .text.memset   0x08004df0       0x10 c:/program files (x86)/embitz/1.11/share/em_armgcc/bin/../lib/gcc/arm-none-eabi/5.4.1/../../../../arm-none-eabi/lib/armv7e-m\libg_n.a(lib_a-memset.o)
+                0x08004df0                memset
+ .text.printf   0x08004e00       0x30 c:/program files (x86)/embitz/1.11/share/em_armgcc/bin/../lib/gcc/arm-none-eabi/5.4.1/../../../../arm-none-eabi/lib/armv7e-m\libg_n.a(lib_a-printf.o)
+                0x08004e00                iprintf
+                0x08004e00                printf
+ .text.putchar  0x08004e30       0x28 c:/program files (x86)/embitz/1.11/share/em_armgcc/bin/../lib/gcc/arm-none-eabi/5.4.1/../../../../arm-none-eabi/lib/armv7e-m\libg_n.a(lib_a-putchar.o)
+                0x08004e30                putchar
+ .text.srand    0x08004e58       0x50 c:/program files (x86)/embitz/1.11/share/em_armgcc/bin/../lib/gcc/arm-none-eabi/5.4.1/../../../../arm-none-eabi/lib/armv7e-m\libg_n.a(lib_a-rand.o)
+                0x08004e58                srand
+ .text.setbuf   0x08004ea8       0x10 c:/program files (x86)/embitz/1.11/share/em_armgcc/bin/../lib/gcc/arm-none-eabi/5.4.1/../../../../arm-none-eabi/lib/armv7e-m\libg_n.a(lib_a-setbuf.o)
+                0x08004ea8                setbuf
+ .text.setvbuf  0x08004eb8      0x154 c:/program files (x86)/embitz/1.11/share/em_armgcc/bin/../lib/gcc/arm-none-eabi/5.4.1/../../../../arm-none-eabi/lib/armv7e-m\libg_n.a(lib_a-setvbuf.o)
+                0x08004eb8                setvbuf
+ .text          0x0800500c       0x10 c:/program files (x86)/embitz/1.11/share/em_armgcc/bin/../lib/gcc/arm-none-eabi/5.4.1/../../../../arm-none-eabi/lib/armv7e-m\libg_n.a(lib_a-strlen.o)
+                0x0800500c                strlen
+ .text.time     0x0800501c       0x28 c:/program files (x86)/embitz/1.11/share/em_armgcc/bin/../lib/gcc/arm-none-eabi/5.4.1/../../../../arm-none-eabi/lib/armv7e-m\libg_n.a(lib_a-time.o)
+                0x0800501c                time
  .text.__sflush_r
-                0x08004b38      0x110 c:/program files (x86)/embitz/1.11/share/em_armgcc/bin/../lib/gcc/arm-none-eabi/5.4.1/../../../../arm-none-eabi/lib/armv7e-m\libg_n.a(lib_a-fflush.o)
-                0x08004b38                __sflush_r
+                0x08005044      0x110 c:/program files (x86)/embitz/1.11/share/em_armgcc/bin/../lib/gcc/arm-none-eabi/5.4.1/../../../../arm-none-eabi/lib/armv7e-m\libg_n.a(lib_a-fflush.o)
+                0x08005044                __sflush_r
  .text._fflush_r
-                0x08004c48       0x54 c:/program files (x86)/embitz/1.11/share/em_armgcc/bin/../lib/gcc/arm-none-eabi/5.4.1/../../../../arm-none-eabi/lib/armv7e-m\libg_n.a(lib_a-fflush.o)
-                0x08004c48                _fflush_r
+                0x08005154       0x54 c:/program files (x86)/embitz/1.11/share/em_armgcc/bin/../lib/gcc/arm-none-eabi/5.4.1/../../../../arm-none-eabi/lib/armv7e-m\libg_n.a(lib_a-fflush.o)
+                0x08005154                _fflush_r
  .text._cleanup_r
-                0x08004c9c        0xc c:/program files (x86)/embitz/1.11/share/em_armgcc/bin/../lib/gcc/arm-none-eabi/5.4.1/../../../../arm-none-eabi/lib/armv7e-m\libg_n.a(lib_a-findfp.o)
-                0x08004c9c                _cleanup_r
+                0x080051a8        0xc c:/program files (x86)/embitz/1.11/share/em_armgcc/bin/../lib/gcc/arm-none-eabi/5.4.1/../../../../arm-none-eabi/lib/armv7e-m\libg_n.a(lib_a-findfp.o)
+                0x080051a8                _cleanup_r
  .text.std.isra.0
-                0x08004ca8       0x48 c:/program files (x86)/embitz/1.11/share/em_armgcc/bin/../lib/gcc/arm-none-eabi/5.4.1/../../../../arm-none-eabi/lib/armv7e-m\libg_n.a(lib_a-findfp.o)
+                0x080051b4       0x48 c:/program files (x86)/embitz/1.11/share/em_armgcc/bin/../lib/gcc/arm-none-eabi/5.4.1/../../../../arm-none-eabi/lib/armv7e-m\libg_n.a(lib_a-findfp.o)
  .text.__sfmoreglue
-                0x08004cf0       0x2c c:/program files (x86)/embitz/1.11/share/em_armgcc/bin/../lib/gcc/arm-none-eabi/5.4.1/../../../../arm-none-eabi/lib/armv7e-m\libg_n.a(lib_a-findfp.o)
-                0x08004cf0                __sfmoreglue
- .text.__sinit  0x08004d1c       0x60 c:/program files (x86)/embitz/1.11/share/em_armgcc/bin/../lib/gcc/arm-none-eabi/5.4.1/../../../../arm-none-eabi/lib/armv7e-m\libg_n.a(lib_a-findfp.o)
-                0x08004d1c                __sinit
- .text.__sfp    0x08004d7c       0x78 c:/program files (x86)/embitz/1.11/share/em_armgcc/bin/../lib/gcc/arm-none-eabi/5.4.1/../../../../arm-none-eabi/lib/armv7e-m\libg_n.a(lib_a-findfp.o)
-                0x08004d7c                __sfp
+                0x080051fc       0x2c c:/program files (x86)/embitz/1.11/share/em_armgcc/bin/../lib/gcc/arm-none-eabi/5.4.1/../../../../arm-none-eabi/lib/armv7e-m\libg_n.a(lib_a-findfp.o)
+                0x080051fc                __sfmoreglue
+ .text.__sinit  0x08005228       0x60 c:/program files (x86)/embitz/1.11/share/em_armgcc/bin/../lib/gcc/arm-none-eabi/5.4.1/../../../../arm-none-eabi/lib/armv7e-m\libg_n.a(lib_a-findfp.o)
+                0x08005228                __sinit
+ .text.__sfp    0x08005288       0x78 c:/program files (x86)/embitz/1.11/share/em_armgcc/bin/../lib/gcc/arm-none-eabi/5.4.1/../../../../arm-none-eabi/lib/armv7e-m\libg_n.a(lib_a-findfp.o)
+                0x08005288                __sfp
  .text._fwalk_reent
-                0x08004df4       0x3c c:/program files (x86)/embitz/1.11/share/em_armgcc/bin/../lib/gcc/arm-none-eabi/5.4.1/../../../../arm-none-eabi/lib/armv7e-m\libg_n.a(lib_a-fwalk.o)
-                0x08004df4                _fwalk_reent
+                0x08005300       0x3c c:/program files (x86)/embitz/1.11/share/em_armgcc/bin/../lib/gcc/arm-none-eabi/5.4.1/../../../../arm-none-eabi/lib/armv7e-m\libg_n.a(lib_a-fwalk.o)
+                0x08005300                _fwalk_reent
  .text._gettimeofday_r
-                0x08004e30       0x24 c:/program files (x86)/embitz/1.11/share/em_armgcc/bin/../lib/gcc/arm-none-eabi/5.4.1/../../../../arm-none-eabi/lib/armv7e-m\libg_n.a(lib_a-gettimeofdayr.o)
-                0x08004e30                _gettimeofday_r
+                0x0800533c       0x24 c:/program files (x86)/embitz/1.11/share/em_armgcc/bin/../lib/gcc/arm-none-eabi/5.4.1/../../../../arm-none-eabi/lib/armv7e-m\libg_n.a(lib_a-gettimeofdayr.o)
+                0x0800533c                _gettimeofday_r
  .text.__swhatbuf_r
-                0x08004e54       0x46 c:/program files (x86)/embitz/1.11/share/em_armgcc/bin/../lib/gcc/arm-none-eabi/5.4.1/../../../../arm-none-eabi/lib/armv7e-m\libg_n.a(lib_a-makebuf.o)
-                0x08004e54                __swhatbuf_r
- *fill*         0x08004e9a        0x2 
+                0x08005360       0x46 c:/program files (x86)/embitz/1.11/share/em_armgcc/bin/../lib/gcc/arm-none-eabi/5.4.1/../../../../arm-none-eabi/lib/armv7e-m\libg_n.a(lib_a-makebuf.o)
+                0x08005360                __swhatbuf_r
+ *fill*         0x080053a6        0x2 
  .text.__smakebuf_r
-                0x08004e9c       0x78 c:/program files (x86)/embitz/1.11/share/em_armgcc/bin/../lib/gcc/arm-none-eabi/5.4.1/../../../../arm-none-eabi/lib/armv7e-m\libg_n.a(lib_a-makebuf.o)
-                0x08004e9c                __smakebuf_r
- .text.malloc   0x08004f14       0x10 c:/program files (x86)/embitz/1.11/share/em_armgcc/bin/../lib/gcc/arm-none-eabi/5.4.1/../../../../arm-none-eabi/lib/armv7e-m\libg_n.a(lib_a-malloc.o)
-                0x08004f14                malloc
- .text._free_r  0x08004f24       0x9c c:/program files (x86)/embitz/1.11/share/em_armgcc/bin/../lib/gcc/arm-none-eabi/5.4.1/../../../../arm-none-eabi/lib/armv7e-m\libg_n.a(lib_a-nano-freer.o)
-                0x08004f24                _free_r
+                0x080053a8       0x78 c:/program files (x86)/embitz/1.11/share/em_armgcc/bin/../lib/gcc/arm-none-eabi/5.4.1/../../../../arm-none-eabi/lib/armv7e-m\libg_n.a(lib_a-makebuf.o)
+                0x080053a8                __smakebuf_r
+ .text.malloc   0x08005420       0x10 c:/program files (x86)/embitz/1.11/share/em_armgcc/bin/../lib/gcc/arm-none-eabi/5.4.1/../../../../arm-none-eabi/lib/armv7e-m\libg_n.a(lib_a-malloc.o)
+                0x08005420                malloc
+ .text._free_r  0x08005430       0x9c c:/program files (x86)/embitz/1.11/share/em_armgcc/bin/../lib/gcc/arm-none-eabi/5.4.1/../../../../arm-none-eabi/lib/armv7e-m\libg_n.a(lib_a-nano-freer.o)
+                0x08005430                _free_r
  .text._malloc_r
-                0x08004fc0       0xbc c:/program files (x86)/embitz/1.11/share/em_armgcc/bin/../lib/gcc/arm-none-eabi/5.4.1/../../../../arm-none-eabi/lib/armv7e-m\libg_n.a(lib_a-nano-mallocr.o)
-                0x08004fc0                _malloc_r
+                0x080054cc       0xbc c:/program files (x86)/embitz/1.11/share/em_armgcc/bin/../lib/gcc/arm-none-eabi/5.4.1/../../../../arm-none-eabi/lib/armv7e-m\libg_n.a(lib_a-nano-mallocr.o)
+                0x080054cc                _malloc_r
  .text.__sfputc_r
-                0x0800507c       0x2c c:/program files (x86)/embitz/1.11/share/em_armgcc/bin/../lib/gcc/arm-none-eabi/5.4.1/../../../../arm-none-eabi/lib/armv7e-m\libg_n.a(lib_a-nano-vfprintf.o)
+                0x08005588       0x2c c:/program files (x86)/embitz/1.11/share/em_armgcc/bin/../lib/gcc/arm-none-eabi/5.4.1/../../../../arm-none-eabi/lib/armv7e-m\libg_n.a(lib_a-nano-vfprintf.o)
  .text.__sfputs_r
-                0x080050a8       0x24 c:/program files (x86)/embitz/1.11/share/em_armgcc/bin/../lib/gcc/arm-none-eabi/5.4.1/../../../../arm-none-eabi/lib/armv7e-m\libg_n.a(lib_a-nano-vfprintf.o)
-                0x080050a8                __sfputs_r
+                0x080055b4       0x24 c:/program files (x86)/embitz/1.11/share/em_armgcc/bin/../lib/gcc/arm-none-eabi/5.4.1/../../../../arm-none-eabi/lib/armv7e-m\libg_n.a(lib_a-nano-vfprintf.o)
+                0x080055b4                __sfputs_r
  .text._vfprintf_r
-                0x080050cc      0x238 c:/program files (x86)/embitz/1.11/share/em_armgcc/bin/../lib/gcc/arm-none-eabi/5.4.1/../../../../arm-none-eabi/lib/armv7e-m\libg_n.a(lib_a-nano-vfprintf.o)
-                0x080050cc                _vfprintf_r
-                0x080050cc                _vfiprintf_r
+                0x080055d8      0x238 c:/program files (x86)/embitz/1.11/share/em_armgcc/bin/../lib/gcc/arm-none-eabi/5.4.1/../../../../arm-none-eabi/lib/armv7e-m\libg_n.a(lib_a-nano-vfprintf.o)
+                0x080055d8                _vfprintf_r
+                0x080055d8                _vfiprintf_r
  .text._printf_common
-                0x08005304       0xec c:/program files (x86)/embitz/1.11/share/em_armgcc/bin/../lib/gcc/arm-none-eabi/5.4.1/../../../../arm-none-eabi/lib/armv7e-m\libg_n.a(lib_a-nano-vfprintf_i.o)
-                0x08005304                _printf_common
+                0x08005810       0xec c:/program files (x86)/embitz/1.11/share/em_armgcc/bin/../lib/gcc/arm-none-eabi/5.4.1/../../../../arm-none-eabi/lib/armv7e-m\libg_n.a(lib_a-nano-vfprintf_i.o)
+                0x08005810                _printf_common
  .text._printf_i
-                0x080053f0      0x24c c:/program files (x86)/embitz/1.11/share/em_armgcc/bin/../lib/gcc/arm-none-eabi/5.4.1/../../../../arm-none-eabi/lib/armv7e-m\libg_n.a(lib_a-nano-vfprintf_i.o)
-                0x080053f0                _printf_i
- .text._putc_r  0x0800563c       0x6c c:/program files (x86)/embitz/1.11/share/em_armgcc/bin/../lib/gcc/arm-none-eabi/5.4.1/../../../../arm-none-eabi/lib/armv7e-m\libg_n.a(lib_a-putc.o)
-                0x0800563c                _putc_r
- .text._sbrk_r  0x080056a8       0x20 c:/program files (x86)/embitz/1.11/share/em_armgcc/bin/../lib/gcc/arm-none-eabi/5.4.1/../../../../arm-none-eabi/lib/armv7e-m\libg_n.a(lib_a-sbrkr.o)
-                0x080056a8                _sbrk_r
- .text.__sread  0x080056c8       0x22 c:/program files (x86)/embitz/1.11/share/em_armgcc/bin/../lib/gcc/arm-none-eabi/5.4.1/../../../../arm-none-eabi/lib/armv7e-m\libg_n.a(lib_a-stdio.o)
-                0x080056c8                __sread
+                0x080058fc      0x24c c:/program files (x86)/embitz/1.11/share/em_armgcc/bin/../lib/gcc/arm-none-eabi/5.4.1/../../../../arm-none-eabi/lib/armv7e-m\libg_n.a(lib_a-nano-vfprintf_i.o)
+                0x080058fc                _printf_i
+ .text._putc_r  0x08005b48       0x6c c:/program files (x86)/embitz/1.11/share/em_armgcc/bin/../lib/gcc/arm-none-eabi/5.4.1/../../../../arm-none-eabi/lib/armv7e-m\libg_n.a(lib_a-putc.o)
+                0x08005b48                _putc_r
+ .text._sbrk_r  0x08005bb4       0x20 c:/program files (x86)/embitz/1.11/share/em_armgcc/bin/../lib/gcc/arm-none-eabi/5.4.1/../../../../arm-none-eabi/lib/armv7e-m\libg_n.a(lib_a-sbrkr.o)
+                0x08005bb4                _sbrk_r
+ .text.__sread  0x08005bd4       0x22 c:/program files (x86)/embitz/1.11/share/em_armgcc/bin/../lib/gcc/arm-none-eabi/5.4.1/../../../../arm-none-eabi/lib/armv7e-m\libg_n.a(lib_a-stdio.o)
+                0x08005bd4                __sread
  .text.__swrite
-                0x080056ea       0x38 c:/program files (x86)/embitz/1.11/share/em_armgcc/bin/../lib/gcc/arm-none-eabi/5.4.1/../../../../arm-none-eabi/lib/armv7e-m\libg_n.a(lib_a-stdio.o)
-                0x080056ea                __swrite
- .text.__sseek  0x08005722       0x24 c:/program files (x86)/embitz/1.11/share/em_armgcc/bin/../lib/gcc/arm-none-eabi/5.4.1/../../../../arm-none-eabi/lib/armv7e-m\libg_n.a(lib_a-stdio.o)
-                0x08005722                __sseek
+                0x08005bf6       0x38 c:/program files (x86)/embitz/1.11/share/em_armgcc/bin/../lib/gcc/arm-none-eabi/5.4.1/../../../../arm-none-eabi/lib/armv7e-m\libg_n.a(lib_a-stdio.o)
+                0x08005bf6                __swrite
+ .text.__sseek  0x08005c2e       0x24 c:/program files (x86)/embitz/1.11/share/em_armgcc/bin/../lib/gcc/arm-none-eabi/5.4.1/../../../../arm-none-eabi/lib/armv7e-m\libg_n.a(lib_a-stdio.o)
+                0x08005c2e                __sseek
  .text.__sclose
-                0x08005746        0x8 c:/program files (x86)/embitz/1.11/share/em_armgcc/bin/../lib/gcc/arm-none-eabi/5.4.1/../../../../arm-none-eabi/lib/armv7e-m\libg_n.a(lib_a-stdio.o)
-                0x08005746                __sclose
- *fill*         0x0800574e        0x2 
+                0x08005c52        0x8 c:/program files (x86)/embitz/1.11/share/em_armgcc/bin/../lib/gcc/arm-none-eabi/5.4.1/../../../../arm-none-eabi/lib/armv7e-m\libg_n.a(lib_a-stdio.o)
+                0x08005c52                __sclose
+ *fill*         0x08005c5a        0x2 
  .text.__swbuf_r
-                0x08005750       0xa8 c:/program files (x86)/embitz/1.11/share/em_armgcc/bin/../lib/gcc/arm-none-eabi/5.4.1/../../../../arm-none-eabi/lib/armv7e-m\libg_n.a(lib_a-wbuf.o)
-                0x08005750                __swbuf_r
+                0x08005c5c       0xa8 c:/program files (x86)/embitz/1.11/share/em_armgcc/bin/../lib/gcc/arm-none-eabi/5.4.1/../../../../arm-none-eabi/lib/armv7e-m\libg_n.a(lib_a-wbuf.o)
+                0x08005c5c                __swbuf_r
  .text.__swsetup_r
-                0x080057f8       0xdc c:/program files (x86)/embitz/1.11/share/em_armgcc/bin/../lib/gcc/arm-none-eabi/5.4.1/../../../../arm-none-eabi/lib/armv7e-m\libg_n.a(lib_a-wsetup.o)
-                0x080057f8                __swsetup_r
+                0x08005d04       0xdc c:/program files (x86)/embitz/1.11/share/em_armgcc/bin/../lib/gcc/arm-none-eabi/5.4.1/../../../../arm-none-eabi/lib/armv7e-m\libg_n.a(lib_a-wsetup.o)
+                0x08005d04                __swsetup_r
  .text._close_r
-                0x080058d4       0x20 c:/program files (x86)/embitz/1.11/share/em_armgcc/bin/../lib/gcc/arm-none-eabi/5.4.1/../../../../arm-none-eabi/lib/armv7e-m\libg_n.a(lib_a-closer.o)
-                0x080058d4                _close_r
+                0x08005de0       0x20 c:/program files (x86)/embitz/1.11/share/em_armgcc/bin/../lib/gcc/arm-none-eabi/5.4.1/../../../../arm-none-eabi/lib/armv7e-m\libg_n.a(lib_a-closer.o)
+                0x08005de0                _close_r
  .text._fstat_r
-                0x080058f4       0x24 c:/program files (x86)/embitz/1.11/share/em_armgcc/bin/../lib/gcc/arm-none-eabi/5.4.1/../../../../arm-none-eabi/lib/armv7e-m\libg_n.a(lib_a-fstatr.o)
-                0x080058f4                _fstat_r
+                0x08005e00       0x24 c:/program files (x86)/embitz/1.11/share/em_armgcc/bin/../lib/gcc/arm-none-eabi/5.4.1/../../../../arm-none-eabi/lib/armv7e-m\libg_n.a(lib_a-fstatr.o)
+                0x08005e00                _fstat_r
  .text._isatty_r
-                0x08005918       0x20 c:/program files (x86)/embitz/1.11/share/em_armgcc/bin/../lib/gcc/arm-none-eabi/5.4.1/../../../../arm-none-eabi/lib/armv7e-m\libg_n.a(lib_a-isattyr.o)
-                0x08005918                _isatty_r
+                0x08005e24       0x20 c:/program files (x86)/embitz/1.11/share/em_armgcc/bin/../lib/gcc/arm-none-eabi/5.4.1/../../../../arm-none-eabi/lib/armv7e-m\libg_n.a(lib_a-isattyr.o)
+                0x08005e24                _isatty_r
  .text._lseek_r
-                0x08005938       0x24 c:/program files (x86)/embitz/1.11/share/em_armgcc/bin/../lib/gcc/arm-none-eabi/5.4.1/../../../../arm-none-eabi/lib/armv7e-m\libg_n.a(lib_a-lseekr.o)
-                0x08005938                _lseek_r
- *fill*         0x0800595c        0x4 
- .text          0x08005960       0xa0 c:/program files (x86)/embitz/1.11/share/em_armgcc/bin/../lib/gcc/arm-none-eabi/5.4.1/../../../../arm-none-eabi/lib/armv7e-m\libg_n.a(lib_a-memchr.o)
-                0x08005960                memchr
+                0x08005e44       0x24 c:/program files (x86)/embitz/1.11/share/em_armgcc/bin/../lib/gcc/arm-none-eabi/5.4.1/../../../../arm-none-eabi/lib/armv7e-m\libg_n.a(lib_a-lseekr.o)
+                0x08005e44                _lseek_r
+ *fill*         0x08005e68        0x8 
+ .text          0x08005e70       0xa0 c:/program files (x86)/embitz/1.11/share/em_armgcc/bin/../lib/gcc/arm-none-eabi/5.4.1/../../../../arm-none-eabi/lib/armv7e-m\libg_n.a(lib_a-memchr.o)
+                0x08005e70                memchr
  .text.__malloc_lock
-                0x08005a00        0x2 c:/program files (x86)/embitz/1.11/share/em_armgcc/bin/../lib/gcc/arm-none-eabi/5.4.1/../../../../arm-none-eabi/lib/armv7e-m\libg_n.a(lib_a-mlock.o)
-                0x08005a00                __malloc_lock
+                0x08005f10        0x2 c:/program files (x86)/embitz/1.11/share/em_armgcc/bin/../lib/gcc/arm-none-eabi/5.4.1/../../../../arm-none-eabi/lib/armv7e-m\libg_n.a(lib_a-mlock.o)
+                0x08005f10                __malloc_lock
  .text.__malloc_unlock
-                0x08005a02        0x2 c:/program files (x86)/embitz/1.11/share/em_armgcc/bin/../lib/gcc/arm-none-eabi/5.4.1/../../../../arm-none-eabi/lib/armv7e-m\libg_n.a(lib_a-mlock.o)
-                0x08005a02                __malloc_unlock
- .text._read_r  0x08005a04       0x24 c:/program files (x86)/embitz/1.11/share/em_armgcc/bin/../lib/gcc/arm-none-eabi/5.4.1/../../../../arm-none-eabi/lib/armv7e-m\libg_n.a(lib_a-readr.o)
-                0x08005a04                _read_r
- .text._close   0x08005a28       0x10 c:/program files (x86)/embitz/1.11/share/em_armgcc/bin/../lib/gcc/arm-none-eabi/5.4.1/../../../../arm-none-eabi/lib/armv7e-m\libnosys_s.a(close.o)
-                0x08005a28                _close
- .text._fstat   0x08005a38       0x10 c:/program files (x86)/embitz/1.11/share/em_armgcc/bin/../lib/gcc/arm-none-eabi/5.4.1/../../../../arm-none-eabi/lib/armv7e-m\libnosys_s.a(fstat.o)
-                0x08005a38                _fstat
+                0x08005f12        0x2 c:/program files (x86)/embitz/1.11/share/em_armgcc/bin/../lib/gcc/arm-none-eabi/5.4.1/../../../../arm-none-eabi/lib/armv7e-m\libg_n.a(lib_a-mlock.o)
+                0x08005f12                __malloc_unlock
+ .text._read_r  0x08005f14       0x24 c:/program files (x86)/embitz/1.11/share/em_armgcc/bin/../lib/gcc/arm-none-eabi/5.4.1/../../../../arm-none-eabi/lib/armv7e-m\libg_n.a(lib_a-readr.o)
+                0x08005f14                _read_r
+ .text._close   0x08005f38       0x10 c:/program files (x86)/embitz/1.11/share/em_armgcc/bin/../lib/gcc/arm-none-eabi/5.4.1/../../../../arm-none-eabi/lib/armv7e-m\libnosys_s.a(close.o)
+                0x08005f38                _close
+ .text._fstat   0x08005f48       0x10 c:/program files (x86)/embitz/1.11/share/em_armgcc/bin/../lib/gcc/arm-none-eabi/5.4.1/../../../../arm-none-eabi/lib/armv7e-m\libnosys_s.a(fstat.o)
+                0x08005f48                _fstat
  .text._gettimeofday
-                0x08005a48       0x10 c:/program files (x86)/embitz/1.11/share/em_armgcc/bin/../lib/gcc/arm-none-eabi/5.4.1/../../../../arm-none-eabi/lib/armv7e-m\libnosys_s.a(gettod.o)
-                0x08005a48                _gettimeofday
- .text._isatty  0x08005a58       0x10 c:/program files (x86)/embitz/1.11/share/em_armgcc/bin/../lib/gcc/arm-none-eabi/5.4.1/../../../../arm-none-eabi/lib/armv7e-m\libnosys_s.a(isatty.o)
-                0x08005a58                _isatty
- .text._lseek   0x08005a68       0x10 c:/program files (x86)/embitz/1.11/share/em_armgcc/bin/../lib/gcc/arm-none-eabi/5.4.1/../../../../arm-none-eabi/lib/armv7e-m\libnosys_s.a(lseek.o)
-                0x08005a68                _lseek
- .text._read    0x08005a78       0x10 c:/program files (x86)/embitz/1.11/share/em_armgcc/bin/../lib/gcc/arm-none-eabi/5.4.1/../../../../arm-none-eabi/lib/armv7e-m\libnosys_s.a(read.o)
-                0x08005a78                _read
- .text._sbrk    0x08005a88       0x1c c:/program files (x86)/embitz/1.11/share/em_armgcc/bin/../lib/gcc/arm-none-eabi/5.4.1/../../../../arm-none-eabi/lib/armv7e-m\libnosys_s.a(sbrk.o)
-                0x08005a88                _sbrk
- .text._exit    0x08005aa4        0x2 c:/program files (x86)/embitz/1.11/share/em_armgcc/bin/../lib/gcc/arm-none-eabi/5.4.1/../../../../arm-none-eabi/lib/armv7e-m\libnosys_s.a(_exit.o)
-                0x08005aa4                _exit
+                0x08005f58       0x10 c:/program files (x86)/embitz/1.11/share/em_armgcc/bin/../lib/gcc/arm-none-eabi/5.4.1/../../../../arm-none-eabi/lib/armv7e-m\libnosys_s.a(gettod.o)
+                0x08005f58                _gettimeofday
+ .text._isatty  0x08005f68       0x10 c:/program files (x86)/embitz/1.11/share/em_armgcc/bin/../lib/gcc/arm-none-eabi/5.4.1/../../../../arm-none-eabi/lib/armv7e-m\libnosys_s.a(isatty.o)
+                0x08005f68                _isatty
+ .text._lseek   0x08005f78       0x10 c:/program files (x86)/embitz/1.11/share/em_armgcc/bin/../lib/gcc/arm-none-eabi/5.4.1/../../../../arm-none-eabi/lib/armv7e-m\libnosys_s.a(lseek.o)
+                0x08005f78                _lseek
+ .text._read    0x08005f88       0x10 c:/program files (x86)/embitz/1.11/share/em_armgcc/bin/../lib/gcc/arm-none-eabi/5.4.1/../../../../arm-none-eabi/lib/armv7e-m\libnosys_s.a(read.o)
+                0x08005f88                _read
+ .text._sbrk    0x08005f98       0x1c c:/program files (x86)/embitz/1.11/share/em_armgcc/bin/../lib/gcc/arm-none-eabi/5.4.1/../../../../arm-none-eabi/lib/armv7e-m\libnosys_s.a(sbrk.o)
+                0x08005f98                _sbrk
+ .text._exit    0x08005fb4        0x2 c:/program files (x86)/embitz/1.11/share/em_armgcc/bin/../lib/gcc/arm-none-eabi/5.4.1/../../../../arm-none-eabi/lib/armv7e-m\libnosys_s.a(_exit.o)
+                0x08005fb4                _exit
  *(.init)
- *fill*         0x08005aa6        0x2 
- .init          0x08005aa8        0x4 c:/program files (x86)/embitz/1.11/share/em_armgcc/bin/../lib/gcc/arm-none-eabi/5.4.1/armv7e-m/crti.o
-                0x08005aa8                _init
- .init          0x08005aac        0x8 c:/program files (x86)/embitz/1.11/share/em_armgcc/bin/../lib/gcc/arm-none-eabi/5.4.1/armv7e-m/crtn.o
+ *fill*         0x08005fb6        0x2 
+ .init          0x08005fb8        0x4 c:/program files (x86)/embitz/1.11/share/em_armgcc/bin/../lib/gcc/arm-none-eabi/5.4.1/armv7e-m/crti.o
+                0x08005fb8                _init
+ .init          0x08005fbc        0x8 c:/program files (x86)/embitz/1.11/share/em_armgcc/bin/../lib/gcc/arm-none-eabi/5.4.1/armv7e-m/crtn.o
  *(.fini)
- .fini          0x08005ab4        0x4 c:/program files (x86)/embitz/1.11/share/em_armgcc/bin/../lib/gcc/arm-none-eabi/5.4.1/armv7e-m/crti.o
-                0x08005ab4                _fini
- .fini          0x08005ab8        0x8 c:/program files (x86)/embitz/1.11/share/em_armgcc/bin/../lib/gcc/arm-none-eabi/5.4.1/armv7e-m/crtn.o
+ .fini          0x08005fc4        0x4 c:/program files (x86)/embitz/1.11/share/em_armgcc/bin/../lib/gcc/arm-none-eabi/5.4.1/armv7e-m/crti.o
+                0x08005fc4                _fini
+ .fini          0x08005fc8        0x8 c:/program files (x86)/embitz/1.11/share/em_armgcc/bin/../lib/gcc/arm-none-eabi/5.4.1/armv7e-m/crtn.o
  *crtbegin.o(.ctors)
  *crtbegin?.o(.ctors)
  *(EXCLUDE_FILE(*crtend.o *crtend?.o) .ctors)
@@ -5599,75 +5609,76 @@ LOAD c:/program files (x86)/embitz/1.11/share/em_armgcc/bin/../lib/gcc/arm-none-
  *(SORT(.dtors.*))
  *(.dtors)
  *(.rodata*)
- .rodata        0x08005ac0       0x6c obj\debug\src\alien.o
- .rodata        0x08005b2c       0x5b obj\debug\src\ansi.o
- *fill*         0x08005b87        0x1 
- .rodata        0x08005b88       0x39 obj\debug\src\asteroid.o
- *fill*         0x08005bc1        0x3 
+ .rodata        0x08005fd0       0x72 obj\debug\src\alien.o
+ *fill*         0x08006042        0x2 
+ .rodata        0x08006044       0x5b obj\debug\src\ansi.o
+ *fill*         0x0800609f        0x1 
+ .rodata        0x080060a0       0x77 obj\debug\src\asteroid.o
+ *fill*         0x08006117        0x1 
  .rodata.character_data
-                0x08005bc4      0x1db obj\debug\src\charset.o
-                0x08005bc4                character_data
- *fill*         0x08005d9f        0x1 
- .rodata        0x08005da0       0x1b obj\debug\src\gamefunctions.o
- *fill*         0x08005dbb        0x1 
- .rodata        0x08005dbc        0xf obj\debug\src\main.o
- *fill*         0x08005dcb        0x1 
- .rodata        0x08005dcc     0x1e0f obj\debug\src\menu.o
- *fill*         0x08007bdb        0x1 
- .rodata        0x08007bdc        0xc obj\debug\src\powerups.o
+                0x08006118      0x1db obj\debug\src\charset.o
+                0x08006118                character_data
+ *fill*         0x080062f3        0x1 
+ .rodata        0x080062f4       0x1b obj\debug\src\gamefunctions.o
+ *fill*         0x0800630f        0x1 
+ .rodata        0x08006310        0xf obj\debug\src\main.o
+ *fill*         0x0800631f        0x1 
+ .rodata        0x08006320     0x1e1e obj\debug\src\menu.o
+ *fill*         0x0800813e        0x2 
+ .rodata        0x08008140        0xc obj\debug\src\powerups.o
  .rodata.str1.1
-                0x08007be8        0x2 c:/program files (x86)/embitz/1.11/share/em_armgcc/bin/../lib/gcc/arm-none-eabi/5.4.1/../../../../arm-none-eabi/lib/armv7e-m\libg_n.a(lib_a-impure.o)
- *fill*         0x08007bea        0x2 
+                0x0800814c        0x2 c:/program files (x86)/embitz/1.11/share/em_armgcc/bin/../lib/gcc/arm-none-eabi/5.4.1/../../../../arm-none-eabi/lib/armv7e-m\libg_n.a(lib_a-impure.o)
+ *fill*         0x0800814e        0x2 
  .rodata._global_impure_ptr
-                0x08007bec        0x4 c:/program files (x86)/embitz/1.11/share/em_armgcc/bin/../lib/gcc/arm-none-eabi/5.4.1/../../../../arm-none-eabi/lib/armv7e-m\libg_n.a(lib_a-impure.o)
-                0x08007bec                _global_impure_ptr
+                0x08008150        0x4 c:/program files (x86)/embitz/1.11/share/em_armgcc/bin/../lib/gcc/arm-none-eabi/5.4.1/../../../../arm-none-eabi/lib/armv7e-m\libg_n.a(lib_a-impure.o)
+                0x08008150                _global_impure_ptr
  .rodata.__sf_fake_stdin
-                0x08007bf0       0x20 c:/program files (x86)/embitz/1.11/share/em_armgcc/bin/../lib/gcc/arm-none-eabi/5.4.1/../../../../arm-none-eabi/lib/armv7e-m\libg_n.a(lib_a-findfp.o)
-                0x08007bf0                __sf_fake_stdin
+                0x08008154       0x20 c:/program files (x86)/embitz/1.11/share/em_armgcc/bin/../lib/gcc/arm-none-eabi/5.4.1/../../../../arm-none-eabi/lib/armv7e-m\libg_n.a(lib_a-findfp.o)
+                0x08008154                __sf_fake_stdin
  .rodata.__sf_fake_stdout
-                0x08007c10       0x20 c:/program files (x86)/embitz/1.11/share/em_armgcc/bin/../lib/gcc/arm-none-eabi/5.4.1/../../../../arm-none-eabi/lib/armv7e-m\libg_n.a(lib_a-findfp.o)
-                0x08007c10                __sf_fake_stdout
+                0x08008174       0x20 c:/program files (x86)/embitz/1.11/share/em_armgcc/bin/../lib/gcc/arm-none-eabi/5.4.1/../../../../arm-none-eabi/lib/armv7e-m\libg_n.a(lib_a-findfp.o)
+                0x08008174                __sf_fake_stdout
  .rodata.__sf_fake_stderr
-                0x08007c30       0x20 c:/program files (x86)/embitz/1.11/share/em_armgcc/bin/../lib/gcc/arm-none-eabi/5.4.1/../../../../arm-none-eabi/lib/armv7e-m\libg_n.a(lib_a-findfp.o)
-                0x08007c30                __sf_fake_stderr
+                0x08008194       0x20 c:/program files (x86)/embitz/1.11/share/em_armgcc/bin/../lib/gcc/arm-none-eabi/5.4.1/../../../../arm-none-eabi/lib/armv7e-m\libg_n.a(lib_a-findfp.o)
+                0x08008194                __sf_fake_stderr
  .rodata.str1.1
-                0x08007c50       0x11 c:/program files (x86)/embitz/1.11/share/em_armgcc/bin/../lib/gcc/arm-none-eabi/5.4.1/../../../../arm-none-eabi/lib/armv7e-m\libg_n.a(lib_a-nano-vfprintf.o)
+                0x080081b4       0x11 c:/program files (x86)/embitz/1.11/share/em_armgcc/bin/../lib/gcc/arm-none-eabi/5.4.1/../../../../arm-none-eabi/lib/armv7e-m\libg_n.a(lib_a-nano-vfprintf.o)
  .rodata.str1.1
-                0x08007c61       0x22 c:/program files (x86)/embitz/1.11/share/em_armgcc/bin/../lib/gcc/arm-none-eabi/5.4.1/../../../../arm-none-eabi/lib/armv7e-m\libg_n.a(lib_a-nano-vfprintf_i.o)
+                0x080081c5       0x22 c:/program files (x86)/embitz/1.11/share/em_armgcc/bin/../lib/gcc/arm-none-eabi/5.4.1/../../../../arm-none-eabi/lib/armv7e-m\libg_n.a(lib_a-nano-vfprintf_i.o)
  *(.eh_frame*)
- *fill*         0x08007c83        0x1 
- .eh_frame      0x08007c84        0x0 c:/program files (x86)/embitz/1.11/share/em_armgcc/bin/../lib/gcc/arm-none-eabi/5.4.1/armv7e-m/crtbegin.o
- .eh_frame      0x08007c84        0x4 c:/program files (x86)/embitz/1.11/share/em_armgcc/bin/../lib/gcc/arm-none-eabi/5.4.1/armv7e-m/crtend.o
+ *fill*         0x080081e7        0x1 
+ .eh_frame      0x080081e8        0x0 c:/program files (x86)/embitz/1.11/share/em_armgcc/bin/../lib/gcc/arm-none-eabi/5.4.1/armv7e-m/crtbegin.o
+ .eh_frame      0x080081e8        0x4 c:/program files (x86)/embitz/1.11/share/em_armgcc/bin/../lib/gcc/arm-none-eabi/5.4.1/armv7e-m/crtend.o
 
-.glue_7         0x08007c88        0x0
- .glue_7        0x08007c88        0x0 linker stubs
+.glue_7         0x080081ec        0x0
+ .glue_7        0x080081ec        0x0 linker stubs
 
-.glue_7t        0x08007c88        0x0
- .glue_7t       0x08007c88        0x0 linker stubs
+.glue_7t        0x080081ec        0x0
+ .glue_7t       0x080081ec        0x0 linker stubs
 
-.vfp11_veneer   0x08007c88        0x0
- .vfp11_veneer  0x08007c88        0x0 linker stubs
+.vfp11_veneer   0x080081ec        0x0
+ .vfp11_veneer  0x080081ec        0x0 linker stubs
 
-.v4_bx          0x08007c88        0x0
- .v4_bx         0x08007c88        0x0 linker stubs
+.v4_bx          0x080081ec        0x0
+ .v4_bx         0x080081ec        0x0 linker stubs
 
-.iplt           0x08007c88        0x0
- .iplt          0x08007c88        0x0 c:/program files (x86)/embitz/1.11/share/em_armgcc/bin/../lib/gcc/arm-none-eabi/5.4.1/armv7e-m/crtbegin.o
+.iplt           0x080081ec        0x0
+ .iplt          0x080081ec        0x0 c:/program files (x86)/embitz/1.11/share/em_armgcc/bin/../lib/gcc/arm-none-eabi/5.4.1/armv7e-m/crtbegin.o
 
 .ARM.extab
  *(.ARM.extab* .gnu.linkonce.armextab.*)
-                0x08007c88                __exidx_start = .
+                0x080081ec                __exidx_start = .
 
-.ARM.exidx      0x08007c88        0x8
+.ARM.exidx      0x080081ec        0x8
  *(.ARM.exidx* .gnu.linkonce.armexidx.*)
- .ARM.exidx     0x08007c88        0x8 c:/program files (x86)/embitz/1.11/share/em_armgcc/bin/../lib/gcc/arm-none-eabi/5.4.1/../../../../arm-none-eabi/lib/armv7e-m/crt0.o
-                0x08007c90                __exidx_end = .
-                0x08007c90                __etext = .
+ .ARM.exidx     0x080081ec        0x8 c:/program files (x86)/embitz/1.11/share/em_armgcc/bin/../lib/gcc/arm-none-eabi/5.4.1/../../../../arm-none-eabi/lib/armv7e-m/crt0.o
+                0x080081f4                __exidx_end = .
+                0x080081f4                __etext = .
 
-.rel.dyn        0x08007c90        0x0
- .rel.iplt      0x08007c90        0x0 c:/program files (x86)/embitz/1.11/share/em_armgcc/bin/../lib/gcc/arm-none-eabi/5.4.1/armv7e-m/crtbegin.o
+.rel.dyn        0x080081f4        0x0
+ .rel.iplt      0x080081f4        0x0 c:/program files (x86)/embitz/1.11/share/em_armgcc/bin/../lib/gcc/arm-none-eabi/5.4.1/armv7e-m/crtbegin.o
 
-.data           0x20000000       0x98 load address 0x08007c90
+.data           0x20000000       0x98 load address 0x080081f4
                 0x20000000                __data_start__ = .
  *(vtable)
  *(.data*)
@@ -5700,13 +5711,13 @@ LOAD c:/program files (x86)/embitz/1.11/share/em_armgcc/bin/../lib/gcc/arm-none-
                 0x20000098                . = ALIGN (0x4)
                 0x20000098                __data_end__ = .
 
-.jcr            0x20000098        0x0 load address 0x08007d28
+.jcr            0x20000098        0x0 load address 0x0800828c
  .jcr           0x20000098        0x0 c:/program files (x86)/embitz/1.11/share/em_armgcc/bin/../lib/gcc/arm-none-eabi/5.4.1/armv7e-m/crtbegin.o
 
-.igot.plt       0x20000098        0x0 load address 0x08007d28
+.igot.plt       0x20000098        0x0 load address 0x0800828c
  .igot.plt      0x20000098        0x0 c:/program files (x86)/embitz/1.11/share/em_armgcc/bin/../lib/gcc/arm-none-eabi/5.4.1/armv7e-m/crtbegin.o
 
-.bss            0x20000098      0x1a4 load address 0x08007d28
+.bss            0x20000098      0x1a4 load address 0x0800828c
                 0x20000098                __bss_start__ = .
  *(.bss*)
  .bss           0x20000098       0x1c c:/program files (x86)/embitz/1.11/share/em_armgcc/bin/../lib/gcc/arm-none-eabi/5.4.1/armv7e-m/crtbegin.o
@@ -5723,9 +5734,9 @@ LOAD c:/program files (x86)/embitz/1.11/share/em_armgcc/bin/../lib/gcc/arm-none-
                 0x200001b6        0x1 obj\debug\src\30010_io.o
                 0x200001b6                UART_COUNT
  *fill*         0x200001b7        0x1 
- .bss.Dvx.9062  0x200001b8       0x28 obj\debug\src\gamefunctions.o
- .bss.Dvy.9063  0x200001e0       0x28 obj\debug\src\gamefunctions.o
- .bss.c_count.8953
+ .bss.Dvx.9101  0x200001b8       0x28 obj\debug\src\gamefunctions.o
+ .bss.Dvy.9102  0x200001e0       0x28 obj\debug\src\gamefunctions.o
+ .bss.c_count.8993
                 0x20000208        0x1 obj\debug\src\serial_com.o
  *fill*         0x20000209        0x3 
  .bss.__malloc_sbrk_start
@@ -5796,7 +5807,6 @@ LOAD obj\debug\src\powerups.o
 LOAD obj\debug\src\serial_com.o
 LOAD obj\debug\src\startup_stm32f30x.o
 LOAD obj\debug\src\system_stm32f30x.o
-LOAD obj\debug\src\test_alien_array.o
 LOAD obj\debug\src\timer.o
 START GROUP
 LOAD c:/program files (x86)/embitz/1.11/share/em_armgcc/bin/../lib/gcc/arm-none-eabi/5.4.1/armv7e-m\libgcc.a
@@ -5971,51 +5981,51 @@ OUTPUT(bin\Debug\Exercise_5.elf elf32-littlearm)
  .comment       0x0000006e       0x6f obj\debug\src\system_stm32f30x.o
  .comment       0x0000006e       0x6f obj\debug\src\timer.o
 
-.debug_info     0x00000000     0x6de7
+.debug_info     0x00000000     0x7205
  .debug_info    0x00000000      0xad4 obj\debug\spl\src\stm32f30x_rcc.o
  .debug_info    0x00000ad4      0xb82 obj\debug\spl\src\stm32f30x_spi.o
  .debug_info    0x00001656      0xecc obj\debug\spl\src\stm32f30x_usart.o
  .debug_info    0x00002522     0x12ea obj\debug\src\30010_io.o
- .debug_info    0x0000380c      0x21e obj\debug\src\alien.o
- .debug_info    0x00003a2a      0x29a obj\debug\src\ansi.o
- .debug_info    0x00003cc4      0x256 obj\debug\src\asteroid.o
- .debug_info    0x00003f1a       0x61 obj\debug\src\charset.o
- .debug_info    0x00003f7b      0x1ba obj\debug\src\fpsqrt.o
- .debug_info    0x00004135      0xa5b obj\debug\src\gamefunctions.o
- .debug_info    0x00004b90      0x316 obj\debug\src\joystick.o
- .debug_info    0x00004ea6      0x39a obj\debug\src\lcd.o
- .debug_info    0x00005240      0x1fb obj\debug\src\led_control.o
- .debug_info    0x0000543b      0x49c obj\debug\src\main.o
- .debug_info    0x000058d7      0x1c5 obj\debug\src\menu.o
- .debug_info    0x00005a9c      0x1bd obj\debug\src\powerups.o
- .debug_info    0x00005c59      0x31e obj\debug\src\serial_com.o
- .debug_info    0x00005f77       0x7b obj\debug\src\startup_stm32f30x.o
- .debug_info    0x00005ff2      0x470 obj\debug\src\system_stm32f30x.o
- .debug_info    0x00006462      0x985 obj\debug\src\timer.o
+ .debug_info    0x0000380c      0x47a obj\debug\src\alien.o
+ .debug_info    0x00003c86      0x29a obj\debug\src\ansi.o
+ .debug_info    0x00003f20      0x256 obj\debug\src\asteroid.o
+ .debug_info    0x00004176       0x61 obj\debug\src\charset.o
+ .debug_info    0x000041d7      0x1ba obj\debug\src\fpsqrt.o
+ .debug_info    0x00004391      0xbb0 obj\debug\src\gamefunctions.o
+ .debug_info    0x00004f41      0x316 obj\debug\src\joystick.o
+ .debug_info    0x00005257      0x39a obj\debug\src\lcd.o
+ .debug_info    0x000055f1      0x1fb obj\debug\src\led_control.o
+ .debug_info    0x000057ec      0x511 obj\debug\src\main.o
+ .debug_info    0x00005cfd      0x1d3 obj\debug\src\menu.o
+ .debug_info    0x00005ed0      0x1bd obj\debug\src\powerups.o
+ .debug_info    0x0000608d      0x31e obj\debug\src\serial_com.o
+ .debug_info    0x000063ab       0x7b obj\debug\src\startup_stm32f30x.o
+ .debug_info    0x00006426      0x470 obj\debug\src\system_stm32f30x.o
+ .debug_info    0x00006896      0x96f obj\debug\src\timer.o
 
-.debug_abbrev   0x00000000     0x170c
+.debug_abbrev   0x00000000     0x1724
  .debug_abbrev  0x00000000      0x1ea obj\debug\spl\src\stm32f30x_rcc.o
  .debug_abbrev  0x000001ea      0x190 obj\debug\spl\src\stm32f30x_spi.o
  .debug_abbrev  0x0000037a      0x15c obj\debug\spl\src\stm32f30x_usart.o
  .debug_abbrev  0x000004d6      0x33a obj\debug\src\30010_io.o
- .debug_abbrev  0x00000810       0xe8 obj\debug\src\alien.o
- .debug_abbrev  0x000008f8       0xe1 obj\debug\src\ansi.o
- .debug_abbrev  0x000009d9       0xf5 obj\debug\src\asteroid.o
- .debug_abbrev  0x00000ace       0x48 obj\debug\src\charset.o
- .debug_abbrev  0x00000b16       0x8e obj\debug\src\fpsqrt.o
- .debug_abbrev  0x00000ba4      0x18a obj\debug\src\gamefunctions.o
- .debug_abbrev  0x00000d2e       0xdb obj\debug\src\joystick.o
- .debug_abbrev  0x00000e09      0x11a obj\debug\src\lcd.o
- .debug_abbrev  0x00000f23       0xdd obj\debug\src\led_control.o
- .debug_abbrev  0x00001000      0x113 obj\debug\src\main.o
- .debug_abbrev  0x00001113       0xe6 obj\debug\src\menu.o
- .debug_abbrev  0x000011f9      0x104 obj\debug\src\powerups.o
- .debug_abbrev  0x000012fd       0xfd obj\debug\src\serial_com.o
- .debug_abbrev  0x000013fa       0x14 obj\debug\src\startup_stm32f30x.o
- .debug_abbrev  0x0000140e      0x11a obj\debug\src\system_stm32f30x.o
- .debug_abbrev  0x00001528      0x1e4 obj\debug\src\timer.o
+ .debug_abbrev  0x00000810      0x113 obj\debug\src\alien.o
+ .debug_abbrev  0x00000923       0xe1 obj\debug\src\ansi.o
+ .debug_abbrev  0x00000a04       0xf5 obj\debug\src\asteroid.o
+ .debug_abbrev  0x00000af9       0x48 obj\debug\src\charset.o
+ .debug_abbrev  0x00000b41       0x8e obj\debug\src\fpsqrt.o
+ .debug_abbrev  0x00000bcf      0x18a obj\debug\src\gamefunctions.o
+ .debug_abbrev  0x00000d59       0xdb obj\debug\src\joystick.o
+ .debug_abbrev  0x00000e34      0x11a obj\debug\src\lcd.o
+ .debug_abbrev  0x00000f4e       0xdd obj\debug\src\led_control.o
+ .debug_abbrev  0x0000102b      0x100 obj\debug\src\main.o
+ .debug_abbrev  0x0000112b       0xe6 obj\debug\src\menu.o
+ .debug_abbrev  0x00001211      0x104 obj\debug\src\powerups.o
+ .debug_abbrev  0x00001315       0xfd obj\debug\src\serial_com.o
+ .debug_abbrev  0x00001412       0x14 obj\debug\src\startup_stm32f30x.o
+ .debug_abbrev  0x00001426      0x11a obj\debug\src\system_stm32f30x.o
+ .debug_abbrev  0x00001540      0x1e4 obj\debug\src\timer.o
 
-.debug_aranges  0x00000000      0x8a0
+.debug_aranges  0x00000000      0x8d8
  .debug_aranges
                 0x00000000      0x150 obj\debug\spl\src\stm32f30x_rcc.o
  .debug_aranges
@@ -6025,59 +6035,59 @@ OUTPUT(bin\Debug\Exercise_5.elf elf32-littlearm)
  .debug_aranges
                 0x00000408       0x78 obj\debug\src\30010_io.o
  .debug_aranges
-                0x00000480       0x38 obj\debug\src\alien.o
+                0x00000480       0x68 obj\debug\src\alien.o
  .debug_aranges
-                0x000004b8       0x70 obj\debug\src\ansi.o
+                0x000004e8       0x70 obj\debug\src\ansi.o
  .debug_aranges
-                0x00000528       0x38 obj\debug\src\asteroid.o
+                0x00000558       0x38 obj\debug\src\asteroid.o
  .debug_aranges
-                0x00000560       0x18 obj\debug\src\charset.o
+                0x00000590       0x18 obj\debug\src\charset.o
  .debug_aranges
-                0x00000578       0x30 obj\debug\src\fpsqrt.o
+                0x000005a8       0x30 obj\debug\src\fpsqrt.o
  .debug_aranges
-                0x000005a8       0xe0 obj\debug\src\gamefunctions.o
+                0x000005d8       0xe8 obj\debug\src\gamefunctions.o
  .debug_aranges
-                0x00000688       0x28 obj\debug\src\joystick.o
+                0x000006c0       0x28 obj\debug\src\joystick.o
  .debug_aranges
-                0x000006b0       0x40 obj\debug\src\lcd.o
+                0x000006e8       0x40 obj\debug\src\lcd.o
  .debug_aranges
-                0x000006f0       0x28 obj\debug\src\led_control.o
+                0x00000728       0x28 obj\debug\src\led_control.o
  .debug_aranges
-                0x00000718       0x28 obj\debug\src\main.o
+                0x00000750       0x28 obj\debug\src\main.o
  .debug_aranges
-                0x00000740       0x50 obj\debug\src\menu.o
+                0x00000778       0x50 obj\debug\src\menu.o
  .debug_aranges
-                0x00000790       0x30 obj\debug\src\powerups.o
+                0x000007c8       0x30 obj\debug\src\powerups.o
  .debug_aranges
-                0x000007c0       0x28 obj\debug\src\serial_com.o
+                0x000007f8       0x28 obj\debug\src\serial_com.o
  .debug_aranges
-                0x000007e8       0x20 obj\debug\src\startup_stm32f30x.o
+                0x00000820       0x20 obj\debug\src\startup_stm32f30x.o
  .debug_aranges
-                0x00000808       0x30 obj\debug\src\system_stm32f30x.o
+                0x00000840       0x30 obj\debug\src\system_stm32f30x.o
  .debug_aranges
-                0x00000838       0x68 obj\debug\src\timer.o
+                0x00000870       0x68 obj\debug\src\timer.o
 
-.debug_ranges   0x00000000      0x760
+.debug_ranges   0x00000000      0x798
  .debug_ranges  0x00000000      0x140 obj\debug\spl\src\stm32f30x_rcc.o
  .debug_ranges  0x00000140      0x108 obj\debug\spl\src\stm32f30x_spi.o
  .debug_ranges  0x00000248      0x190 obj\debug\spl\src\stm32f30x_usart.o
  .debug_ranges  0x000003d8       0x68 obj\debug\src\30010_io.o
- .debug_ranges  0x00000440       0x40 obj\debug\src\alien.o
- .debug_ranges  0x00000480       0x60 obj\debug\src\ansi.o
- .debug_ranges  0x000004e0       0x28 obj\debug\src\asteroid.o
- .debug_ranges  0x00000508       0x20 obj\debug\src\fpsqrt.o
- .debug_ranges  0x00000528       0xd0 obj\debug\src\gamefunctions.o
- .debug_ranges  0x000005f8       0x18 obj\debug\src\joystick.o
- .debug_ranges  0x00000610       0x30 obj\debug\src\lcd.o
- .debug_ranges  0x00000640       0x18 obj\debug\src\led_control.o
- .debug_ranges  0x00000658       0x18 obj\debug\src\main.o
- .debug_ranges  0x00000670       0x40 obj\debug\src\menu.o
- .debug_ranges  0x000006b0       0x20 obj\debug\src\powerups.o
- .debug_ranges  0x000006d0       0x18 obj\debug\src\serial_com.o
- .debug_ranges  0x000006e8       0x20 obj\debug\src\system_stm32f30x.o
- .debug_ranges  0x00000708       0x58 obj\debug\src\timer.o
+ .debug_ranges  0x00000440       0x70 obj\debug\src\alien.o
+ .debug_ranges  0x000004b0       0x60 obj\debug\src\ansi.o
+ .debug_ranges  0x00000510       0x28 obj\debug\src\asteroid.o
+ .debug_ranges  0x00000538       0x20 obj\debug\src\fpsqrt.o
+ .debug_ranges  0x00000558       0xd8 obj\debug\src\gamefunctions.o
+ .debug_ranges  0x00000630       0x18 obj\debug\src\joystick.o
+ .debug_ranges  0x00000648       0x30 obj\debug\src\lcd.o
+ .debug_ranges  0x00000678       0x18 obj\debug\src\led_control.o
+ .debug_ranges  0x00000690       0x18 obj\debug\src\main.o
+ .debug_ranges  0x000006a8       0x40 obj\debug\src\menu.o
+ .debug_ranges  0x000006e8       0x20 obj\debug\src\powerups.o
+ .debug_ranges  0x00000708       0x18 obj\debug\src\serial_com.o
+ .debug_ranges  0x00000720       0x20 obj\debug\src\system_stm32f30x.o
+ .debug_ranges  0x00000740       0x58 obj\debug\src\timer.o
 
-.debug_macro    0x00000000     0x4c0c
+.debug_macro    0x00000000     0x4c5a
  .debug_macro   0x00000000      0x238 obj\debug\spl\src\stm32f30x_rcc.o
  .debug_macro   0x00000238      0x5c0 obj\debug\spl\src\stm32f30x_rcc.o
  .debug_macro   0x000007f8      0x1b0 obj\debug\spl\src\stm32f30x_spi.o
@@ -6107,58 +6117,58 @@ OUTPUT(bin\Debug\Exercise_5.elf elf32-littlearm)
  .debug_macro   0x00001e8f       0xd7 obj\debug\src\30010_io.o
  .debug_macro   0x00001f66       0x16 obj\debug\src\30010_io.o
  .debug_macro   0x00001f7c      0x189 obj\debug\src\30010_io.o
- .debug_macro   0x00002105      0x2f9 obj\debug\src\alien.o
- .debug_macro   0x000023fe       0x16 obj\debug\src\alien.o
- .debug_macro   0x00002414       0x35 obj\debug\src\alien.o
- .debug_macro   0x00002449      0x2de obj\debug\src\ansi.o
- .debug_macro   0x00002727      0x2d8 obj\debug\src\asteroid.o
- .debug_macro   0x000029ff       0x1b obj\debug\src\charset.o
- .debug_macro   0x00002a1a      0x1aa obj\debug\src\fpsqrt.o
- .debug_macro   0x00002bc4      0x37a obj\debug\src\gamefunctions.o
- .debug_macro   0x00002f3e       0x64 obj\debug\src\gamefunctions.o
- .debug_macro   0x00002fa2       0x10 obj\debug\src\gamefunctions.o
- .debug_macro   0x00002fb2       0x10 obj\debug\src\gamefunctions.o
- .debug_macro   0x00002fc2       0x16 obj\debug\src\gamefunctions.o
- .debug_macro   0x00002fd8       0x83 obj\debug\src\gamefunctions.o
- .debug_macro   0x0000305b       0x16 obj\debug\src\gamefunctions.o
- .debug_macro   0x00003071       0x29 obj\debug\src\gamefunctions.o
- .debug_macro   0x0000309a      0x2ef obj\debug\src\joystick.o
- .debug_macro   0x00003389      0x2f1 obj\debug\src\lcd.o
- .debug_macro   0x0000367a      0x2ef obj\debug\src\led_control.o
- .debug_macro   0x00003969      0x453 obj\debug\src\main.o
- .debug_macro   0x00003dbc       0x95 obj\debug\src\main.o
- .debug_macro   0x00003e51       0x16 obj\debug\src\main.o
- .debug_macro   0x00003e67       0x10 obj\debug\src\main.o
- .debug_macro   0x00003e77       0x41 obj\debug\src\main.o
- .debug_macro   0x00003eb8      0x3a5 obj\debug\src\menu.o
- .debug_macro   0x0000425d      0x19b obj\debug\src\powerups.o
- .debug_macro   0x000043f8      0x38e obj\debug\src\serial_com.o
- .debug_macro   0x00004786      0x197 obj\debug\src\system_stm32f30x.o
- .debug_macro   0x0000491d      0x2ef obj\debug\src\timer.o
+ .debug_macro   0x00002105      0x302 obj\debug\src\alien.o
+ .debug_macro   0x00002407       0x16 obj\debug\src\alien.o
+ .debug_macro   0x0000241d       0x35 obj\debug\src\alien.o
+ .debug_macro   0x00002452       0x6a obj\debug\src\alien.o
+ .debug_macro   0x000024bc      0x2de obj\debug\src\ansi.o
+ .debug_macro   0x0000279a      0x2d8 obj\debug\src\asteroid.o
+ .debug_macro   0x00002a72       0x1b obj\debug\src\charset.o
+ .debug_macro   0x00002a8d      0x1aa obj\debug\src\fpsqrt.o
+ .debug_macro   0x00002c37      0x383 obj\debug\src\gamefunctions.o
+ .debug_macro   0x00002fba       0x10 obj\debug\src\gamefunctions.o
+ .debug_macro   0x00002fca       0x10 obj\debug\src\gamefunctions.o
+ .debug_macro   0x00002fda       0x16 obj\debug\src\gamefunctions.o
+ .debug_macro   0x00002ff0       0x83 obj\debug\src\gamefunctions.o
+ .debug_macro   0x00003073       0x16 obj\debug\src\gamefunctions.o
+ .debug_macro   0x00003089       0x29 obj\debug\src\gamefunctions.o
+ .debug_macro   0x000030b2      0x2ef obj\debug\src\joystick.o
+ .debug_macro   0x000033a1      0x2f1 obj\debug\src\lcd.o
+ .debug_macro   0x00003692      0x2ef obj\debug\src\led_control.o
+ .debug_macro   0x00003981      0x477 obj\debug\src\main.o
+ .debug_macro   0x00003df8       0x95 obj\debug\src\main.o
+ .debug_macro   0x00003e8d       0x16 obj\debug\src\main.o
+ .debug_macro   0x00003ea3       0x10 obj\debug\src\main.o
+ .debug_macro   0x00003eb3       0x41 obj\debug\src\main.o
+ .debug_macro   0x00003ef4      0x3ae obj\debug\src\menu.o
+ .debug_macro   0x000042a2      0x19b obj\debug\src\powerups.o
+ .debug_macro   0x0000443d      0x397 obj\debug\src\serial_com.o
+ .debug_macro   0x000047d4      0x197 obj\debug\src\system_stm32f30x.o
+ .debug_macro   0x0000496b      0x2ef obj\debug\src\timer.o
 
-.debug_line     0x00000000     0x74ab
+.debug_line     0x00000000     0x7662
  .debug_line    0x00000000      0x7e5 obj\debug\spl\src\stm32f30x_rcc.o
  .debug_line    0x000007e5      0x736 obj\debug\spl\src\stm32f30x_spi.o
  .debug_line    0x00000f1b      0x86c obj\debug\spl\src\stm32f30x_usart.o
  .debug_line    0x00001787      0x733 obj\debug\src\30010_io.o
- .debug_line    0x00001eba      0x5de obj\debug\src\alien.o
- .debug_line    0x00002498      0x642 obj\debug\src\ansi.o
- .debug_line    0x00002ada      0x5d8 obj\debug\src\asteroid.o
- .debug_line    0x000030b2       0x41 obj\debug\src\charset.o
- .debug_line    0x000030f3      0x361 obj\debug\src\fpsqrt.o
- .debug_line    0x00003454      0xa2a obj\debug\src\gamefunctions.o
- .debug_line    0x00003e7e      0x57f obj\debug\src\joystick.o
- .debug_line    0x000043fd      0x669 obj\debug\src\lcd.o
- .debug_line    0x00004a66      0x5a5 obj\debug\src\led_control.o
- .debug_line    0x0000500b      0x696 obj\debug\src\main.o
- .debug_line    0x000056a1      0x788 obj\debug\src\menu.o
- .debug_line    0x00005e29      0x478 obj\debug\src\powerups.o
- .debug_line    0x000062a1      0x692 obj\debug\src\serial_com.o
- .debug_line    0x00006933       0xbb obj\debug\src\startup_stm32f30x.o
- .debug_line    0x000069ee      0x493 obj\debug\src\system_stm32f30x.o
- .debug_line    0x00006e81      0x62a obj\debug\src\timer.o
+ .debug_line    0x00001eba      0x702 obj\debug\src\alien.o
+ .debug_line    0x000025bc      0x642 obj\debug\src\ansi.o
+ .debug_line    0x00002bfe      0x5da obj\debug\src\asteroid.o
+ .debug_line    0x000031d8       0x41 obj\debug\src\charset.o
+ .debug_line    0x00003219      0x361 obj\debug\src\fpsqrt.o
+ .debug_line    0x0000357a      0xab0 obj\debug\src\gamefunctions.o
+ .debug_line    0x0000402a      0x57f obj\debug\src\joystick.o
+ .debug_line    0x000045a9      0x669 obj\debug\src\lcd.o
+ .debug_line    0x00004c12      0x5a5 obj\debug\src\led_control.o
+ .debug_line    0x000051b7      0x69a obj\debug\src\main.o
+ .debug_line    0x00005851      0x78f obj\debug\src\menu.o
+ .debug_line    0x00005fe0      0x478 obj\debug\src\powerups.o
+ .debug_line    0x00006458      0x692 obj\debug\src\serial_com.o
+ .debug_line    0x00006aea       0xbb obj\debug\src\startup_stm32f30x.o
+ .debug_line    0x00006ba5      0x493 obj\debug\src\system_stm32f30x.o
+ .debug_line    0x00007038      0x62a obj\debug\src\timer.o
 
-.debug_str      0x00000000    0x587db
+.debug_str      0x00000000    0x5885e
  .debug_str     0x00000000    0x52c14 obj\debug\spl\src\stm32f30x_rcc.o
                               0x52dd0 (size before relaxing)
  .debug_str     0x00052c14      0x51c obj\debug\spl\src\stm32f30x_spi.o
@@ -6167,95 +6177,95 @@ OUTPUT(bin\Debug\Exercise_5.elf elf32-littlearm)
                               0x52ca4 (size before relaxing)
  .debug_str     0x00053915     0x43dc obj\debug\src\30010_io.o
                               0x56a09 (size before relaxing)
- .debug_str     0x00057cf1       0x8e obj\debug\src\alien.o
-                              0x55e99 (size before relaxing)
- .debug_str     0x00057d7f       0x76 obj\debug\src\ansi.o
+ .debug_str     0x00057cf1      0x1f3 obj\debug\src\alien.o
+                              0x5600b (size before relaxing)
+ .debug_str     0x00057ee4       0x76 obj\debug\src\ansi.o
                               0x55ec1 (size before relaxing)
- .debug_str     0x00057df5       0x62 obj\debug\src\asteroid.o
+ .debug_str     0x00057f5a       0x62 obj\debug\src\asteroid.o
                               0x55e86 (size before relaxing)
- .debug_str     0x00057e57       0x2a obj\debug\src\charset.o
+ .debug_str     0x00057fbc       0x2a obj\debug\src\charset.o
                                0x252f (size before relaxing)
- .debug_str     0x00057e81       0x37 obj\debug\src\fpsqrt.o
+ .debug_str     0x00057fe6       0x37 obj\debug\src\fpsqrt.o
                                0x6f57 (size before relaxing)
- .debug_str     0x00057eb8      0x3f0 obj\debug\src\gamefunctions.o
-                              0x562ef (size before relaxing)
- .debug_str     0x000582a8       0x69 obj\debug\src\joystick.o
+ .debug_str     0x0005801d      0x300 obj\debug\src\gamefunctions.o
+                              0x56317 (size before relaxing)
+ .debug_str     0x0005831d       0x69 obj\debug\src\joystick.o
                               0x55f56 (size before relaxing)
- .debug_str     0x00058311       0x5a obj\debug\src\lcd.o
+ .debug_str     0x00058386       0x5a obj\debug\src\lcd.o
                               0x55ef4 (size before relaxing)
- .debug_str     0x0005836b       0x34 obj\debug\src\led_control.o
+ .debug_str     0x000583e0       0x34 obj\debug\src\led_control.o
                               0x55ec6 (size before relaxing)
- .debug_str     0x0005839f      0x178 obj\debug\src\main.o
-                              0x56328 (size before relaxing)
- .debug_str     0x00058517       0x7c obj\debug\src\menu.o
-                              0x561a5 (size before relaxing)
- .debug_str     0x00058593       0x3d obj\debug\src\powerups.o
+ .debug_str     0x00058414      0x181 obj\debug\src\main.o
+                              0x56339 (size before relaxing)
+ .debug_str     0x00058595       0x8a obj\debug\src\menu.o
+                              0x561bf (size before relaxing)
+ .debug_str     0x0005861f       0x3d obj\debug\src\powerups.o
                               0x5233f (size before relaxing)
- .debug_str     0x000585d0       0x2d obj\debug\src\serial_com.o
-                              0x561a0 (size before relaxing)
- .debug_str     0x000585fd       0xe0 obj\debug\src\system_stm32f30x.o
+ .debug_str     0x0005865c       0x2d obj\debug\src\serial_com.o
+                              0x561ac (size before relaxing)
+ .debug_str     0x00058689       0xe0 obj\debug\src\system_stm32f30x.o
                               0x52462 (size before relaxing)
- .debug_str     0x000586dd       0xfe obj\debug\src\timer.o
-                              0x564d1 (size before relaxing)
+ .debug_str     0x00058769       0xf5 obj\debug\src\timer.o
+                              0x564c1 (size before relaxing)
 
-.debug_frame    0x00000000     0x2ad4
+.debug_frame    0x00000000     0x2bdc
  .debug_frame   0x00000000      0x60c obj\debug\spl\src\stm32f30x_rcc.o
  .debug_frame   0x0000060c      0x508 obj\debug\spl\src\stm32f30x_spi.o
  .debug_frame   0x00000b14      0x7b0 obj\debug\spl\src\stm32f30x_usart.o
  .debug_frame   0x000012c4      0x1b4 obj\debug\src\30010_io.o
- .debug_frame   0x00001478       0xac obj\debug\src\alien.o
- .debug_frame   0x00001524      0x17c obj\debug\src\ansi.o
- .debug_frame   0x000016a0       0xac obj\debug\src\asteroid.o
- .debug_frame   0x0000174c       0x88 obj\debug\src\fpsqrt.o
- .debug_frame   0x000017d4      0x3c8 obj\debug\src\gamefunctions.o
- .debug_frame   0x00001b9c       0x58 obj\debug\src\joystick.o
- .debug_frame   0x00001bf4       0xc4 obj\debug\src\lcd.o
- .debug_frame   0x00001cb8       0x58 obj\debug\src\led_control.o
- .debug_frame   0x00001d10       0x50 obj\debug\src\main.o
- .debug_frame   0x00001d60       0xe8 obj\debug\src\menu.o
- .debug_frame   0x00001e48       0x80 obj\debug\src\powerups.o
- .debug_frame   0x00001ec8       0x64 obj\debug\src\serial_com.o
- .debug_frame   0x00001f2c       0x74 obj\debug\src\system_stm32f30x.o
- .debug_frame   0x00001fa0      0x164 obj\debug\src\timer.o
- .debug_frame   0x00002104       0x28 c:/program files (x86)/embitz/1.11/share/em_armgcc/bin/../lib/gcc/arm-none-eabi/5.4.1/../../../../arm-none-eabi/lib/armv7e-m\libg_n.a(lib_a-exit.o)
- .debug_frame   0x0000212c       0x2c c:/program files (x86)/embitz/1.11/share/em_armgcc/bin/../lib/gcc/arm-none-eabi/5.4.1/../../../../arm-none-eabi/lib/armv7e-m\libg_n.a(lib_a-init.o)
- .debug_frame   0x00002158       0x20 c:/program files (x86)/embitz/1.11/share/em_armgcc/bin/../lib/gcc/arm-none-eabi/5.4.1/../../../../arm-none-eabi/lib/armv7e-m\libg_n.a(lib_a-memset.o)
- .debug_frame   0x00002178       0x74 c:/program files (x86)/embitz/1.11/share/em_armgcc/bin/../lib/gcc/arm-none-eabi/5.4.1/../../../../arm-none-eabi/lib/armv7e-m\libg_n.a(lib_a-printf.o)
- .debug_frame   0x000021ec       0x58 c:/program files (x86)/embitz/1.11/share/em_armgcc/bin/../lib/gcc/arm-none-eabi/5.4.1/../../../../arm-none-eabi/lib/armv7e-m\libg_n.a(lib_a-putchar.o)
- .debug_frame   0x00002244       0x44 c:/program files (x86)/embitz/1.11/share/em_armgcc/bin/../lib/gcc/arm-none-eabi/5.4.1/../../../../arm-none-eabi/lib/armv7e-m\libg_n.a(lib_a-rand.o)
- .debug_frame   0x00002288       0x20 c:/program files (x86)/embitz/1.11/share/em_armgcc/bin/../lib/gcc/arm-none-eabi/5.4.1/../../../../arm-none-eabi/lib/armv7e-m\libg_n.a(lib_a-setbuf.o)
- .debug_frame   0x000022a8       0x38 c:/program files (x86)/embitz/1.11/share/em_armgcc/bin/../lib/gcc/arm-none-eabi/5.4.1/../../../../arm-none-eabi/lib/armv7e-m\libg_n.a(lib_a-setvbuf.o)
- .debug_frame   0x000022e0       0x2c c:/program files (x86)/embitz/1.11/share/em_armgcc/bin/../lib/gcc/arm-none-eabi/5.4.1/../../../../arm-none-eabi/lib/armv7e-m\libg_n.a(lib_a-time.o)
- .debug_frame   0x0000230c       0x68 c:/program files (x86)/embitz/1.11/share/em_armgcc/bin/../lib/gcc/arm-none-eabi/5.4.1/../../../../arm-none-eabi/lib/armv7e-m\libg_n.a(lib_a-fflush.o)
- .debug_frame   0x00002374      0x11c c:/program files (x86)/embitz/1.11/share/em_armgcc/bin/../lib/gcc/arm-none-eabi/5.4.1/../../../../arm-none-eabi/lib/armv7e-m\libg_n.a(lib_a-findfp.o)
- .debug_frame   0x00002490       0x54 c:/program files (x86)/embitz/1.11/share/em_armgcc/bin/../lib/gcc/arm-none-eabi/5.4.1/../../../../arm-none-eabi/lib/armv7e-m\libg_n.a(lib_a-fwalk.o)
- .debug_frame   0x000024e4       0x2c c:/program files (x86)/embitz/1.11/share/em_armgcc/bin/../lib/gcc/arm-none-eabi/5.4.1/../../../../arm-none-eabi/lib/armv7e-m\libg_n.a(lib_a-gettimeofdayr.o)
- .debug_frame   0x00002510       0x54 c:/program files (x86)/embitz/1.11/share/em_armgcc/bin/../lib/gcc/arm-none-eabi/5.4.1/../../../../arm-none-eabi/lib/armv7e-m\libg_n.a(lib_a-makebuf.o)
- .debug_frame   0x00002564       0x30 c:/program files (x86)/embitz/1.11/share/em_armgcc/bin/../lib/gcc/arm-none-eabi/5.4.1/../../../../arm-none-eabi/lib/armv7e-m\libg_n.a(lib_a-malloc.o)
- .debug_frame   0x00002594       0x38 c:/program files (x86)/embitz/1.11/share/em_armgcc/bin/../lib/gcc/arm-none-eabi/5.4.1/../../../../arm-none-eabi/lib/armv7e-m\libg_n.a(lib_a-nano-freer.o)
- .debug_frame   0x000025cc       0x2c c:/program files (x86)/embitz/1.11/share/em_armgcc/bin/../lib/gcc/arm-none-eabi/5.4.1/../../../../arm-none-eabi/lib/armv7e-m\libg_n.a(lib_a-nano-mallocr.o)
- .debug_frame   0x000025f8       0xac c:/program files (x86)/embitz/1.11/share/em_armgcc/bin/../lib/gcc/arm-none-eabi/5.4.1/../../../../arm-none-eabi/lib/armv7e-m\libg_n.a(lib_a-nano-vfprintf.o)
- .debug_frame   0x000026a4       0x60 c:/program files (x86)/embitz/1.11/share/em_armgcc/bin/../lib/gcc/arm-none-eabi/5.4.1/../../../../arm-none-eabi/lib/armv7e-m\libg_n.a(lib_a-nano-vfprintf_i.o)
- .debug_frame   0x00002704       0x48 c:/program files (x86)/embitz/1.11/share/em_armgcc/bin/../lib/gcc/arm-none-eabi/5.4.1/../../../../arm-none-eabi/lib/armv7e-m\libg_n.a(lib_a-putc.o)
- .debug_frame   0x0000274c       0x5c c:/program files (x86)/embitz/1.11/share/em_armgcc/bin/../lib/gcc/arm-none-eabi/5.4.1/../../../../arm-none-eabi/lib/armv7e-m\libg_n.a(lib_a-reent.o)
- .debug_frame   0x000027a8       0x2c c:/program files (x86)/embitz/1.11/share/em_armgcc/bin/../lib/gcc/arm-none-eabi/5.4.1/../../../../arm-none-eabi/lib/armv7e-m\libg_n.a(lib_a-sbrkr.o)
- .debug_frame   0x000027d4       0x88 c:/program files (x86)/embitz/1.11/share/em_armgcc/bin/../lib/gcc/arm-none-eabi/5.4.1/../../../../arm-none-eabi/lib/armv7e-m\libg_n.a(lib_a-stdio.o)
- .debug_frame   0x0000285c       0x40 c:/program files (x86)/embitz/1.11/share/em_armgcc/bin/../lib/gcc/arm-none-eabi/5.4.1/../../../../arm-none-eabi/lib/armv7e-m\libg_n.a(lib_a-wbuf.o)
- .debug_frame   0x0000289c       0x2c c:/program files (x86)/embitz/1.11/share/em_armgcc/bin/../lib/gcc/arm-none-eabi/5.4.1/../../../../arm-none-eabi/lib/armv7e-m\libg_n.a(lib_a-wsetup.o)
- .debug_frame   0x000028c8       0x2c c:/program files (x86)/embitz/1.11/share/em_armgcc/bin/../lib/gcc/arm-none-eabi/5.4.1/../../../../arm-none-eabi/lib/armv7e-m\libg_n.a(lib_a-closer.o)
- .debug_frame   0x000028f4       0x2c c:/program files (x86)/embitz/1.11/share/em_armgcc/bin/../lib/gcc/arm-none-eabi/5.4.1/../../../../arm-none-eabi/lib/armv7e-m\libg_n.a(lib_a-fstatr.o)
- .debug_frame   0x00002920       0x2c c:/program files (x86)/embitz/1.11/share/em_armgcc/bin/../lib/gcc/arm-none-eabi/5.4.1/../../../../arm-none-eabi/lib/armv7e-m\libg_n.a(lib_a-isattyr.o)
- .debug_frame   0x0000294c       0x2c c:/program files (x86)/embitz/1.11/share/em_armgcc/bin/../lib/gcc/arm-none-eabi/5.4.1/../../../../arm-none-eabi/lib/armv7e-m\libg_n.a(lib_a-lseekr.o)
- .debug_frame   0x00002978       0x30 c:/program files (x86)/embitz/1.11/share/em_armgcc/bin/../lib/gcc/arm-none-eabi/5.4.1/../../../../arm-none-eabi/lib/armv7e-m\libg_n.a(lib_a-mlock.o)
- .debug_frame   0x000029a8       0x2c c:/program files (x86)/embitz/1.11/share/em_armgcc/bin/../lib/gcc/arm-none-eabi/5.4.1/../../../../arm-none-eabi/lib/armv7e-m\libg_n.a(lib_a-readr.o)
- .debug_frame   0x000029d4       0x20 c:/program files (x86)/embitz/1.11/share/em_armgcc/bin/../lib/gcc/arm-none-eabi/5.4.1/../../../../arm-none-eabi/lib/armv7e-m\libnosys_s.a(close.o)
- .debug_frame   0x000029f4       0x20 c:/program files (x86)/embitz/1.11/share/em_armgcc/bin/../lib/gcc/arm-none-eabi/5.4.1/../../../../arm-none-eabi/lib/armv7e-m\libnosys_s.a(fstat.o)
- .debug_frame   0x00002a14       0x20 c:/program files (x86)/embitz/1.11/share/em_armgcc/bin/../lib/gcc/arm-none-eabi/5.4.1/../../../../arm-none-eabi/lib/armv7e-m\libnosys_s.a(gettod.o)
- .debug_frame   0x00002a34       0x20 c:/program files (x86)/embitz/1.11/share/em_armgcc/bin/../lib/gcc/arm-none-eabi/5.4.1/../../../../arm-none-eabi/lib/armv7e-m\libnosys_s.a(isatty.o)
- .debug_frame   0x00002a54       0x20 c:/program files (x86)/embitz/1.11/share/em_armgcc/bin/../lib/gcc/arm-none-eabi/5.4.1/../../../../arm-none-eabi/lib/armv7e-m\libnosys_s.a(lseek.o)
- .debug_frame   0x00002a74       0x20 c:/program files (x86)/embitz/1.11/share/em_armgcc/bin/../lib/gcc/arm-none-eabi/5.4.1/../../../../arm-none-eabi/lib/armv7e-m\libnosys_s.a(read.o)
- .debug_frame   0x00002a94       0x20 c:/program files (x86)/embitz/1.11/share/em_armgcc/bin/../lib/gcc/arm-none-eabi/5.4.1/../../../../arm-none-eabi/lib/armv7e-m\libnosys_s.a(sbrk.o)
- .debug_frame   0x00002ab4       0x20 c:/program files (x86)/embitz/1.11/share/em_armgcc/bin/../lib/gcc/arm-none-eabi/5.4.1/../../../../arm-none-eabi/lib/armv7e-m\libnosys_s.a(_exit.o)
+ .debug_frame   0x00001478      0x188 obj\debug\src\alien.o
+ .debug_frame   0x00001600      0x17c obj\debug\src\ansi.o
+ .debug_frame   0x0000177c       0xac obj\debug\src\asteroid.o
+ .debug_frame   0x00001828       0x88 obj\debug\src\fpsqrt.o
+ .debug_frame   0x000018b0      0x3f4 obj\debug\src\gamefunctions.o
+ .debug_frame   0x00001ca4       0x58 obj\debug\src\joystick.o
+ .debug_frame   0x00001cfc       0xc4 obj\debug\src\lcd.o
+ .debug_frame   0x00001dc0       0x58 obj\debug\src\led_control.o
+ .debug_frame   0x00001e18       0x50 obj\debug\src\main.o
+ .debug_frame   0x00001e68       0xe8 obj\debug\src\menu.o
+ .debug_frame   0x00001f50       0x80 obj\debug\src\powerups.o
+ .debug_frame   0x00001fd0       0x64 obj\debug\src\serial_com.o
+ .debug_frame   0x00002034       0x74 obj\debug\src\system_stm32f30x.o
+ .debug_frame   0x000020a8      0x164 obj\debug\src\timer.o
+ .debug_frame   0x0000220c       0x28 c:/program files (x86)/embitz/1.11/share/em_armgcc/bin/../lib/gcc/arm-none-eabi/5.4.1/../../../../arm-none-eabi/lib/armv7e-m\libg_n.a(lib_a-exit.o)
+ .debug_frame   0x00002234       0x2c c:/program files (x86)/embitz/1.11/share/em_armgcc/bin/../lib/gcc/arm-none-eabi/5.4.1/../../../../arm-none-eabi/lib/armv7e-m\libg_n.a(lib_a-init.o)
+ .debug_frame   0x00002260       0x20 c:/program files (x86)/embitz/1.11/share/em_armgcc/bin/../lib/gcc/arm-none-eabi/5.4.1/../../../../arm-none-eabi/lib/armv7e-m\libg_n.a(lib_a-memset.o)
+ .debug_frame   0x00002280       0x74 c:/program files (x86)/embitz/1.11/share/em_armgcc/bin/../lib/gcc/arm-none-eabi/5.4.1/../../../../arm-none-eabi/lib/armv7e-m\libg_n.a(lib_a-printf.o)
+ .debug_frame   0x000022f4       0x58 c:/program files (x86)/embitz/1.11/share/em_armgcc/bin/../lib/gcc/arm-none-eabi/5.4.1/../../../../arm-none-eabi/lib/armv7e-m\libg_n.a(lib_a-putchar.o)
+ .debug_frame   0x0000234c       0x44 c:/program files (x86)/embitz/1.11/share/em_armgcc/bin/../lib/gcc/arm-none-eabi/5.4.1/../../../../arm-none-eabi/lib/armv7e-m\libg_n.a(lib_a-rand.o)
+ .debug_frame   0x00002390       0x20 c:/program files (x86)/embitz/1.11/share/em_armgcc/bin/../lib/gcc/arm-none-eabi/5.4.1/../../../../arm-none-eabi/lib/armv7e-m\libg_n.a(lib_a-setbuf.o)
+ .debug_frame   0x000023b0       0x38 c:/program files (x86)/embitz/1.11/share/em_armgcc/bin/../lib/gcc/arm-none-eabi/5.4.1/../../../../arm-none-eabi/lib/armv7e-m\libg_n.a(lib_a-setvbuf.o)
+ .debug_frame   0x000023e8       0x2c c:/program files (x86)/embitz/1.11/share/em_armgcc/bin/../lib/gcc/arm-none-eabi/5.4.1/../../../../arm-none-eabi/lib/armv7e-m\libg_n.a(lib_a-time.o)
+ .debug_frame   0x00002414       0x68 c:/program files (x86)/embitz/1.11/share/em_armgcc/bin/../lib/gcc/arm-none-eabi/5.4.1/../../../../arm-none-eabi/lib/armv7e-m\libg_n.a(lib_a-fflush.o)
+ .debug_frame   0x0000247c      0x11c c:/program files (x86)/embitz/1.11/share/em_armgcc/bin/../lib/gcc/arm-none-eabi/5.4.1/../../../../arm-none-eabi/lib/armv7e-m\libg_n.a(lib_a-findfp.o)
+ .debug_frame   0x00002598       0x54 c:/program files (x86)/embitz/1.11/share/em_armgcc/bin/../lib/gcc/arm-none-eabi/5.4.1/../../../../arm-none-eabi/lib/armv7e-m\libg_n.a(lib_a-fwalk.o)
+ .debug_frame   0x000025ec       0x2c c:/program files (x86)/embitz/1.11/share/em_armgcc/bin/../lib/gcc/arm-none-eabi/5.4.1/../../../../arm-none-eabi/lib/armv7e-m\libg_n.a(lib_a-gettimeofdayr.o)
+ .debug_frame   0x00002618       0x54 c:/program files (x86)/embitz/1.11/share/em_armgcc/bin/../lib/gcc/arm-none-eabi/5.4.1/../../../../arm-none-eabi/lib/armv7e-m\libg_n.a(lib_a-makebuf.o)
+ .debug_frame   0x0000266c       0x30 c:/program files (x86)/embitz/1.11/share/em_armgcc/bin/../lib/gcc/arm-none-eabi/5.4.1/../../../../arm-none-eabi/lib/armv7e-m\libg_n.a(lib_a-malloc.o)
+ .debug_frame   0x0000269c       0x38 c:/program files (x86)/embitz/1.11/share/em_armgcc/bin/../lib/gcc/arm-none-eabi/5.4.1/../../../../arm-none-eabi/lib/armv7e-m\libg_n.a(lib_a-nano-freer.o)
+ .debug_frame   0x000026d4       0x2c c:/program files (x86)/embitz/1.11/share/em_armgcc/bin/../lib/gcc/arm-none-eabi/5.4.1/../../../../arm-none-eabi/lib/armv7e-m\libg_n.a(lib_a-nano-mallocr.o)
+ .debug_frame   0x00002700       0xac c:/program files (x86)/embitz/1.11/share/em_armgcc/bin/../lib/gcc/arm-none-eabi/5.4.1/../../../../arm-none-eabi/lib/armv7e-m\libg_n.a(lib_a-nano-vfprintf.o)
+ .debug_frame   0x000027ac       0x60 c:/program files (x86)/embitz/1.11/share/em_armgcc/bin/../lib/gcc/arm-none-eabi/5.4.1/../../../../arm-none-eabi/lib/armv7e-m\libg_n.a(lib_a-nano-vfprintf_i.o)
+ .debug_frame   0x0000280c       0x48 c:/program files (x86)/embitz/1.11/share/em_armgcc/bin/../lib/gcc/arm-none-eabi/5.4.1/../../../../arm-none-eabi/lib/armv7e-m\libg_n.a(lib_a-putc.o)
+ .debug_frame   0x00002854       0x5c c:/program files (x86)/embitz/1.11/share/em_armgcc/bin/../lib/gcc/arm-none-eabi/5.4.1/../../../../arm-none-eabi/lib/armv7e-m\libg_n.a(lib_a-reent.o)
+ .debug_frame   0x000028b0       0x2c c:/program files (x86)/embitz/1.11/share/em_armgcc/bin/../lib/gcc/arm-none-eabi/5.4.1/../../../../arm-none-eabi/lib/armv7e-m\libg_n.a(lib_a-sbrkr.o)
+ .debug_frame   0x000028dc       0x88 c:/program files (x86)/embitz/1.11/share/em_armgcc/bin/../lib/gcc/arm-none-eabi/5.4.1/../../../../arm-none-eabi/lib/armv7e-m\libg_n.a(lib_a-stdio.o)
+ .debug_frame   0x00002964       0x40 c:/program files (x86)/embitz/1.11/share/em_armgcc/bin/../lib/gcc/arm-none-eabi/5.4.1/../../../../arm-none-eabi/lib/armv7e-m\libg_n.a(lib_a-wbuf.o)
+ .debug_frame   0x000029a4       0x2c c:/program files (x86)/embitz/1.11/share/em_armgcc/bin/../lib/gcc/arm-none-eabi/5.4.1/../../../../arm-none-eabi/lib/armv7e-m\libg_n.a(lib_a-wsetup.o)
+ .debug_frame   0x000029d0       0x2c c:/program files (x86)/embitz/1.11/share/em_armgcc/bin/../lib/gcc/arm-none-eabi/5.4.1/../../../../arm-none-eabi/lib/armv7e-m\libg_n.a(lib_a-closer.o)
+ .debug_frame   0x000029fc       0x2c c:/program files (x86)/embitz/1.11/share/em_armgcc/bin/../lib/gcc/arm-none-eabi/5.4.1/../../../../arm-none-eabi/lib/armv7e-m\libg_n.a(lib_a-fstatr.o)
+ .debug_frame   0x00002a28       0x2c c:/program files (x86)/embitz/1.11/share/em_armgcc/bin/../lib/gcc/arm-none-eabi/5.4.1/../../../../arm-none-eabi/lib/armv7e-m\libg_n.a(lib_a-isattyr.o)
+ .debug_frame   0x00002a54       0x2c c:/program files (x86)/embitz/1.11/share/em_armgcc/bin/../lib/gcc/arm-none-eabi/5.4.1/../../../../arm-none-eabi/lib/armv7e-m\libg_n.a(lib_a-lseekr.o)
+ .debug_frame   0x00002a80       0x30 c:/program files (x86)/embitz/1.11/share/em_armgcc/bin/../lib/gcc/arm-none-eabi/5.4.1/../../../../arm-none-eabi/lib/armv7e-m\libg_n.a(lib_a-mlock.o)
+ .debug_frame   0x00002ab0       0x2c c:/program files (x86)/embitz/1.11/share/em_armgcc/bin/../lib/gcc/arm-none-eabi/5.4.1/../../../../arm-none-eabi/lib/armv7e-m\libg_n.a(lib_a-readr.o)
+ .debug_frame   0x00002adc       0x20 c:/program files (x86)/embitz/1.11/share/em_armgcc/bin/../lib/gcc/arm-none-eabi/5.4.1/../../../../arm-none-eabi/lib/armv7e-m\libnosys_s.a(close.o)
+ .debug_frame   0x00002afc       0x20 c:/program files (x86)/embitz/1.11/share/em_armgcc/bin/../lib/gcc/arm-none-eabi/5.4.1/../../../../arm-none-eabi/lib/armv7e-m\libnosys_s.a(fstat.o)
+ .debug_frame   0x00002b1c       0x20 c:/program files (x86)/embitz/1.11/share/em_armgcc/bin/../lib/gcc/arm-none-eabi/5.4.1/../../../../arm-none-eabi/lib/armv7e-m\libnosys_s.a(gettod.o)
+ .debug_frame   0x00002b3c       0x20 c:/program files (x86)/embitz/1.11/share/em_armgcc/bin/../lib/gcc/arm-none-eabi/5.4.1/../../../../arm-none-eabi/lib/armv7e-m\libnosys_s.a(isatty.o)
+ .debug_frame   0x00002b5c       0x20 c:/program files (x86)/embitz/1.11/share/em_armgcc/bin/../lib/gcc/arm-none-eabi/5.4.1/../../../../arm-none-eabi/lib/armv7e-m\libnosys_s.a(lseek.o)
+ .debug_frame   0x00002b7c       0x20 c:/program files (x86)/embitz/1.11/share/em_armgcc/bin/../lib/gcc/arm-none-eabi/5.4.1/../../../../arm-none-eabi/lib/armv7e-m\libnosys_s.a(read.o)
+ .debug_frame   0x00002b9c       0x20 c:/program files (x86)/embitz/1.11/share/em_armgcc/bin/../lib/gcc/arm-none-eabi/5.4.1/../../../../arm-none-eabi/lib/armv7e-m\libnosys_s.a(sbrk.o)
+ .debug_frame   0x00002bbc       0x20 c:/program files (x86)/embitz/1.11/share/em_armgcc/bin/../lib/gcc/arm-none-eabi/5.4.1/../../../../arm-none-eabi/lib/armv7e-m\libnosys_s.a(_exit.o)
 
 .stab           0x00000000       0x9c
  .stab          0x00000000       0x24 c:/program files (x86)/embitz/1.11/share/em_armgcc/bin/../lib/gcc/arm-none-eabi/5.4.1/../../../../arm-none-eabi/lib/armv7e-m\libnosys_s.a(close.o)

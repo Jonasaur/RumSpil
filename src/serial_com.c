@@ -51,6 +51,12 @@ char keyboard_read(char * uart_char, int8_t * c_count)
             return 1;
         }
         (*c_count)++;
+        /*if (uart_char[(*c_count)] != 0)
+        {
+            uart_char[(*c_count)] = 0;
+            (*c_count) = 0;
+            return 20;
+        }*/
     }
     return 0;
 }

@@ -14,25 +14,22 @@
 #ifndef _GAMEFUNCTIONS_H_
 #define _GAMEFUNCTIONS_H_
 
-struct counter_t
-{
+struct counter_t {
     int32_t lives, ammo, bombs;
 };
 
-struct spaceship_t
-{
+struct spaceship_t {
     int32_t x, y, tempx, tempy, tempf, active;
 };
 
-struct Rocket_t
-{
+struct Rocket_t {
     int32_t x, y, vx, vy, tempx, tempy, tempf, active;
 };
 
-struct Bomb_t
-{
+struct Bomb_t {
     int32_t x, y, vx, vy, tempx, tempy, tempf, active;
 };
+void initCounter(struct counter_t * c, int x);
 
 void initSpaceship(struct spaceship_t * s, int x, int y);
 void drawSpaceship (struct spaceship_t * s);
@@ -48,7 +45,7 @@ void deleteRocket(struct Rocket_t * r);
 void shootRocket(struct Rocket_t * r, struct spaceship_t * s , struct counter_t * c, uint8_t * buffer, int8_t vx, int8_t vy);
 void updateRocketPos(struct Rocket_t * r);
 void moveRocket(struct Rocket_t * r);
-void hitDetection (struct Rocket_t * r, struct Bomb_t * b, struct alien_t * al, struct asteroid_t * as, struct spaceship_t * s, struct powerup_t * p, struct counter_t * c, uint8_t * buffer);
+void hitDetection (struct Rocket_t * r, struct Bomb_t * b, struct alien_t * al, struct asteroid_t * as, struct spaceship_t * s, struct powerup_t * p, struct counter_t * c, uint8_t * buffer, struct laser_t * l);
 
 void initBomb(struct Bomb_t * b, int x, int y, int vx, int vy);
 void drawBomb (struct Bomb_t * b);
@@ -60,8 +57,8 @@ void moveBomb(struct Bomb_t * b);
 void respawn (struct spaceship_t *s, struct counter_t *c, uint8_t *buffer);
 void controlPowerups(struct powerup_t * p);
 void background(int x, int y);
-void gravity(struct Rocket_t * r, struct alien_t * al);
-
+void gravityRockets(struct Rocket_t * r, struct asteroid_t * al);
+void gravityBombs(struct Bomb_t * b, struct asteroid_t * as);
 #endif
 
 

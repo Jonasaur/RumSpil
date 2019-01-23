@@ -5,7 +5,7 @@ void menu_init() {
     clrscr();
     gotoxy(0, 3);  printf("          *                 +           _______..______      ___  +    ______  _______      *    __   _______  *  _______. __    __   +   _______.     -                  +");
     gotoxy(0, 4);  printf("                     _                 /       ||   _  \\    /   \\     /      ||   ____|         |  | |   ____|   /       ||  |  |  |     /       |             _");
-    gotoxy(0, 5);  printf("             |     _| |________       |   (----`|  |_)  |  /  ^  \\   |  ,----'|  |__            |  | |  |__     |   (----`|  |  |  |    |   (----`    ________| |");
+    gotoxy(0, 5);  printf("             |     _| |________       |   (----`|  |_)  |  /  ^  \\   |  ,----'|  |__            |  | |  |__     |   (----`|  |  |  |    |   (----`    ________| |_");
     gotoxy(0, 6);  printf("           - o -  |_   ________|       \\   \\    |   ___/  /  /_\\  \\  |  |     |   __|  +  .--.  |  | |   __|     \\   \\    |  |  |  |     \\   \\       |________   _|             +");
     gotoxy(0, 7);  printf("             |      |_|            .----)   |   |  |     /  _____  \\ |  `----.|  |____    |  `--'  | |  |____.----)   |   |  `--'  | .----)   |               |_|     *     |");
     gotoxy(0, 8);  printf("                                   |_______/    | _|    /__/     \\__\\ \\______||_______|  | \\______/  |_______|_______/     \\______/  |_______/      +                     - o -");
@@ -44,12 +44,12 @@ void how_to_screen() {
     // Currently only the header is written - will include some text on where the controls are and such
     // Another idea could be to include this on the first page. We can show here what controls do what.
     clrscr();
-    gotoxy(35, 5); printf(" __    __    ______   ____    __    ____   .___________.  ______     .______    __          ___   ____    ____ ");
-    gotoxy(35, 6); printf("|  |  |  |  /  __  \\  \\   \\  /  \\  /   /   |           | /  __  \\    |   _  \\  |  |        /   \\  \\   \\  /   / ");
-    gotoxy(35, 7); printf("|  |__|  | |  |  |  |  \\   \\/    \\/   /    `---|  |----`|  |  |  |   |  |_)  | |  |       /  ^  \\  \\   \\/   /  ");
-    gotoxy(35, 8); printf("|   __   | |  |  |  |   \\            /         |  |     |  |  |  |   |   ___/  |  |      /  /_\\  \\  \\_    _/   ");
-    gotoxy(35, 9); printf("|  |  |  | |  `--'  |    \\    /\\    /          |  |     |  `--'  |   |  |      |  `----./  _____  \\   |  |     ");
-   gotoxy(35, 10); printf("|__|  |__|  \\______/      \\__/  \\__/           |__|      \\______/    | _|      |_______/__/     \\__\\  |__|     ");
+    gotoxy(35, 3); printf(" __    __    ______   ____    __    ____   .___________.  ______     .______    __          ___   ____    ____ ");
+    gotoxy(35, 4); printf("|  |  |  |  /  __  \\  \\   \\  /  \\  /   /   |           | /  __  \\    |   _  \\  |  |        /   \\  \\   \\  /   / ");
+    gotoxy(35, 5); printf("|  |__|  | |  |  |  |  \\   \\/    \\/   /    `---|  |----`|  |  |  |   |  |_)  | |  |       /  ^  \\  \\   \\/   /  ");
+    gotoxy(35, 6); printf("|   __   | |  |  |  |   \\            /         |  |     |  |  |  |   |   ___/  |  |      /  /_\\  \\  \\_    _/   ");
+    gotoxy(35, 7); printf("|  |  |  | |  `--'  |    \\    /\\    /          |  |     |  `--'  |   |  |      |  `----./  _____  \\   |  |     ");
+   gotoxy(35, 8); printf("|__|  |__|  \\______/      \\__/  \\__/           |__|      \\______/    | _|      |_______/__/     \\__\\  |__|     ");
 
        //--------------------------------------------------------//
 
@@ -111,12 +111,12 @@ void how_to_screen() {
 void settings_screen() {
     // Perhaps a place to enable/disable sounds - increase difficulty - perhaps change keybindings (It's definitely possible)
     clrscr();
-    gotoxy(50, 5); printf("     _______. _______ .___________.___________. __  .__   __.   _______      _______.");
-    gotoxy(50, 6); printf("    /       ||   ____||           |           ||  | |  \\ |  |  /  _____|    /       |");
-    gotoxy(50, 7); printf("   |   (----`|  |__   `---|  |----`---|  |----`|  | |   \\|  | |  |  __     |   (----`");
-    gotoxy(50, 8); printf("    \\   \\    |   __|      |  |        |  |     |  | |  . `  | |  | |_ |     \\   \\    ");
-    gotoxy(50, 9); printf(".----)   |   |  |____     |  |        |  |     |  | |  |\\   | |  |__| | .----)   |   ");
-   gotoxy(50, 10); printf("|_______/    |_______|    |__|        |__|     |__| |__| \\__|  \\______| |_______/    ");
+    gotoxy(50, 3); printf("     _______. _______ .___________.___________. __  .__   __.   _______      _______.");
+    gotoxy(50, 4); printf("    /       ||   ____||           |           ||  | |  \\ |  |  /  _____|    /       |");
+    gotoxy(50, 5); printf("   |   (----`|  |__   `---|  |----`---|  |----`|  | |   \\|  | |  |  __     |   (----`");
+    gotoxy(50, 6); printf("    \\   \\    |   __|      |  |        |  |     |  | |  . `  | |  | |_ |     \\   \\    ");
+    gotoxy(50, 7); printf(".----)   |   |  |____     |  |        |  |     |  | |  |\\   | |  |__| | .----)   |   ");
+   gotoxy(50, 8); printf("|_______/    |_______|    |__|        |__|     |__| |__| \\__|  \\______| |_______/    ");
 }
 
 void high_score() {
@@ -125,12 +125,12 @@ void high_score() {
     // In here we should utilize the currently not in use write feature
 
     clrscr();
-    gotoxy(45, 5); printf(" __    __   __    _______  __    __         _______.  ______   ______   .______       _______ ");
-    gotoxy(45, 6); printf("|  |  |  | |  |  /  _____||  |  |  |       /       | /      | /  __  \\  |   _  \\     |   ____|");
-    gotoxy(45, 7); printf("|  |__|  | |  | |  |  __  |  |__|  |      |   (----`|  ,----'|  |  |  | |  |_)  |    |  |__   ");
-    gotoxy(45, 8); printf("|   __   | |  | |  | |_ | |   __   |       \\   \\    |  |     |  |  |  | |      /     |   __|  ");
-    gotoxy(45, 9); printf("|  |  |  | |  | |  |__| | |  |  |  |        \\   \\   |  |     |  |  |  | |     /      |  |____");
-   gotoxy(45, 10); printf("|__|  |__| |__|  \\______| |__|  |__|    |_______/    \\______| \\______/  | _| `._____||_______|");
+    gotoxy(45, 3); printf(" __    __   __    _______  __    __         _______.  ______   ______   .______       _______ ");
+    gotoxy(45, 4); printf("|  |  |  | |  |  /  _____||  |  |  |       /       | /      | /  __  \\  |   _  \\     |   ____|");
+    gotoxy(45, 5); printf("|  |__|  | |  | |  |  __  |  |__|  |      |   (----`|  ,----'|  |  |  | |  |_)  |    |  |__   ");
+    gotoxy(45, 6); printf("|   __   | |  | |  | |_ | |   __   |       \\   \\    |  |     |  |  |  | |      /     |   __|  ");
+    gotoxy(45, 7); printf("|  |  |  | |  | |  |__| | |  |  |  |        \\   \\   |  |     |  |  |  | |     /      |  |____");
+    gotoxy(45, 8); printf("|__|  |__| |__|  \\______| |__|  |__|    |_______/    \\______| \\______/  | _| `._____||_______|");
 }
 
 void stop_game() {
@@ -138,26 +138,16 @@ void stop_game() {
 }
 
 void start_game() {
-    //The Final Frontier - Revenge of Mecha-Jesus
-    //Seventh Heaven - Expanse
-    //The Second Coming - Blood of the Heathens-
-    //Expansive Exorcism
-    //Vengeance Cometh
-    //The Atonement of Andromeda
-    //Atonement of the Infidels
-    //Crossroads of the Infidels
-    //Space Jesus - Dare you cross him again?
-
     clrscr();
     gotoxy(0, 3);  printf("          *                 +           _______..______      ___  +    ______  _______      *    __   _______  *  _______. __    __   +   _______.     -                  +");
     gotoxy(0, 4);  printf("                     _                 /       ||   _  \\    /   \\     /      ||   ____|         |  | |   ____|   /       ||  |  |  |     /       |             _");
-    gotoxy(0, 5);  printf("             |     _| |________       |   (----`|  |_)  |  /  ^  \\   |  ,----'|  |__            |  | |  |__     |   (----`|  |  |  |    |   (----`    ________| |");
+    gotoxy(0, 5);  printf("             |     _| |________       |   (----`|  |_)  |  /  ^  \\   |  ,----'|  |__            |  | |  |__     |   (----`|  |  |  |    |   (----`    ________| |_");
     gotoxy(0, 6);  printf("           - o -  |_   ________|       \\   \\    |   ___/  /  /_\\  \\  |  |     |   __|  +  .--.  |  | |   __|     \\   \\    |  |  |  |     \\   \\       |________   _|             +");
     gotoxy(0, 7);  printf("             |      |_|            .----)   |   |  |     /  _____  \\ |  `----.|  |____    |  `--'  | |  |____.----)   |   |  `--'  | .----)   |               |_|     *     |");
     gotoxy(0, 8);  printf("                                   |_______/    | _|    /__/     \\__\\ \\______||_______|  | \\______/  |_______|_______/     \\______/  |_______/      +                     - o -");
     gotoxy(0, 9);  printf("                          *                                                            - o -                                                                                |");
     gotoxy(0, 10); printf("         *                                             +                                 |                        +                          *");
-uint8_t i;
+    uint8_t i;
     gotoxy(1, 11);
     printf("%c", 0xC9);
     for (i = 0; i <= 179; i++)
@@ -186,9 +176,22 @@ uint8_t i;
 
 void menu_selection(char * uart_char, int8_t * c_count, int8_t in_menu) {
     menu_init();
-    int8_t selection;
-    int8_t select;
-    int8_t print_flag;
+    gotoxy(TEXT_X + 80, TEXT_Y - 4);
+    printf("PRESS ANY KEY");
+    no_inverse();
+    int8_t selection = 0;
+    int8_t select = 0;
+    int8_t print_flag = 0;
+    int8_t press_any_key = 0;
+    /*do {
+        if(((keyboard_read(uart_char, &c_count) != 0))) {
+            press_any_key = 1;
+            select = 1;
+            (*c_count) = 0;
+            print_flag = 1;
+            selection = 0;
+        }
+    } while(press_any_key = 0);*/
     do {
         switch(keyboard_read(uart_char, &c_count)) {
             case 3: //what to do if "Up" is pushed
@@ -198,7 +201,7 @@ void menu_selection(char * uart_char, int8_t * c_count, int8_t in_menu) {
                     select = 0;
                 }
                 break;
-            case 4: //what to do if "Down" is pushed
+            case 1: //what to do if "Down" is pushed
                 if (select == 0) { //If you push down as the first thing somethings gonna fuck up
                     select = 1;
                     (*c_count) = 0;

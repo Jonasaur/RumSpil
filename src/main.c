@@ -31,8 +31,7 @@
 #include <time.h>
 //#include "calc_sin.h" //needs to be implemented
 
-void setup()
-{
+void setup() {
     uart_init(UART_BAUDRATE);
     uart_clear();
     clrscr();
@@ -62,16 +61,20 @@ int main(void)
     initBomb(theBombs, 2, 1, 1, 0);
 
     struct alien_t the_alien;
-    init_alien(&the_alien, 60, 30, 0, 0);
+    init_alien(&the_alien, 160, 30, 0, 0);
 
     struct spaceship_t theShip;
     initSpaceship(&theShip, 20, 30);
+    //drawSpaceship(&theShip);
+
+    struct laser_t thelaser[N_LASERS];
+    initLaser(thelaser, 15,15,-2,0);
 
     struct asteroid_t theAsteroid;
-    init_asteroid(&theAsteroid, 140, 20, 0, 0);
+    init_asteroid(&theAsteroid, 140, 20, 1, 0);
 
     struct counter_t theCounts;
-    initCounter(&theCounts, 3, N_ROCKETS, N_BOMBS);
+    initCounter(&theCounts, 3);
 
     struct powerup_t thePowerup;
     init_powerup(&thePowerup, 30, 15);
@@ -95,12 +98,15 @@ int main(void)
         game_controls(&i_time, &theShip, theRockets, theBombs, &theCounts, buffer);
         if (get_flag() != (theShip).tempf && i_time == 0)
         {
-            gravity(theRockets, &the_alien);
+            gravityRockets(theRockets, &theAsteroid);
+            gravityRockets(theBombs, &theAsteroid);
             moveRocket(theRockets);
             moveBomb(theBombs);
-            move_alien(&the_alien);
+            move_alien(&the_alien, 1, 1);
+            shootLaser(thelaser,&the_alien,-2,0);
+            moveLaser(thelaser,&the_alien);
             move_asteroid(&theAsteroid);
-            hitDetection(theRockets,theBombs, &the_alien, &theAsteroid, &theShip ,&thePowerup, & theCounts , buffer );
+            hitDetection(theRockets,theBombs, &the_alien, &theAsteroid, &theShip ,&thePowerup, & theCounts , buffer, thelaser);
             respawn(&theShip, &theCounts,buffer);
             theShip.tempf = get_flag();
             controlPowerups(&thePowerup);

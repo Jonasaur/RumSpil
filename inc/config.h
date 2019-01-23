@@ -2,6 +2,7 @@
 #define N_ALIENS 10
 #define N_ROCKETS 10
 #define N_BOMBS 5
+#define N_LASERS 10
 
 #define ESC 0x1B
 
@@ -15,8 +16,8 @@
 #define FIX14_DIV(a, b) ( ((a) << FIX14_SHIFT) / b )
 
 //ALIEN SPAWN Y_COORDINATE INTERVAL
-#define RAND_MAX 40
-#define RAND_MIN 10
+#define MAX_RAND 40
+#define MIN_RAND 10
 
 //MENU
 #define TEXT_X  8

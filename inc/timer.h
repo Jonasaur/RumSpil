@@ -20,12 +20,12 @@ void stop_timer();
 
 void TIM2_IRQHandler(void);
 
-int8_t get_flag();
+int32_t get_flag();
 
-int8_t get_level_flag();
+int32_t get_level_flag();
 
-void set_lvl(int8_t lvl_input);
+void set_lvl(int32_t lvl_input);
 
-int8_t get_anim_flag();
+int32_t get_anim_flag();
 
 #endif
